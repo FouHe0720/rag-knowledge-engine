@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RAG Knowledge Engine · Evidence first</title>
+<style>
+:root{--ink:#1d2e2b;--muted:#5c6e68;--paper:#f5f5ef;--line:#d7e0d9;--green:#1a5948;--card:#fff;--soft:#e9f0e9}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 system-ui,sans-serif}
+header{padding:25px 5vw;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;align-items:center}
+.brand{font-weight:750;letter-spacing:-.5px;font-size:20px}.badge{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12px;background:white}
+main{max-width:1220px;margin:auto;padding:36px 5vw}.eyebrow{color:var(--green);font-size:12px;letter-spacing:2px;font-weight:700}
+h1{font-size:38px;line-height:1.2;margin:12px 0;letter-spacing:-1.5px}p{color:var(--muted)}.intro{max-width:720px;margin-bottom:30px}
+.grid{display:grid;grid-template-columns:260px minmax(0,1fr);gap:24px}.card{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:22px;margin-bottom:20px}
+h2{font-size:17px;margin:0 0 14px}h3{font-size:14px;margin:0 0 8px}.small{font-size:12px;color:var(--muted)}
+label{display:block;font-size:13px;margin:12px 0 5px}input,textarea,select{width:100%;border:1px solid var(--line);border-radius:6px;padding:10px;background:#fff;color:var(--ink);font:inherit}
+textarea{resize:vertical;min-height:96px}button{border:0;background:var(--green);color:white;border-radius:6px;padding:10px 16px;font:inherit;cursor:pointer}button:disabled{opacity:.5;cursor:wait}button.secondary{background:var(--soft);color:var(--green)}button.delete{font-size:11px;padding:3px 8px;background:transparent;color:#854b43}
+.options{display:flex;align-items:end;gap:14px;flex-wrap:wrap;margin-bottom:16px}.options>div{min-width:130px;flex:1}.options label{margin-top:6px}.inline{display:flex;align-items:center;gap:7px}.inline input{width:auto}
+#status{min-height:24px;font-size:13px;color:var(--muted)}#answer{white-space:pre-wrap;overflow-wrap:anywhere}.doc{border-top:1px solid var(--line);padding:12px 0;overflow-wrap:anywhere}.doc:first-child{border-top:0}.doc-line{display:flex;justify-content:space-between;gap:8px;align-items:center}
+.empty{padding:30px 8px;text-align:center;color:var(--muted)}details{border-top:1px solid var(--line);padding:13px 0}summary{cursor:pointer;font-size:13px;font-weight:650}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:var(--paper);padding:14px;border-radius:6px;font-size:12px}blockquote{margin:12px 0;padding:10px 14px;border-left:3px solid #7ba38c;background:var(--paper);white-space:pre-wrap;overflow-wrap:anywhere}.section-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px}.section-head h2{margin:0}.mode{font-size:11px;text-transform:uppercase;color:var(--green);font-weight:700}footer{padding:0 5vw 30px;text-align:center;font-size:12px;color:var(--muted)}a{color:var(--green)}
+@media(max-width:760px){.grid{grid-template-columns:1fr}h1{font-size:30px}header{flex-direction:column;align-items:start}.card{padding:18px}}
+</style>
+</head>
+<body>
+<header><div class="brand">RAG / Knowledge Engine</div><div class="badge" id="health">正在连接知识库…</div></header>
+<main>
+<div class="intro"><div class="eyebrow">INSPECTABLE RETRIEVAL</div><h1>让每条回答，都有据可查。</h1><p>从知识库检索证据，逐条检查来源、位置与排名。默认离线模式展示原文摘录；DeterministicEmbedding 仅用于接口演示。</p></div>
+<div class="grid">
+<aside>
+<section class="card"><h2>知识库文件</h2><div id="documents" aria-live="polite"></div><form id="ingest-form"><label for="source">摄取受控相对路径</label><input id="source" value="storage.md" required maxlength="240"><p class="small">文件须位于配置的 corpus 根目录。可试 retrieval.md 或 operations.pdf。</p><button type="submit" class="secondary">摄取文档</button></form></section>
+<div class="small">索引删除只移除文档、片段和向量，原始文件仍保留。<br><a href="/docs">API 文档 ↗</a></div>
+</aside>
+<div>
+<section class="card"><form id="query-form"><h2>向知识库提问</h2><label for="question">问题</label><textarea id="question" required maxlength="2000">SQLite WAL allows multiple writers?</textarea><div class="options"><div><label for="strategy">检索策略</label><select id="strategy"><option value="hybrid">Hybrid · BM25 + Dense</option><option value="bm25">BM25 · 词项检索</option><option value="dense">Dense · 向量检索</option></select></div><div><label for="rerank">重排</label><select id="rerank"><option value="noop">Noop</option><option value="lexical">Lexical baseline</option></select></div><div><label for="top-k">Top K</label><select id="top-k"><option>1</option><option>3</option><option selected>5</option></select></div></div><button type="submit">检索证据 →</button></form><div id="status" role="status" aria-live="polite"></div></section>
+<section class="card"><div class="section-head"><h2>答案 / 证据摘录</h2><span class="mode" id="mode">等待检索</span></div><div id="answer" class="empty">先摄取文档，再输入一个问题。</div><p class="small" id="confidence"></p><div id="citations"></div></section>
+<section class="card"><h2>候选检索条目</h2><p class="small">展开查看 BM25、cosine、原始排名与 RRF 分数。分数不代表答案正确概率。</p><div id="candidates" class="empty">检索轨迹将在此显示</div></section>
+</div>
+</div>
+</main>
+<footer>Original corpus · CPU offline demo · Source-bound citations</footer>
+<script>
+const el = id => document.getElementById(id);
+function node(tag,text,cls){const n=document.createElement(tag);n.textContent=text;if(cls)n.className=cls;return n;}
+async function api(path,method='GET',body){const response=await fetch(path,{method,headers:{'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body)});const data=await response.json();if(!response.ok)throw new Error(data.error?.message||`HTTP ${response.status}`);return data;}
+function status(message){el('status').textContent=message;}
+async function refresh(){const data=await api('/documents');el('documents').replaceChildren();if(!data.documents.length){el('documents').append(node('p','还没有索引文档。','small'));}for(const doc of data.documents){const item=node('div','','doc');const line=node('div','','doc-line');line.append(node('strong',doc.file_name));const button=node('button','删除','delete');button.type='button';button.addEventListener('click',async()=>{try{await api('/documents/'+doc.document_id,'DELETE');await refresh();status('已删除索引：'+doc.source);}catch(error){status(error.message);}});line.append(button);item.append(line,node('div',doc.chunks+' chunks · '+doc.source,'small'));el('documents').append(item);}}
+el('ingest-form').addEventListener('submit',async event=>{event.preventDefault();const button=event.target.querySelector('button');button.disabled=true;status('正在摄取文档…');try{const result=await api('/documents','POST',{source:el('source').value});await refresh();status(result.changed?'文档已建立索引。':'内容未变，已跳过重复索引。');}catch(error){status(error.message);}finally{button.disabled=false;}});
+el('query-form').addEventListener('submit',async event=>{event.preventDefault();const button=event.target.querySelector('button');button.disabled=true;status('正在检索…');try{const data=await api('/query','POST',{question:el('question').value,strategy:el('strategy').value,rerank:el('rerank').value,top_k:Number(el('top-k').value)});el('mode').textContent=data.mode+' / '+data.embedding_kind;el('answer').className='';el('answer').textContent=data.answer;el('confidence').textContent=`词语覆盖率 ${data.evidence_score.toFixed(2)} · 门槛 ${data.threshold}。这是证据筛选启发式，不能验证语义蕴含。`;el('citations').replaceChildren();for(const citation of data.citations){const details=node('details');details.open=true;details.append(node('summary',`[${citation.citation_id}] ${citation.file_name} · ${citation.page?'第 '+citation.page+' 页':citation.section||'段落 '+citation.paragraph}`),node('blockquote',citation.snippet),node('div',`${citation.source} · [${citation.start},${citation.end}) · chunk ${citation.chunk_id}`,'small'));el('citations').append(details);}el('candidates').replaceChildren();el('candidates').className='';for(const hit of data.candidates){const details=node('details');details.append(node('summary',`#${hit.rank} ${hit.chunk.file_name} · score ${hit.score.toFixed(4)}`),node('pre',JSON.stringify(hit.trace,null,2)),node('blockquote',hit.chunk.text));el('candidates').append(details);}status(data.refused?'当前证据不足，已返回拒答。':`已检索 ${data.candidates.length} 个候选，展示 ${data.citations.length} 条引用。`);}catch(error){status(error.message);}finally{button.disabled=false;}});
+Promise.all([api('/health').then(data=>{el('health').textContent=data.embedding_kind+' · '+data.answer_mode;}),refresh()]).catch(error=>status(error.message));
+</script>
+</body>
+</html>

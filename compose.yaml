@@ -1,0 +1,14 @@
+services:
+  rag:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - rag-data:/app/data
+      - ./corpus:/app/corpus:ro
+    mem_limit: 768m
+    cpus: 1.0
+    security_opt:
+      - no-new-privileges:true
+volumes:
+  rag-data:

@@ -1,0 +1,9 @@
+The default offline demo runs on CPU with deterministic hash embeddings and extractive evidence. It does not download a model, call a paid provider or require a GPU. This is an interface demonstration, not a semantic search quality claim.
+
+Compatible API mode posts batches of text to /embeddings and question evidence to /chat/completions. Configure the base URL, model, explicit deployment revision, dimension and optional API key through environment variables. Build a separate database for each embedding configuration.
+
+The optional sentence-transformers backend runs on CPU, sets trust_remote_code to false and uses local files by default. A model download requires explicit opt-in. Pin an immutable model revision, record its actual files and measure memory on the target machine rather than assuming a universal RAM budget.
+
+A container demo mounts a persistent data volume and an original corpus directory. Its health check calls /health. A healthy process is not proof that retrieval quality, source permissions or an external model are correct. Run lifecycle smoke checks after ingestion.
+
+Continuous integration runs formatting, static lint, unit and integration tests, annotation validation and offline evaluation. Container validation should build the image and exercise HTTP ingestion, query and deletion. Real provider tests are opt-in and must not use production secrets in pull requests.
