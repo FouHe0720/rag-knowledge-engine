@@ -1,8 +1,9 @@
 import json
+import re
 
 import httpx
 import numpy as np
-from pydantic import BaseModel, ConfigDict, Field, ValidationError
+from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_validator
 
 from rag_engine.adapters.embedding import validate_vectors
 from rag_engine.domain.contracts import EmbeddingProvider, Vector
@@ -28,13 +29,21 @@ class CompatibleClient:
                 follow_redirects=False,
                 trust_env=False,
             ) as client:
-                response = client.post(
-                    self.settings.api_base_url.rstrip("/") + endpoint, json=body, headers=headers
-                )
-                response.raise_for_status()
-                if len(response.content) > 10_000_000:
-                    raise EngineError("provider_response_size", "Provider response too large.", 502)
-                value = response.json()
+                with client.stream(
+                    "POST",
+                    self.settings.api_base_url.rstrip("/") + endpoint,
+                    json=body,
+                    headers=headers,
+                ) as response:
+                    response.raise_for_status()
+                    data = bytearray()
+                    for part in response.iter_bytes(chunk_size=65536):
+                        data.extend(part)
+                        if len(data) > 10_000_000:
+                            raise EngineError(
+                                "provider_response_size", "Provider response too large.", 502
+                            )
+                value = json.loads(data)
                 if not isinstance(value, dict):
                     raise ValueError("Expected object")
                 return value
@@ -108,6 +117,13 @@ class GeneratedStatement(BaseModel):
     model_config = ConfigDict(extra="forbid")
     text: str = Field(min_length=1, max_length=2000)
     citation_ids: list[str] = Field(min_length=1, max_length=10)
+
+    @field_validator("text")
+    @classmethod
+    def plain_claim(cls, value: str) -> str:
+        if not value.strip() or re.search(r"\[(?:C)?\d+\]", value):
+            raise ValueError("Citation markers belong only in citation_ids")
+        return value.strip()
 
 
 class GeneratedAnswer(BaseModel):

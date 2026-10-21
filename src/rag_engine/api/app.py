@@ -10,6 +10,7 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 from rag_engine.domain.errors import EngineError
 from rag_engine.infra.config import Settings
+from rag_engine.infra.middleware import BodyLimitMiddleware
 from rag_engine.services.engine import Engine, RerankMode, Strategy, build_engine
 
 
@@ -41,6 +42,7 @@ def create_app(engine: Engine | None = None) -> FastAPI:
         yield
 
     app = FastAPI(title="RAG Knowledge Engine", version="0.1.0", lifespan=lifespan)
+    app.add_middleware(BodyLimitMiddleware)
 
     @app.exception_handler(EngineError)
     async def engine_error(request: Request, exc: EngineError):

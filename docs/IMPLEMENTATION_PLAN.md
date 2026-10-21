@@ -10,3 +10,12 @@
 
 ## Acceptance
 No paid key or model download required. Stable source positions, atomic updates/deletes, model fingerprint checks, traceable fusion and citations. Dense fixture results clearly marked MOCK. Publish only after checks; real API/model runs separately identified.
+
+## Completion record
+
+- V0 complete: 6 tests, ruff, real offline CLI; commit f24d354.
+- V1 complete: 42 tests, retrieval/API/citation boundaries; commit 852665a.
+- V2 complete: 46 tests, 48 retrieval annotations, 20 citation cases, UI, lockfiles and CI/container tooling; commit 0cfe583.
+- V3 local acceptance: 52 tests, lint/format, locked install/pip check, repeated Quick Start, local HTTP + Docker lifecycle including PDF page locators, docs and privacy review. GitHub publication and remote CI are checked after the release commit.
+
+Real external API/model execution, semantic faithfulness judgment and production deployment hardening are explicitly outside the completed validation record; formal opt-in entrypoints exist.

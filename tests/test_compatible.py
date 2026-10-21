@@ -104,3 +104,45 @@ def test_config_rejects_unsafe_endpoint_and_missing_model():
             llm_model="x",
             api_base_url="http://remote.example.com/v1",
         )
+
+
+def test_forged_marker_in_claim_rejected(populated):
+    citations = populated.query("SQLite WAL", top_k=1).citations
+    payload = {"statements": [{"text": "Unsupported [C999]", "citation_ids": ["C1"]}]}
+    client = CompatibleClient(
+        settings(),
+        httpx.MockTransport(
+            lambda request: httpx.Response(
+                200, json={"choices": [{"message": {"content": json.dumps(payload)}}]}
+            )
+        ),
+    )
+    with pytest.raises(EngineError, match="citation schema"):
+        CompatibleAnswerer(client).answer("SQLite WAL", citations)
+
+
+def test_generated_answer_integration_and_refusal(populated):
+    payload = {"statements": [{"text": "WAL permits concurrent readers.", "citation_ids": ["C1"]}]}
+    client = CompatibleClient(
+        settings(),
+        httpx.MockTransport(
+            lambda request: httpx.Response(
+                200, json={"choices": [{"message": {"content": json.dumps(payload)}}]}
+            )
+        ),
+    )
+    populated.answerer = CompatibleAnswerer(client)
+    result = populated.query("SQLite WAL", top_k=1)
+    assert result.mode == "generated" and result.citations[0].citation_id == "C1"
+    assert result.answer.endswith("[C1]")
+    refusal = CompatibleClient(
+        settings(),
+        httpx.MockTransport(
+            lambda request: httpx.Response(
+                200, json={"choices": [{"message": {"content": '{"statements":[]}'}}]}
+            )
+        ),
+    )
+    populated.answerer = CompatibleAnswerer(refusal)
+    result = populated.query("SQLite WAL", top_k=1)
+    assert result.refused and not result.citations

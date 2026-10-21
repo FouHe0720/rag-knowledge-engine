@@ -16,3 +16,12 @@ Markdown 按 ATX heading path 分段，TXT 按段落，PDF 按页（1-based）�
 - [OpenAI chat completions reference](https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create)
 - [pypdf text extraction and resource caveats](https://pypdf.readthedocs.io/en/stable/user/extract-text.html)
 - [SentenceTransformer CPU / revision / local_files_only parameters](https://www.sbert.net/docs/package_reference/sentence_transformer/model.html)
+
+## ADR 005：引用与评测分离
+Citation ID 来自真实检索 chunk，但 ID 可解析不代表语义蕴含。生成 claim 采用严格 statements/citation_ids schema；源信息由服务附加。默认 extractive 直接展示原文。词语覆盖率门槛明确是启发式。20 条审计夹具含 10 条故意无效样例，报告其结构判定，不冒充端到端 LLM citation 质量。
+
+## ADR 006：PDF 子进程预算
+pypdf 解压 stream 的内存峰值不能只靠输入 byte limit 控制。Linux worker 在固定入口解析，CPU 8 秒、父进程 timeout 12 秒、解释器导入完成后额外 256 MiB 虚拟地址空间预算，另有页数/文本/stream 限制。不把 RLIMIT_AS 描述成固定 RSS，也不声称它隔离文件/网络系统调用。公网仍需进程并发限制、容器与访问控制。
+
+## ADR 007：CPU 模型仅显式 opt-in
+默认不安装 sentence-transformers / PyTorch，不下载权重。CPU extra 保留依赖范围，实际安装需选择目标平台的 CPU PyTorch wheel；资源量随版本和模型变化，以真实下载/运行测量为准。模型 revision 必填，trust_remote_code=false，local_files_only 默认 true。该路径在本次交付中未实测。

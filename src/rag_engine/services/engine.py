@@ -71,13 +71,26 @@ class Engine:
             retrieval_query = self.rewriter.rewrite(query)
         candidates = self.search(retrieval_query, strategy, self.settings.top_n)
         reranker = LexicalReranker() if rerank == "lexical" else NoopReranker()
-        selected = reranker.rerank(retrieval_query, candidates, top_k)
+        candidates = reranker.rerank(retrieval_query, candidates, len(candidates))
+        selected = candidates[:top_k]
         terms = set(tokenize(query))
         coverages = {
             h.chunk.chunk_id: len(terms & set(tokenize(h.chunk.text))) / max(len(terms), 1)
-            for h in selected
+            for h in candidates
         }
-        score = max(coverages.values(), default=0.0)
+        score = max((coverages[h.chunk.chunk_id] for h in selected), default=0.0)
+        candidates = [
+            h.model_copy(
+                update={
+                    "trace": {
+                        **h.trace,
+                        "selected": int(h.rank <= top_k),
+                        "evidence_coverage": coverages[h.chunk.chunk_id],
+                    }
+                }
+            )
+            for h in candidates
+        ]
         supported = [
             hit
             for hit in selected

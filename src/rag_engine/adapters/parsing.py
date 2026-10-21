@@ -1,9 +1,10 @@
-import io
+import json
+import os
 import re
+import subprocess
+import sys
 import unicodedata
 from pathlib import PurePosixPath
-
-from pypdf import PdfReader
 
 from rag_engine.domain.contracts import Chunker, DocumentParser
 from rag_engine.domain.errors import EngineError
@@ -65,25 +66,25 @@ class FileParser(DocumentParser):
 
     def _pdf(self, content: bytes) -> list[Segment]:
         try:
-            reader = PdfReader(io.BytesIO(content))
-            if reader.is_encrypted:
-                raise EngineError("encrypted_pdf", "Encrypted PDFs are not supported.")
-            if len(reader.pages) > 100:
-                raise EngineError("pdf_pages", "PDF limit is 100 pages.", 413)
-            segments = []
-            for i, page in enumerate(reader.pages, 1):
-                stream = page.get_contents()
-                if stream and len(stream.get_data()) > 8_000_000:
-                    raise EngineError(
-                        "pdf_stream", "PDF page stream exceeds the parsing limit.", 413
-                    )
-                text = clean(page.extract_text() or "")
-                if text:
-                    segments.append(Segment(text=text, page=i))
-            return segments
-        except EngineError:
-            raise
-        except Exception as exc:
+            completed = subprocess.run(
+                [sys.executable, "-m", "rag_engine.adapters.pdf_worker"],
+                input=content,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.DEVNULL,
+                timeout=12,
+                env={"PATH": os.defpath, "LANG": "C.UTF-8", "OPENBLAS_NUM_THREADS": "1"},
+                check=False,
+            )
+            if completed.returncode or len(completed.stdout) > 8_000_000:
+                raise EngineError("pdf_budget", "PDF worker exceeded parsing/resource limits.", 413)
+            value = json.loads(completed.stdout)
+            if "error" in value:
+                error = value["error"]
+                raise EngineError(error["code"], error["message"], error["status"])
+            return [Segment.model_validate(s) for s in value["segments"]]
+        except subprocess.TimeoutExpired as exc:
+            raise EngineError("pdf_timeout", "PDF parsing timed out.", 408) from exc
+        except (ValueError, KeyError, TypeError) as exc:
             raise EngineError("invalid_pdf", "PDF cannot be parsed.") from exc
 
 

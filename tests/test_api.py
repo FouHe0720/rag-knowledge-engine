@@ -33,3 +33,13 @@ def test_malicious_path_and_invalid_inputs(engine):
         ]:
             assert client.post("/query", json=body).status_code == 422
         assert client.delete("/documents/not-an-id").status_code == 422
+
+
+def test_json_body_limit_and_static_ui(engine):
+    with TestClient(create_app(engine)) as client:
+        oversized = client.post("/query", content=b"x" * 20000)
+        assert oversized.status_code == 413
+        assert oversized.json()["error"]["code"] == "request_size"
+        page = client.get("/")
+        assert page.status_code == 200 and "候选检索条目" in page.text
+        assert "textContent" in page.text

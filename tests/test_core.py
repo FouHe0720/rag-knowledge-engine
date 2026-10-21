@@ -161,3 +161,51 @@ def test_identical_content_preserves_both_sources(engine):
     assert len(engine.store.snapshot()[0]) == 2
     repeated = WindowChunker(32, 0).split("repeat.txt", FileParser().parse("r.txt", b"x" * 64))
     assert len(repeated) == 1
+
+
+def test_pdf_timeout_and_page_budget(engine, monkeypatch):
+    import subprocess
+
+    from pypdf import PdfWriter
+
+    writer = PdfWriter()
+    for _ in range(101):
+        writer.add_blank_page(width=100, height=100)
+    output = io.BytesIO()
+    writer.write(output)
+    with pytest.raises(EngineError) as error:
+        engine.ingestion.ingest_bytes("huge.pdf", output.getvalue())
+    assert error.value.code == "pdf_pages"
+
+    def timeout(*args, **kwargs):
+        raise subprocess.TimeoutExpired("worker", 12)
+
+    monkeypatch.setattr("rag_engine.adapters.parsing.subprocess.run", timeout)
+    with pytest.raises(EngineError) as error:
+        FileParser().parse("timeout.pdf", b"fixture")
+    assert error.value.code == "pdf_timeout"
+
+
+def test_pdf_encrypted_and_blank(engine):
+    from pypdf import PdfWriter
+
+    writer = PdfWriter()
+    writer.add_blank_page(width=100, height=100)
+    blank = io.BytesIO()
+    writer.write(blank)
+    with pytest.raises(EngineError) as error:
+        engine.ingestion.ingest_bytes("scan.pdf", blank.getvalue())
+    assert error.value.code == "empty_document"
+    writer.encrypt("fixture-password")
+    encrypted = io.BytesIO()
+    writer.write(encrypted)
+    with pytest.raises(EngineError) as error:
+        engine.ingestion.ingest_bytes("locked.pdf", encrypted.getvalue())
+    assert error.value.code == "encrypted_pdf"
+
+
+def test_rerank_trace_is_returned(populated):
+    result = populated.query("inverse document frequency", rerank="lexical", top_k=1)
+    assert result.candidates[0].trace["reranker"] == "lexical_baseline"
+    assert result.candidates[0].trace["selected"] == 1
+    assert "pre_rerank_rank" in result.candidates[0].trace
