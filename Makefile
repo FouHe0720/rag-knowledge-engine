@@ -1,7 +1,10 @@
-.PHONY: install lint format test demo ingest serve eval annotations docker-smoke
+.PHONY: install lock lint format test demo ingest serve eval annotations docker-smoke
 PY = .venv/bin/python
 install:
 	bash scripts/install.sh
+lock:
+	uv pip compile pyproject.toml --universal --python-version 3.11 --generate-hashes -o requirements.lock
+	uv pip compile pyproject.toml --universal --python-version 3.11 --extra dev --generate-hashes -o requirements-dev.lock
 lint:
 	.venv/bin/ruff check .
 	.venv/bin/ruff format --check .

@@ -162,7 +162,7 @@ RAG_DB=data/real-index.sqlite3
 
 ## 验证与容器
 
-2026-10-21 的本地验收：`pytest` **52 passed**；ruff lint / format、标注校验、离线 CLI Demo、锁文件安装和 `pip check` 均通过。测试框架有 1 条 Starlette/httpx deprecation warning，非失败。普通 coverage 未追踪 PDF 子进程、CLI 手工运行或可选真实模型，因此不把它包装成全路径覆盖。[详细验收](docs/VALIDATION.md)
+2026-10-21 的本地验收：Python 3.11 / 3.12 的 `pytest` **各 52 passed**；ruff lint / format、标注校验、离线 CLI Demo、锁文件安装和 `pip check` 均通过。测试框架有 1 条 Starlette/httpx deprecation warning，非失败。普通 coverage 未追踪 PDF 子进程、CLI 手工运行或可选真实模型，因此不把它包装成全路径覆盖。[详细验收](docs/VALIDATION.md)
 
 Docker 已实际构建并运行 HTTP 生命周期检查（包括 PDF 页码），Compose 配置已检查。镜像不包含 Key/DB/模型权重，运行用户为非 root。CI 包含 Python 3.11/3.12、测试/评测和容器检查，远端执行结果以 Actions 为准。
 

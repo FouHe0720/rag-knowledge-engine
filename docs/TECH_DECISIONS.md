@@ -25,3 +25,6 @@ pypdf 解压 stream 的内存峰值不能只靠输入 byte limit 控制。Linux 
 
 ## ADR 007：CPU 模型仅显式 opt-in
 默认不安装 sentence-transformers / PyTorch，不下载权重。CPU extra 保留依赖范围，实际安装需选择目标平台的 CPU PyTorch wheel；资源量随版本和模型变化，以真实下载/运行测量为准。模型 revision 必填，trust_remote_code=false，local_files_only 默认 true。该路径在本次交付中未实测。
+
+## ADR 008：跨 Python 版本锁文件
+首轮 GitHub CI 的 Python 3.11 安装发现 NumPy 2.5 要求 Python >=3.12。仅在 3.12 上执行 pip compile 会遗漏最低支持版本；`--universal` 的 Python 下界仍默认是当前解释器，因此再显式指定 `--python-version 3.11`。`make lock` 固定完整命令，输出带 Python markers 的 NumPy 2.4.6（3.11）/2.5.4（>=3.12）及各平台 hash，CI 继续验证两个解释器，不缩减支持矩阵来绕过问题。

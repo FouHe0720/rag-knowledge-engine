@@ -19,3 +19,5 @@ No paid key or model download required. Stable source positions, atomic updates/
 - V3 local acceptance: 52 tests, lint/format, locked install/pip check, repeated Quick Start, local HTTP + Docker lifecycle including PDF page locators, docs and privacy review. GitHub publication and remote CI are checked after the release commit.
 
 Real external API/model execution, semantic faithfulness judgment and production deployment hardening are explicitly outside the completed validation record; formal opt-in entrypoints exist.
+
+GitHub repository was created PUBLIC and pushed with the official CLI. First remote CI found a Python 3.11 NumPy lock issue; corrected with universal resolution and an explicit 3.11 lower bound, then verified locally on both supported interpreters. Remote CI is rerun on the corrective commit.
