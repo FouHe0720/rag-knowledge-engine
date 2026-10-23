@@ -1,28 +1,33 @@
-# 实际验证记录
+# 验证记录
 
-验收日期：2026-10-21（Asia/Shanghai）。环境预检见 PREFLIGHT.md；运行产物 DB/log 在 .gitignore 内，不上传机器路径或凭证。
+以下为 2026-10-23 的本地验证。运行数据库、日志及模型缓存不进入仓库。
 
-| 检查 | 实际结果 |
+| 检查 | 结果 |
 |---|---|
-| V0：pytest、ruff、CLI ingest/query | 6 passed；commit f24d354 |
-| V1：核心检索/API/引用/边界 | 42 passed；commit 852665a |
-| V2：完整离线评测/展示/工具 | 46 passed；commit 0cfe583 |
-| V3：pytest | Python 3.11.17 / 3.12.3 分别 52 passed；各有 1 条 Starlette/httpx deprecation warning |
-| ruff check / format --check | 通过 |
-| make install / pip check | 锁定版本安装成功，无破损依赖 |
-| 标注校验 | 48 questions + 20 citation cases，44 chunks，全部可解析 |
-| make demo / CLI | 英文/中文/拒答、持久化查询实际运行 |
-| Docker | 实际 build + HTTP ingest/query/delete/refusal；PDF 页码断言 |
-| Compose | docker compose config --quiet 通过；Compose 服务未单独启动 |
-| 默认评测 | 实际生成 results/offline.json 与 offline.md；Dense/Hybrid=MOCK |
-| 真实 API / CPU 模型 | 未配置凭证/未下载模型，未实测；保留显式入口 |
-| UI | TestClient / HTTP 静态首页响应验证；JavaScript 通过 node --check；未声称浏览器截图或视觉验收 |
-| GitHub Actions | 推送后检查实际结果，以 Actions 页面为准 |
+| Python 3.12 完整测试 | 58 passed；一条 Starlette/httpx 弃用提示 |
+| Ruff lint / format | 通过 |
+| 原始资料复核 | 8 份 DOCX、68 段文本及重建 Markdown 与来源清单一致 |
+| 校园回归 | 20/20；原文定位、关键字段、无匹配词与空范围 |
+| 技术标注 | 48 道检索题、20 条引用检查，44 个片段，全部可解析 |
+| 技术基准 | 8 份原创笔记，独立运行 BM25 / Dense / Hybrid / Lexical |
+| CLI | 持久化索引及按来源查询通过 |
+| 浏览器 | 资料范围切换、引用定位；桌面及 390px 窄屏 |
 
-pytest 包括 PDF 页码与 normalized offsets、Markdown fence、TXT 段落、非法类型/编码/空文档、幂等/更新/删除、路径/符号链接越界、大小/页数/超时、维度不符保留旧版本、模型/chunker 身份冲突、BM25/Dense/Hybrid、RRF trace、rerank trace、拒答、citation binding、伪造 ID/marker、HTTP 生命周期、JSON 限流和标注/指标协议。Compatible API 通过 httpx.MockTransport 验证，不是外部网络实测。
+## 复现
 
-coverage 是普通父进程采集，PDF 子进程不计入；CLI 有独立真实命令运行，真实 CPU 模型未运行。未声称完整路径覆盖或零风险。
+```bash
+make test lint annotations
+make campus-demo
+.venv/bin/python scripts/campus_sources.py --source-root /path/to/知识库
+.venv/bin/python eval/run.py --output /tmp/rag-evaluation
+```
 
-隐私检查：`scripts/privacy_check.py` 检查 Git candidates 中的明显密钥模式、机器绝对路径与禁止产物；另人工检查 staged filenames、外链域名、原创 corpus 与 PDF metadata。模式扫描不是通用 secret detection，不保证发现任意格式的敏感数据。
+不提供 `--source-root` 时只校验随仓库提供的摘录与清单，不会读取原始 DOCX。校园回归检查检索与引用位置，不衡量开放问答准确率；技术基准的 hash 向量标为 `MOCK`。
 
-首轮 GitHub CI 的 3.11 安装暴露 NumPy 2.5 的 Python 最低版本限制；已用带显式 3.11 下界的 universal lock 修复，新增 make lock 固化生成命令。本地独立项目缓存环境完成 3.11 的 52 项测试和全部标注校验。错误与修复原因保留于 TECH_DECISIONS.md 的 ADR 008。
+浏览器分别核对计算机与人工智能方案的弹性学制，验证来源切换、点击引用定位、旧结果清理、未入库来源拒答及窄屏布局。截图位于 `docs/screenshots/`。
+
+## 验证范围
+
+Compatible API 使用模拟 HTTP 响应检查请求、超时、引用 ID 与错误处理。本轮未调用外部模型，也未重建 Docker 镜像。此前已验证容器内 HTTP 入库、查询、删除及 PDF 页码；当前镜像状态由 CI 的容器检查确定。
+
+PDF 子进程不计入普通父进程 coverage。固定字符窗口、词项证据门槛和模型身份校验的取舍见 [技术决策](TECH_DECISIONS.md)。公开内容扫描检查明显密钥、机器路径和运行产物，另核对来源与引用材料。

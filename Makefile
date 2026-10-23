@@ -1,4 +1,4 @@
-.PHONY: install lock lint format test demo ingest serve eval annotations docker-smoke
+.PHONY: install lock lint format test demo ingest serve eval annotations docker-smoke campus-demo campus-serve
 PY = .venv/bin/python
 install:
 	bash scripts/install.sh
@@ -15,6 +15,11 @@ test:
 	$(PY) -m pytest -q
 demo:
 	$(PY) scripts/demo.py
+campus-demo:
+	$(PY) scripts/campus_sources.py
+	$(PY) scripts/campus_demo.py --db data/campus.sqlite3
+campus-serve:
+	RAG_DB=data/campus.sqlite3 .venv/bin/uvicorn rag_engine.api.app:create_app --factory --host 127.0.0.1 --port 8000
 ingest:
 	.venv/bin/rag ingest all
 serve:

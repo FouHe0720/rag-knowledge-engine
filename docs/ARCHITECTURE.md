@@ -57,3 +57,8 @@ CompatibleClient 仅调用配置端点，有 HTTP timeout、流式 10 MB 响应�
 API 使用 Pydantic schema 和 16 KiB ASGI body limit；只读 corpus 根目录受控路径。静态 HTML 以 textContent 渲染证据/模型内容，避免 HTML 注入；不执行来源中的脚本。没有单独前端构建或 CDN。CLI/HTTP 共享服务，不存在另一套检索算法。
 
 评测通过相同服务重建临时 index，先校验标注定位，再输出逐题指标、候选/相关 ID、语料与问题 hash。默认忽略环境和 .env，避免意外真实调用。协议见 eval/README.md。
+
+
+## 资料范围
+
+查询可带`sources`列表。Engine从同一store快照中按source筛选chunk与向量，再构建BM25/Dense检索器；RRF与重排只处理该范围的候选。`null`为全部文档，空列表为零文档，未知source不回退。响应`source_scope`记录实际范围；这是文档选择参数，不替代访问控制。校园样例及DOCX来源定位见[CAMPUS](CAMPUS.md)。

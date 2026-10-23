@@ -23,6 +23,8 @@ jobs:
       - run: pytest -q --cov=rag_engine --cov-report=term-missing
       - run: python eval/run.py --validate-only
       - run: python eval/run.py --output /tmp/rag-evaluation
+      - run: python scripts/campus_sources.py
+      - run: python scripts/campus_demo.py --output /tmp/rag-evaluation/campus.json
       - uses: actions/upload-artifact@v4
         with:
           name: offline-evaluation-py${{ matrix.python }}

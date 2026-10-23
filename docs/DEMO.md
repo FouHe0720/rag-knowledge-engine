@@ -1,5 +1,11 @@
 # 可复制演示
 
+## 校园资料演示
+
+先运行 `make campus-demo`，再运行 `make campus-serve`。网页默认按资料范围查询，点击“计算机学制”和“人工智能学制”可比较两份2024版方案，返回原文第68段的“3至6年”和第65段的“4至6年”。材料来源及局限见 [CAMPUS](CAMPUS.md)。
+
+以下保留通用技术笔记演示，使用默认 `data/index.sqlite3`，与校园演示数据库分开。
+
 在项目根目录打开终端；首次先 `make install`。以下默认不下载模型、不调用外部服务。
 
 ## 1. 一键临时演示
@@ -23,7 +29,7 @@ make demo
 .venv/bin/rag query 'zxqvplm astronomyzebra'
 ```
 
-第一次写 8 个 document，默认分块产生 44 chunks；第二次每个 `changed=false`。Dense 的 hash projection 只展示接口流程。响应中检查 `bm25_score`、`dense_score`、`rrf_score`、`pre_rerank_rank`、`lexical_score`、`selected`，同时检查 snippet 是否真的支持问题。
+`ingest all` 会导入技术笔记与 campus 子目录内的材料；第二次每个 `changed=false`。技术评测独立限定在原有8份笔记。Dense 的 hash projection 只展示接口流程。响应中检查 `bm25_score`、`dense_score`、`rrf_score`、`pre_rerank_rank`、`lexical_score`、`selected`，同时检查 snippet 是否真的支持问题。
 
 ## 3. PDF 页码与受控路径
 

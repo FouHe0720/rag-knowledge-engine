@@ -16,7 +16,7 @@ from rag_engine.domain.errors import EngineError
 from rag_engine.domain.models import Answer, Citation, Hit, Statement
 from rag_engine.infra.config import Settings
 from rag_engine.infra.store import SQLiteStore
-from rag_engine.services.ingestion import IngestionService
+from rag_engine.services.ingestion import IngestionService, safe_source
 from rag_engine.services.text import tokenize
 
 Strategy = Literal["bm25", "dense", "hybrid"]
@@ -40,10 +40,23 @@ class Engine:
     answerer: Answerer | None = None
     rewriter: Rewriter | None = None
 
-    def search(self, query: str, strategy: Strategy = "hybrid", top_n: int = 20) -> list[Hit]:
+    def search(
+        self,
+        query: str,
+        strategy: Strategy = "hybrid",
+        top_n: int = 20,
+        sources: list[str] | None = None,
+    ) -> list[Hit]:
         if strategy not in {"bm25", "dense", "hybrid"} or not 1 <= top_n <= 100:
             raise EngineError("search_config", "Invalid strategy or candidate count.")
         chunks, vectors = self.store.snapshot()
+        if sources is not None:
+            if len(sources) > 32:
+                raise EngineError("source_scope", "At most 32 sources may be selected.")
+            allowed = {safe_source(source) for source in sources}
+            positions = [i for i, chunk in enumerate(chunks) if chunk.source in allowed]
+            chunks = [chunks[i] for i in positions]
+            vectors = vectors[positions]
         sparse = BM25Retriever(chunks)
         if strategy == "bm25":
             return sparse.retrieve(query, top_n)
@@ -59,6 +72,7 @@ class Engine:
         top_k: int = 5,
         rerank: RerankMode = "noop",
         rewrite: bool = False,
+        sources: list[str] | None = None,
     ) -> Answer:
         if not query.strip() or len(query) > 2000 or not 1 <= top_k <= self.settings.top_n:
             raise EngineError("query_input", "Question/top_k is outside configured limits.")
@@ -69,7 +83,7 @@ class Engine:
             if not self.rewriter:
                 raise EngineError("rewrite_unavailable", "Query rewrite requires a configured LLM.")
             retrieval_query = self.rewriter.rewrite(query)
-        candidates = self.search(retrieval_query, strategy, self.settings.top_n)
+        candidates = self.search(retrieval_query, strategy, self.settings.top_n, sources)
         reranker = LexicalReranker() if rerank == "lexical" else NoopReranker()
         candidates = reranker.rerank(retrieval_query, candidates, len(candidates))
         selected = candidates[:top_k]
@@ -143,6 +157,7 @@ class Engine:
             original_query=query,
             retrieval_query=retrieval_query,
             embedding_kind=self.embedding.kind,
+            source_scope=sources,
         )
 
 

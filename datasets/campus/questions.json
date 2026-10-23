@@ -1,0 +1,22 @@
+[
+  {"id":"cs-credits","source":"cs-curriculum-2024.md","question":"毕业学分","paragraph":65,"contains":"173学分"},
+  {"id":"cs-duration","source":"cs-curriculum-2024.md","question":"弹性修业年限","paragraph":68,"contains":"3至6年"},
+  {"id":"cs-degree","source":"cs-curriculum-2024.md","question":"工学学士学位","paragraph":70,"contains":"工学学士学位"},
+  {"id":"ai-duration","source":"ai-curriculum-2024.md","question":"弹性修业年限","paragraph":65,"contains":"4至6年"},
+  {"id":"physics-credits","source":"physics-curriculum-2023.md","question":"毕业学分","paragraph":32,"contains":"179学分"},
+  {"id":"physics-international","source":"physics-curriculum-2023.md","question":"国际学分","paragraph":33,"contains":"至少2学分"},
+  {"id":"navigation-quota","source":"navigation-admission-2024.md","question":"择优录取","paragraph":14,"contains":"30名"},
+  {"id":"navigation-weight","source":"navigation-admission-2024.md","question":"笔试与面试成绩","paragraph":16,"contains":"各占50%"},
+  {"id":"navigation-interview","source":"navigation-admission-2024.md","question":"进入面试","paragraph":18,"contains":"前45名"},
+  {"id":"data-science-quota","source":"data-science-admission-2024.md","question":"最终成绩排名","paragraph":115,"contains":"前25"},
+  {"id":"data-science-subjects","source":"data-science-admission-2024.md","question":"高考选科","paragraph":110,"contains":"物理和化学"},
+  {"id":"data-science-degree","source":"data-science-admission-2024.md","question":"学历证书和学位证书","paragraph":126,"contains":"理学学位证书"},
+  {"id":"law-weight","source":"computational-law-admission-2024.md","question":"综合成绩笔试面试比例","paragraph":27,"contains":"笔试成绩占60%"},
+  {"id":"law-quota","source":"computational-law-admission-2024.md","question":"招生计划人数","paragraph":12,"contains":"30人"},
+  {"id":"english-exception","source":"english-placement-2024.md","question":"参加对象","paragraph":6,"contains":"不含翻译学院"},
+  {"id":"english-materials","source":"english-placement-2024.md","question":"凭什么参加考试","paragraph":12,"contains":"身份证和一卡通"},
+  {"id":"course-period","source":"course-selection-2024.md","question":"新生选课时间","paragraph":6,"contains":"9月20日10：00"},
+  {"id":"course-number","source":"course-selection-2024.md","question":"教学计划课程号","paragraph":18,"contains":"课程号必须与教学计划课程号一致"},
+  {"id":"unknown-term","source":"cs-curriculum-2024.md","question":"zxqvplm astronomyzebra","refused":true},
+  {"id":"unavailable-2026-source","source":"course-selection-2026.md","question":"新生选课时间","refused":true}
+]

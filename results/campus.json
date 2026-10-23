@@ -1,0 +1,4408 @@
+{
+  "dataset_id": "sdu-weihai-campus-2024-v1",
+  "dataset_sha256": "89cfd2ac66df3f22d74fd6b7a80d5aa739905f3e1dbec1075aa98461315ad47d",
+  "manifest_sha256": "b0019bdf208c36476f1b8e241616d45691e68ff009c2baf3dae904b088ca7387",
+  "scope": "20 author-written evidence-location checks; not held-out answer quality",
+  "embedding": "MOCK; BM25 retrieval only",
+  "passed": 20,
+  "total": 20,
+  "rows": [
+    {
+      "case_id": "cs-credits",
+      "passed": true,
+      "response": {
+        "mode": "extractive",
+        "answer": "六、毕业学分 [C1]\n\n173学分（专业培养计划153学分，重点培养计划12学分，创新实践计划4学分，拓展培养计划4学分）。 [C2]\n\n九、各类课程学分比例 [C3]",
+        "statements": [
+          {
+            "text": "六、毕业学分",
+            "citation_ids": [
+              "C1"
+            ]
+          },
+          {
+            "text": "173学分（专业培养计划153学分，重点培养计划12学分，创新实践计划4学分，拓展培养计划4学分）。",
+            "citation_ids": [
+              "C2"
+            ]
+          },
+          {
+            "text": "九、各类课程学分比例",
+            "citation_ids": [
+              "C3"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "C1",
+            "chunk_id": "6604a7a4416c7e196527e43d810a704e",
+            "document_id": "9cef8fd021b95fe176f71cec",
+            "file_name": "cs-curriculum-2024.md",
+            "source": "campus/cs-curriculum-2024.md",
+            "page": null,
+            "section": "2024版计算机科学与技术专业培养方案 / 原文第 64 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 6,
+            "snippet": "六、毕业学分"
+          },
+          {
+            "citation_id": "C2",
+            "chunk_id": "98124a7d09dc64f7d2c448f328fa434a",
+            "document_id": "9cef8fd021b95fe176f71cec",
+            "file_name": "cs-curriculum-2024.md",
+            "source": "campus/cs-curriculum-2024.md",
+            "page": null,
+            "section": "2024版计算机科学与技术专业培养方案 / 原文第 65 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 50,
+            "snippet": "173学分（专业培养计划153学分，重点培养计划12学分，创新实践计划4学分，拓展培养计划4学分）。"
+          },
+          {
+            "citation_id": "C3",
+            "chunk_id": "3633b60ff6aa93f099f90776614a19e6",
+            "document_id": "9cef8fd021b95fe176f71cec",
+            "file_name": "cs-curriculum-2024.md",
+            "source": "campus/cs-curriculum-2024.md",
+            "page": null,
+            "section": "2024版计算机科学与技术专业培养方案 / 原文第 72 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 10,
+            "snippet": "九、各类课程学分比例"
+          }
+        ],
+        "candidates": [
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案 / 原文第 64 段",
+              "paragraph": null,
+              "segment_index": 2,
+              "chunk_id": "6604a7a4416c7e196527e43d810a704e",
+              "text": "六、毕业学分",
+              "text_hash": "491cee8ae89dc84469052660a1b2ad02dd6b7433ba137d8b75800f2788551d3d",
+              "start": 0,
+              "end": 6
+            },
+            "score": 13.096650285474205,
+            "rank": 1,
+            "trace": {
+              "bm25_score": 13.096650285474205,
+              "bm25_rank": 1,
+              "selected": 1,
+              "evidence_coverage": 1.0
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案 / 原文第 65 段",
+              "paragraph": null,
+              "segment_index": 3,
+              "chunk_id": "98124a7d09dc64f7d2c448f328fa434a",
+              "text": "173学分（专业培养计划153学分，重点培养计划12学分，创新实践计划4学分，拓展培养计划4学分）。",
+              "text_hash": "52fec49f7820952e45fa27c10a2d7b45d5d5388f69d9b9e09f405c5fcd85b0d1",
+              "start": 0,
+              "end": 50
+            },
+            "score": 4.033282346818534,
+            "rank": 2,
+            "trace": {
+              "bm25_score": 4.033282346818534,
+              "bm25_rank": 2,
+              "selected": 1,
+              "evidence_coverage": 0.5714285714285714
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案 / 原文第 72 段",
+              "paragraph": null,
+              "segment_index": 9,
+              "chunk_id": "3633b60ff6aa93f099f90776614a19e6",
+              "text": "九、各类课程学分比例",
+              "text_hash": "a52c65ce1723f3d2ba028d0040b89fd4dd27ed62ee3a5a285caafde18a04b6d7",
+              "start": 0,
+              "end": 10
+            },
+            "score": 2.7964059966533052,
+            "rank": 3,
+            "trace": {
+              "bm25_score": 2.7964059966533052,
+              "bm25_rank": 3,
+              "selected": 1,
+              "evidence_coverage": 0.42857142857142855
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案 / 原文第 68 段",
+              "paragraph": null,
+              "segment_index": 6,
+              "chunk_id": "c4f0e3a0cecc9dada0c6cab8bbb913f0",
+              "text": "弹性修业年限：3至6年",
+              "text_hash": "60f99563834177bef46fdd82297e453e4667b8fd509ab5795b9e39f6e8fbc4ab",
+              "start": 0,
+              "end": 11
+            },
+            "score": 1.0498961941738312,
+            "rank": 4,
+            "trace": {
+              "bm25_score": 1.0498961941738312,
+              "bm25_rank": 4,
+              "selected": 0,
+              "evidence_coverage": 0.14285714285714285
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案 / 原文第 1 段",
+              "paragraph": null,
+              "segment_index": 1,
+              "chunk_id": "17262ab115fb24b89ab26b3de4edc704",
+              "text": "计算机科学与技术专业培养方案（2024版）",
+              "text_hash": "d6279f60a77b64254fdfe9737b32e6ee09e43c4ca24ad017ded723a42039a0bc",
+              "start": 0,
+              "end": 21
+            },
+            "score": 0.9186219252973185,
+            "rank": 5,
+            "trace": {
+              "bm25_score": 0.9186219252973185,
+              "bm25_rank": 5,
+              "selected": 0,
+              "evidence_coverage": 0.2857142857142857
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案 / 原文第 70 段",
+              "paragraph": null,
+              "segment_index": 8,
+              "chunk_id": "a80cf5a628a8b2a63c956afac6516442",
+              "text": "工学学士学位",
+              "text_hash": "87c6b7ce5b4fb95be680faef9e4e803338bea06bec083a432cb460172d26f7b0",
+              "start": 0,
+              "end": 6
+            },
+            "score": 0.2799588935974433,
+            "rank": 6,
+            "trace": {
+              "bm25_score": 0.2799588935974433,
+              "bm25_rank": 6,
+              "selected": 0,
+              "evidence_coverage": 0.14285714285714285
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案 / 原文第 66 段",
+              "paragraph": null,
+              "segment_index": 4,
+              "chunk_id": "3701d94457aa0c05823e6826d9748715",
+              "text": "七、学制",
+              "text_hash": "0f777d5997580d976bc4fcfccaa0deda777831e883a23bca568d5cc6345f47ca",
+              "start": 0,
+              "end": 4
+            },
+            "score": 0.23257208370382507,
+            "rank": 7,
+            "trace": {
+              "bm25_score": 0.23257208370382507,
+              "bm25_rank": 7,
+              "selected": 0,
+              "evidence_coverage": 0.14285714285714285
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案 / 原文第 69 段",
+              "paragraph": null,
+              "segment_index": 7,
+              "chunk_id": "c8f26f0ca3a3ad21286273a115c64af6",
+              "text": "八、授予学位",
+              "text_hash": "6311703276f1dbcf133d7c8b8e4510e4513a7b6be48f87ea47c076124573a5d8",
+              "start": 0,
+              "end": 6
+            },
+            "score": 0.20627624509409612,
+            "rank": 8,
+            "trace": {
+              "bm25_score": 0.20627624509409612,
+              "bm25_rank": 8,
+              "selected": 0,
+              "evidence_coverage": 0.14285714285714285
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案 / 原文第 67 段",
+              "paragraph": null,
+              "segment_index": 5,
+              "chunk_id": "43211f07c0e4c515f514c489d5b47460",
+              "text": "标准学制：4年",
+              "text_hash": "280e73418507166fff8844c8a98cdef9b0588bb3cedb2067d8dd9bd626bede8b",
+              "start": 0,
+              "end": 7
+            },
+            "score": 0.2006058535062926,
+            "rank": 9,
+            "trace": {
+              "bm25_score": 0.2006058535062926,
+              "bm25_rank": 9,
+              "selected": 0,
+              "evidence_coverage": 0.14285714285714285
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案",
+              "paragraph": null,
+              "segment_index": 0,
+              "chunk_id": "de2daa221606423a5742dafae98d6b39",
+              "text": "> 山东大学（威海） · 2024 年历史资料摘录。仅用于工程演示，不作为当前办事或招生依据。",
+              "text_hash": "55db37b288b872daf3dcbafd631775ee14e7c907fd6cbfe07afd32b8a10711b3",
+              "start": 0,
+              "end": 47
+            },
+            "score": 0.08351774725071236,
+            "rank": 10,
+            "trace": {
+              "bm25_score": 0.08351774725071236,
+              "bm25_rank": 10,
+              "selected": 0,
+              "evidence_coverage": 0.14285714285714285
+            }
+          }
+        ],
+        "refused": false,
+        "evidence_score": 1.0,
+        "threshold": 0.25,
+        "confidence_note": "Lexical token coverage is an evidence gate, not a probability or entailment proof.",
+        "original_query": "毕业学分",
+        "retrieval_query": "毕业学分",
+        "embedding_kind": "MOCK",
+        "source_scope": [
+          "campus/cs-curriculum-2024.md"
+        ]
+      }
+    },
+    {
+      "case_id": "cs-duration",
+      "passed": true,
+      "response": {
+        "mode": "extractive",
+        "answer": "弹性修业年限：3至6年 [C1]",
+        "statements": [
+          {
+            "text": "弹性修业年限：3至6年",
+            "citation_ids": [
+              "C1"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "C1",
+            "chunk_id": "c4f0e3a0cecc9dada0c6cab8bbb913f0",
+            "document_id": "9cef8fd021b95fe176f71cec",
+            "file_name": "cs-curriculum-2024.md",
+            "source": "campus/cs-curriculum-2024.md",
+            "page": null,
+            "section": "2024版计算机科学与技术专业培养方案 / 原文第 68 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 11,
+            "snippet": "弹性修业年限：3至6年"
+          }
+        ],
+        "candidates": [
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案 / 原文第 68 段",
+              "paragraph": null,
+              "segment_index": 6,
+              "chunk_id": "c4f0e3a0cecc9dada0c6cab8bbb913f0",
+              "text": "弹性修业年限：3至6年",
+              "text_hash": "60f99563834177bef46fdd82297e453e4667b8fd509ab5795b9e39f6e8fbc4ab",
+              "start": 0,
+              "end": 11
+            },
+            "score": 23.943278581514697,
+            "rank": 1,
+            "trace": {
+              "bm25_score": 23.943278581514697,
+              "bm25_rank": 1,
+              "selected": 1,
+              "evidence_coverage": 1.0
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案 / 原文第 67 段",
+              "paragraph": null,
+              "segment_index": 5,
+              "chunk_id": "43211f07c0e4c515f514c489d5b47460",
+              "text": "标准学制：4年",
+              "text_hash": "280e73418507166fff8844c8a98cdef9b0588bb3cedb2067d8dd9bd626bede8b",
+              "start": 0,
+              "end": 7
+            },
+            "score": 1.5669495184109503,
+            "rank": 2,
+            "trace": {
+              "bm25_score": 1.5669495184109503,
+              "bm25_rank": 2,
+              "selected": 1,
+              "evidence_coverage": 0.09090909090909091
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案 / 原文第 64 段",
+              "paragraph": null,
+              "segment_index": 2,
+              "chunk_id": "6604a7a4416c7e196527e43d810a704e",
+              "text": "六、毕业学分",
+              "text_hash": "491cee8ae89dc84469052660a1b2ad02dd6b7433ba137d8b75800f2788551d3d",
+              "start": 0,
+              "end": 6
+            },
+            "score": 1.2576331923928996,
+            "rank": 3,
+            "trace": {
+              "bm25_score": 1.2576331923928996,
+              "bm25_rank": 3,
+              "selected": 1,
+              "evidence_coverage": 0.09090909090909091
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案 / 原文第 1 段",
+              "paragraph": null,
+              "segment_index": 1,
+              "chunk_id": "17262ab115fb24b89ab26b3de4edc704",
+              "text": "计算机科学与技术专业培养方案（2024版）",
+              "text_hash": "d6279f60a77b64254fdfe9737b32e6ee09e43c4ca24ad017ded723a42039a0bc",
+              "start": 0,
+              "end": 21
+            },
+            "score": 0.7891809390183271,
+            "rank": 4,
+            "trace": {
+              "bm25_score": 0.7891809390183271,
+              "bm25_rank": 4,
+              "selected": 0,
+              "evidence_coverage": 0.09090909090909091
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案",
+              "paragraph": null,
+              "segment_index": 0,
+              "chunk_id": "de2daa221606423a5742dafae98d6b39",
+              "text": "> 山东大学（威海） · 2024 年历史资料摘录。仅用于工程演示，不作为当前办事或招生依据。",
+              "text_hash": "55db37b288b872daf3dcbafd631775ee14e7c907fd6cbfe07afd32b8a10711b3",
+              "start": 0,
+              "end": 47
+            },
+            "score": 0.6523642832244978,
+            "rank": 5,
+            "trace": {
+              "bm25_score": 0.6523642832244978,
+              "bm25_rank": 5,
+              "selected": 0,
+              "evidence_coverage": 0.09090909090909091
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案 / 原文第 65 段",
+              "paragraph": null,
+              "segment_index": 3,
+              "chunk_id": "98124a7d09dc64f7d2c448f328fa434a",
+              "text": "173学分（专业培养计划153学分，重点培养计划12学分，创新实践计划4学分，拓展培养计划4学分）。",
+              "text_hash": "52fec49f7820952e45fa27c10a2d7b45d5d5388f69d9b9e09f405c5fcd85b0d1",
+              "start": 0,
+              "end": 50
+            },
+            "score": 0.48690467954511085,
+            "rank": 6,
+            "trace": {
+              "bm25_score": 0.48690467954511085,
+              "bm25_rank": 6,
+              "selected": 0,
+              "evidence_coverage": 0.09090909090909091
+            }
+          }
+        ],
+        "refused": false,
+        "evidence_score": 1.0,
+        "threshold": 0.25,
+        "confidence_note": "Lexical token coverage is an evidence gate, not a probability or entailment proof.",
+        "original_query": "弹性修业年限",
+        "retrieval_query": "弹性修业年限",
+        "embedding_kind": "MOCK",
+        "source_scope": [
+          "campus/cs-curriculum-2024.md"
+        ]
+      }
+    },
+    {
+      "case_id": "cs-degree",
+      "passed": true,
+      "response": {
+        "mode": "extractive",
+        "answer": "工学学士学位 [C1]\n\n八、授予学位 [C2]",
+        "statements": [
+          {
+            "text": "工学学士学位",
+            "citation_ids": [
+              "C1"
+            ]
+          },
+          {
+            "text": "八、授予学位",
+            "citation_ids": [
+              "C2"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "C1",
+            "chunk_id": "a80cf5a628a8b2a63c956afac6516442",
+            "document_id": "9cef8fd021b95fe176f71cec",
+            "file_name": "cs-curriculum-2024.md",
+            "source": "campus/cs-curriculum-2024.md",
+            "page": null,
+            "section": "2024版计算机科学与技术专业培养方案 / 原文第 70 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 6,
+            "snippet": "工学学士学位"
+          },
+          {
+            "citation_id": "C2",
+            "chunk_id": "c8f26f0ca3a3ad21286273a115c64af6",
+            "document_id": "9cef8fd021b95fe176f71cec",
+            "file_name": "cs-curriculum-2024.md",
+            "source": "campus/cs-curriculum-2024.md",
+            "page": null,
+            "section": "2024版计算机科学与技术专业培养方案 / 原文第 69 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 6,
+            "snippet": "八、授予学位"
+          }
+        ],
+        "candidates": [
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案 / 原文第 70 段",
+              "paragraph": null,
+              "segment_index": 8,
+              "chunk_id": "a80cf5a628a8b2a63c956afac6516442",
+              "text": "工学学士学位",
+              "text_hash": "87c6b7ce5b4fb95be680faef9e4e803338bea06bec083a432cb460172d26f7b0",
+              "start": 0,
+              "end": 6
+            },
+            "score": 18.966467497848186,
+            "rank": 1,
+            "trace": {
+              "bm25_score": 18.966467497848186,
+              "bm25_rank": 1,
+              "selected": 1,
+              "evidence_coverage": 1.0
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案 / 原文第 69 段",
+              "paragraph": null,
+              "segment_index": 7,
+              "chunk_id": "c8f26f0ca3a3ad21286273a115c64af6",
+              "text": "八、授予学位",
+              "text_hash": "6311703276f1dbcf133d7c8b8e4510e4513a7b6be48f87ea47c076124573a5d8",
+              "start": 0,
+              "end": 6
+            },
+            "score": 4.37561565674013,
+            "rank": 2,
+            "trace": {
+              "bm25_score": 4.37561565674013,
+              "bm25_rank": 2,
+              "selected": 1,
+              "evidence_coverage": 0.3333333333333333
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案",
+              "paragraph": null,
+              "segment_index": 0,
+              "chunk_id": "de2daa221606423a5742dafae98d6b39",
+              "text": "> 山东大学（威海） · 2024 年历史资料摘录。仅用于工程演示，不作为当前办事或招生依据。",
+              "text_hash": "55db37b288b872daf3dcbafd631775ee14e7c907fd6cbfe07afd32b8a10711b3",
+              "start": 0,
+              "end": 47
+            },
+            "score": 0.9275650950813946,
+            "rank": 3,
+            "trace": {
+              "bm25_score": 0.9275650950813946,
+              "bm25_rank": 3,
+              "selected": 1,
+              "evidence_coverage": 0.2222222222222222
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案 / 原文第 66 段",
+              "paragraph": null,
+              "segment_index": 4,
+              "chunk_id": "3701d94457aa0c05823e6826d9748715",
+              "text": "七、学制",
+              "text_hash": "0f777d5997580d976bc4fcfccaa0deda777831e883a23bca568d5cc6345f47ca",
+              "start": 0,
+              "end": 4
+            },
+            "score": 0.23257208370382507,
+            "rank": 4,
+            "trace": {
+              "bm25_score": 0.23257208370382507,
+              "bm25_rank": 4,
+              "selected": 0,
+              "evidence_coverage": 0.1111111111111111
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案 / 原文第 65 段",
+              "paragraph": null,
+              "segment_index": 3,
+              "chunk_id": "98124a7d09dc64f7d2c448f328fa434a",
+              "text": "173学分（专业培养计划153学分，重点培养计划12学分，创新实践计划4学分，拓展培养计划4学分）。",
+              "text_hash": "52fec49f7820952e45fa27c10a2d7b45d5d5388f69d9b9e09f405c5fcd85b0d1",
+              "start": 0,
+              "end": 50
+            },
+            "score": 0.21335224934368566,
+            "rank": 5,
+            "trace": {
+              "bm25_score": 0.21335224934368566,
+              "bm25_rank": 5,
+              "selected": 0,
+              "evidence_coverage": 0.1111111111111111
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案 / 原文第 64 段",
+              "paragraph": null,
+              "segment_index": 2,
+              "chunk_id": "6604a7a4416c7e196527e43d810a704e",
+              "text": "六、毕业学分",
+              "text_hash": "491cee8ae89dc84469052660a1b2ad02dd6b7433ba137d8b75800f2788551d3d",
+              "start": 0,
+              "end": 6
+            },
+            "score": 0.20627624509409612,
+            "rank": 6,
+            "trace": {
+              "bm25_score": 0.20627624509409612,
+              "bm25_rank": 6,
+              "selected": 0,
+              "evidence_coverage": 0.1111111111111111
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案 / 原文第 67 段",
+              "paragraph": null,
+              "segment_index": 5,
+              "chunk_id": "43211f07c0e4c515f514c489d5b47460",
+              "text": "标准学制：4年",
+              "text_hash": "280e73418507166fff8844c8a98cdef9b0588bb3cedb2067d8dd9bd626bede8b",
+              "start": 0,
+              "end": 7
+            },
+            "score": 0.2006058535062926,
+            "rank": 7,
+            "trace": {
+              "bm25_score": 0.2006058535062926,
+              "bm25_rank": 7,
+              "selected": 0,
+              "evidence_coverage": 0.1111111111111111
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案 / 原文第 72 段",
+              "paragraph": null,
+              "segment_index": 9,
+              "chunk_id": "3633b60ff6aa93f099f90776614a19e6",
+              "text": "九、各类课程学分比例",
+              "text_hash": "a52c65ce1723f3d2ba028d0040b89fd4dd27ed62ee3a5a285caafde18a04b6d7",
+              "start": 0,
+              "end": 10
+            },
+            "score": 0.16823349497428328,
+            "rank": 8,
+            "trace": {
+              "bm25_score": 0.16823349497428328,
+              "bm25_rank": 8,
+              "selected": 0,
+              "evidence_coverage": 0.1111111111111111
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "9cef8fd021b95fe176f71cec",
+              "file_name": "cs-curriculum-2024.md",
+              "source": "campus/cs-curriculum-2024.md",
+              "page": null,
+              "section": "2024版计算机科学与技术专业培养方案 / 原文第 1 段",
+              "paragraph": null,
+              "segment_index": 1,
+              "chunk_id": "17262ab115fb24b89ab26b3de4edc704",
+              "text": "计算机科学与技术专业培养方案（2024版）",
+              "text_hash": "d6279f60a77b64254fdfe9737b32e6ee09e43c4ca24ad017ded723a42039a0bc",
+              "start": 0,
+              "end": 21
+            },
+            "score": 0.12944098627899134,
+            "rank": 9,
+            "trace": {
+              "bm25_score": 0.12944098627899134,
+              "bm25_rank": 9,
+              "selected": 0,
+              "evidence_coverage": 0.1111111111111111
+            }
+          }
+        ],
+        "refused": false,
+        "evidence_score": 1.0,
+        "threshold": 0.25,
+        "confidence_note": "Lexical token coverage is an evidence gate, not a probability or entailment proof.",
+        "original_query": "工学学士学位",
+        "retrieval_query": "工学学士学位",
+        "embedding_kind": "MOCK",
+        "source_scope": [
+          "campus/cs-curriculum-2024.md"
+        ]
+      }
+    },
+    {
+      "case_id": "ai-duration",
+      "passed": true,
+      "response": {
+        "mode": "extractive",
+        "answer": "弹性修业年限：4至6年 [C1]",
+        "statements": [
+          {
+            "text": "弹性修业年限：4至6年",
+            "citation_ids": [
+              "C1"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "C1",
+            "chunk_id": "1015213f40ca5ed7da8e7d7c4019b717",
+            "document_id": "bcdab7d2dbabfb7b4ace23c8",
+            "file_name": "ai-curriculum-2024.md",
+            "source": "campus/ai-curriculum-2024.md",
+            "page": null,
+            "section": "2024版人工智能专业培养方案-改 / 原文第 65 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 11,
+            "snippet": "弹性修业年限：4至6年"
+          }
+        ],
+        "candidates": [
+          {
+            "chunk": {
+              "document_id": "bcdab7d2dbabfb7b4ace23c8",
+              "file_name": "ai-curriculum-2024.md",
+              "source": "campus/ai-curriculum-2024.md",
+              "page": null,
+              "section": "2024版人工智能专业培养方案-改 / 原文第 65 段",
+              "paragraph": null,
+              "segment_index": 6,
+              "chunk_id": "1015213f40ca5ed7da8e7d7c4019b717",
+              "text": "弹性修业年限：4至6年",
+              "text_hash": "fd7f615dd17aad747afcfb3f8fd6e849623ccfddda693f22eee1d5ee94081081",
+              "start": 0,
+              "end": 11
+            },
+            "score": 22.608908086792592,
+            "rank": 1,
+            "trace": {
+              "bm25_score": 22.608908086792592,
+              "bm25_rank": 1,
+              "selected": 1,
+              "evidence_coverage": 1.0
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "bcdab7d2dbabfb7b4ace23c8",
+              "file_name": "ai-curriculum-2024.md",
+              "source": "campus/ai-curriculum-2024.md",
+              "page": null,
+              "section": "2024版人工智能专业培养方案-改 / 原文第 64 段",
+              "paragraph": null,
+              "segment_index": 5,
+              "chunk_id": "b061b6040bbaee1382f8d8e1ca755890",
+              "text": "标准学制：4年",
+              "text_hash": "280e73418507166fff8844c8a98cdef9b0588bb3cedb2067d8dd9bd626bede8b",
+              "start": 0,
+              "end": 7
+            },
+            "score": 1.4336935807424755,
+            "rank": 2,
+            "trace": {
+              "bm25_score": 1.4336935807424755,
+              "bm25_rank": 2,
+              "selected": 1,
+              "evidence_coverage": 0.09090909090909091
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "bcdab7d2dbabfb7b4ace23c8",
+              "file_name": "ai-curriculum-2024.md",
+              "source": "campus/ai-curriculum-2024.md",
+              "page": null,
+              "section": "2024版人工智能专业培养方案-改 / 原文第 61 段",
+              "paragraph": null,
+              "segment_index": 2,
+              "chunk_id": "f44ecd0614d5e65f556587fa011f87ef",
+              "text": "六、毕业学分",
+              "text_hash": "491cee8ae89dc84469052660a1b2ad02dd6b7433ba137d8b75800f2788551d3d",
+              "start": 0,
+              "end": 6
+            },
+            "score": 1.121499573339567,
+            "rank": 3,
+            "trace": {
+              "bm25_score": 1.121499573339567,
+              "bm25_rank": 3,
+              "selected": 1,
+              "evidence_coverage": 0.09090909090909091
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "bcdab7d2dbabfb7b4ace23c8",
+              "file_name": "ai-curriculum-2024.md",
+              "source": "campus/ai-curriculum-2024.md",
+              "page": null,
+              "section": "2024版人工智能专业培养方案-改 / 原文第 1 段",
+              "paragraph": null,
+              "segment_index": 1,
+              "chunk_id": "e9b029228f876fdbe534ce05cc470063",
+              "text": "人工智能专业培养方案（2024版）",
+              "text_hash": "f240dc216b06fc294d28407bf79e61b445528b66d8aa053add36ea70896fdae6",
+              "start": 0,
+              "end": 17
+            },
+            "score": 0.8187723109128651,
+            "rank": 4,
+            "trace": {
+              "bm25_score": 0.8187723109128651,
+              "bm25_rank": 4,
+              "selected": 0,
+              "evidence_coverage": 0.09090909090909091
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "bcdab7d2dbabfb7b4ace23c8",
+              "file_name": "ai-curriculum-2024.md",
+              "source": "campus/ai-curriculum-2024.md",
+              "page": null,
+              "section": "2024版人工智能专业培养方案-改",
+              "paragraph": null,
+              "segment_index": 0,
+              "chunk_id": "7ec07db8e862c1511839dc8bd5f55ba1",
+              "text": "> 山东大学（威海） · 2024 年历史资料摘录。仅用于工程演示，不作为当前办事或招生依据。",
+              "text_hash": "55db37b288b872daf3dcbafd631775ee14e7c907fd6cbfe07afd32b8a10711b3",
+              "start": 0,
+              "end": 47
+            },
+            "score": 0.5948000705374945,
+            "rank": 5,
+            "trace": {
+              "bm25_score": 0.5948000705374945,
+              "bm25_rank": 5,
+              "selected": 0,
+              "evidence_coverage": 0.09090909090909091
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "bcdab7d2dbabfb7b4ace23c8",
+              "file_name": "ai-curriculum-2024.md",
+              "source": "campus/ai-curriculum-2024.md",
+              "page": null,
+              "section": "2024版人工智能专业培养方案-改 / 原文第 62 段",
+              "paragraph": null,
+              "segment_index": 3,
+              "chunk_id": "3cb6d3c4c6654ec9b2cbcaeaa29e17d4",
+              "text": "173学分（专业培养计划153学分，重点培养计划12学分，创新实践计划4学分，拓展培养计划4学分）。",
+              "text_hash": "52fec49f7820952e45fa27c10a2d7b45d5d5388f69d9b9e09f405c5fcd85b0d1",
+              "start": 0,
+              "end": 50
+            },
+            "score": 0.4325610488720323,
+            "rank": 6,
+            "trace": {
+              "bm25_score": 0.4325610488720323,
+              "bm25_rank": 6,
+              "selected": 0,
+              "evidence_coverage": 0.09090909090909091
+            }
+          }
+        ],
+        "refused": false,
+        "evidence_score": 1.0,
+        "threshold": 0.25,
+        "confidence_note": "Lexical token coverage is an evidence gate, not a probability or entailment proof.",
+        "original_query": "弹性修业年限",
+        "retrieval_query": "弹性修业年限",
+        "embedding_kind": "MOCK",
+        "source_scope": [
+          "campus/ai-curriculum-2024.md"
+        ]
+      }
+    },
+    {
+      "case_id": "physics-credits",
+      "passed": true,
+      "response": {
+        "mode": "extractive",
+        "answer": "六、毕业学分 179学分 [C1]\n\n毕业学分由专业培养计划学分、重点提升计划学分、创新实践计划学分、拓展培养计划学分四部分构成。其中，专业培养计划学分159学分，重点提升计划学分8学分，创新实践计划学分4学分，拓展培养计划学分8学分。总学分中必须修读至少2学分的“国际学分”，方可获得毕业资格！ [C2]\n\n物理学专业培养方案（2023）（中文版） [C3]",
+        "statements": [
+          {
+            "text": "六、毕业学分 179学分",
+            "citation_ids": [
+              "C1"
+            ]
+          },
+          {
+            "text": "毕业学分由专业培养计划学分、重点提升计划学分、创新实践计划学分、拓展培养计划学分四部分构成。其中，专业培养计划学分159学分，重点提升计划学分8学分，创新实践计划学分4学分，拓展培养计划学分8学分。总学分中必须修读至少2学分的“国际学分”，方可获得毕业资格！",
+            "citation_ids": [
+              "C2"
+            ]
+          },
+          {
+            "text": "物理学专业培养方案（2023）（中文版）",
+            "citation_ids": [
+              "C3"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "C1",
+            "chunk_id": "bfa8a4766003f1cff671730d7f3c76a1",
+            "document_id": "c09d5c6dc5850a5a9936d96a",
+            "file_name": "physics-curriculum-2023.md",
+            "source": "campus/physics-curriculum-2023.md",
+            "page": null,
+            "section": "物理学专业2023级培养方案 / 原文第 32 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 12,
+            "snippet": "六、毕业学分 179学分"
+          },
+          {
+            "citation_id": "C2",
+            "chunk_id": "0459b414eb756428173e37063fb26b31",
+            "document_id": "c09d5c6dc5850a5a9936d96a",
+            "file_name": "physics-curriculum-2023.md",
+            "source": "campus/physics-curriculum-2023.md",
+            "page": null,
+            "section": "物理学专业2023级培养方案 / 原文第 33 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 129,
+            "snippet": "毕业学分由专业培养计划学分、重点提升计划学分、创新实践计划学分、拓展培养计划学分四部分构成。其中，专业培养计划学分159学分，重点提升计划学分8学分，创新实践计划学分4学分，拓展培养计划学分8学分。总学分中必须修读至少2学分的“国际学分”，方可获得毕业资格！"
+          },
+          {
+            "citation_id": "C3",
+            "chunk_id": "abc805c179d8b685abbe8b60e9bd1d9b",
+            "document_id": "c09d5c6dc5850a5a9936d96a",
+            "file_name": "physics-curriculum-2023.md",
+            "source": "campus/physics-curriculum-2023.md",
+            "page": null,
+            "section": "物理学专业2023级培养方案 / 原文第 1 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 20,
+            "snippet": "物理学专业培养方案（2023）（中文版）"
+          }
+        ],
+        "candidates": [
+          {
+            "chunk": {
+              "document_id": "c09d5c6dc5850a5a9936d96a",
+              "file_name": "physics-curriculum-2023.md",
+              "source": "campus/physics-curriculum-2023.md",
+              "page": null,
+              "section": "物理学专业2023级培养方案 / 原文第 32 段",
+              "paragraph": null,
+              "segment_index": 2,
+              "chunk_id": "bfa8a4766003f1cff671730d7f3c76a1",
+              "text": "六、毕业学分 179学分",
+              "text_hash": "ab9ab2a9527548f1aec9c09397751f1d57ae0a57e2e9ef445f847a779a19441a",
+              "start": 0,
+              "end": 12
+            },
+            "score": 9.889860154944506,
+            "rank": 1,
+            "trace": {
+              "bm25_score": 9.889860154944506,
+              "bm25_rank": 1,
+              "selected": 1,
+              "evidence_coverage": 1.0
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "c09d5c6dc5850a5a9936d96a",
+              "file_name": "physics-curriculum-2023.md",
+              "source": "campus/physics-curriculum-2023.md",
+              "page": null,
+              "section": "物理学专业2023级培养方案 / 原文第 33 段",
+              "paragraph": null,
+              "segment_index": 3,
+              "chunk_id": "0459b414eb756428173e37063fb26b31",
+              "text": "毕业学分由专业培养计划学分、重点提升计划学分、创新实践计划学分、拓展培养计划学分四部分构成。其中，专业培养计划学分159学分，重点提升计划学分8学分，创新实践计划学分4学分，拓展培养计划学分8学分。总学分中必须修读至少2学分的“国际学分”，方可获得毕业资格！",
+              "text_hash": "9069b93e466871df9a039a5f1a1c7d5e4feae07dcb3ccfdfaefdb75dd93898e2",
+              "start": 0,
+              "end": 129
+            },
+            "score": 6.970206422521937,
+            "rank": 2,
+            "trace": {
+              "bm25_score": 6.970206422521937,
+              "bm25_rank": 2,
+              "selected": 1,
+              "evidence_coverage": 1.0
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "c09d5c6dc5850a5a9936d96a",
+              "file_name": "physics-curriculum-2023.md",
+              "source": "campus/physics-curriculum-2023.md",
+              "page": null,
+              "section": "物理学专业2023级培养方案 / 原文第 1 段",
+              "paragraph": null,
+              "segment_index": 1,
+              "chunk_id": "abc805c179d8b685abbe8b60e9bd1d9b",
+              "text": "物理学专业培养方案（2023）（中文版）",
+              "text_hash": "7d0989658f4c5bfabdf7b9e6b39f0198f096bea493aa5e294909942ebccdccfb",
+              "start": 0,
+              "end": 20
+            },
+            "score": 1.0361440753299729,
+            "rank": 3,
+            "trace": {
+              "bm25_score": 1.0361440753299729,
+              "bm25_rank": 3,
+              "selected": 1,
+              "evidence_coverage": 0.2857142857142857
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "c09d5c6dc5850a5a9936d96a",
+              "file_name": "physics-curriculum-2023.md",
+              "source": "campus/physics-curriculum-2023.md",
+              "page": null,
+              "section": "物理学专业2023级培养方案 / 原文第 36 段",
+              "paragraph": null,
+              "segment_index": 5,
+              "chunk_id": "1cd8bd0076f18f5ce0382d9c782831c3",
+              "text": "八、授予学位 理学学士",
+              "text_hash": "0d3d96c9f48346e751bbd537d67b72ddbdd6a34a3a532a1de612ea5980918b28",
+              "start": 0,
+              "end": 11
+            },
+            "score": 0.15080648515676226,
+            "rank": 4,
+            "trace": {
+              "bm25_score": 0.15080648515676226,
+              "bm25_rank": 4,
+              "selected": 0,
+              "evidence_coverage": 0.14285714285714285
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "c09d5c6dc5850a5a9936d96a",
+              "file_name": "physics-curriculum-2023.md",
+              "source": "campus/physics-curriculum-2023.md",
+              "page": null,
+              "section": "物理学专业2023级培养方案 / 原文第 34 段",
+              "paragraph": null,
+              "segment_index": 4,
+              "chunk_id": "a40caf2dda7845e9052a29c1691f4fd2",
+              "text": "七、标准学制 4年",
+              "text_hash": "133df91a44c6bedd4477803ead147627034b1afad6da055ae813e565cbe00293",
+              "start": 0,
+              "end": 9
+            },
+            "score": 0.11710712032047173,
+            "rank": 5,
+            "trace": {
+              "bm25_score": 0.11710712032047173,
+              "bm25_rank": 5,
+              "selected": 0,
+              "evidence_coverage": 0.14285714285714285
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "c09d5c6dc5850a5a9936d96a",
+              "file_name": "physics-curriculum-2023.md",
+              "source": "campus/physics-curriculum-2023.md",
+              "page": null,
+              "section": "物理学专业2023级培养方案",
+              "paragraph": null,
+              "segment_index": 0,
+              "chunk_id": "8b530681f39d7c15def77d49f32c580e",
+              "text": "> 山东大学（威海） · 2023 年历史资料摘录。仅用于工程演示，不作为当前办事或招生依据。",
+              "text_hash": "148c573224a61084e79a404ab6103802186faac622fd04826f4ca2bc5c2214b1",
+              "start": 0,
+              "end": 47
+            },
+            "score": 0.07078581576945009,
+            "rank": 6,
+            "trace": {
+              "bm25_score": 0.07078581576945009,
+              "bm25_rank": 6,
+              "selected": 0,
+              "evidence_coverage": 0.14285714285714285
+            }
+          }
+        ],
+        "refused": false,
+        "evidence_score": 1.0,
+        "threshold": 0.25,
+        "confidence_note": "Lexical token coverage is an evidence gate, not a probability or entailment proof.",
+        "original_query": "毕业学分",
+        "retrieval_query": "毕业学分",
+        "embedding_kind": "MOCK",
+        "source_scope": [
+          "campus/physics-curriculum-2023.md"
+        ]
+      }
+    },
+    {
+      "case_id": "physics-international",
+      "passed": true,
+      "response": {
+        "mode": "extractive",
+        "answer": "毕业学分由专业培养计划学分、重点提升计划学分、创新实践计划学分、拓展培养计划学分四部分构成。其中，专业培养计划学分159学分，重点提升计划学分8学分，创新实践计划学分4学分，拓展培养计划学分8学分。总学分中必须修读至少2学分的“国际学分”，方可获得毕业资格！ [C1]\n\n六、毕业学分 179学分 [C2]",
+        "statements": [
+          {
+            "text": "毕业学分由专业培养计划学分、重点提升计划学分、创新实践计划学分、拓展培养计划学分四部分构成。其中，专业培养计划学分159学分，重点提升计划学分8学分，创新实践计划学分4学分，拓展培养计划学分8学分。总学分中必须修读至少2学分的“国际学分”，方可获得毕业资格！",
+            "citation_ids": [
+              "C1"
+            ]
+          },
+          {
+            "text": "六、毕业学分 179学分",
+            "citation_ids": [
+              "C2"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "C1",
+            "chunk_id": "0459b414eb756428173e37063fb26b31",
+            "document_id": "c09d5c6dc5850a5a9936d96a",
+            "file_name": "physics-curriculum-2023.md",
+            "source": "campus/physics-curriculum-2023.md",
+            "page": null,
+            "section": "物理学专业2023级培养方案 / 原文第 33 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 129,
+            "snippet": "毕业学分由专业培养计划学分、重点提升计划学分、创新实践计划学分、拓展培养计划学分四部分构成。其中，专业培养计划学分159学分，重点提升计划学分8学分，创新实践计划学分4学分，拓展培养计划学分8学分。总学分中必须修读至少2学分的“国际学分”，方可获得毕业资格！"
+          },
+          {
+            "citation_id": "C2",
+            "chunk_id": "bfa8a4766003f1cff671730d7f3c76a1",
+            "document_id": "c09d5c6dc5850a5a9936d96a",
+            "file_name": "physics-curriculum-2023.md",
+            "source": "campus/physics-curriculum-2023.md",
+            "page": null,
+            "section": "物理学专业2023级培养方案 / 原文第 32 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 12,
+            "snippet": "六、毕业学分 179学分"
+          }
+        ],
+        "candidates": [
+          {
+            "chunk": {
+              "document_id": "c09d5c6dc5850a5a9936d96a",
+              "file_name": "physics-curriculum-2023.md",
+              "source": "campus/physics-curriculum-2023.md",
+              "page": null,
+              "section": "物理学专业2023级培养方案 / 原文第 33 段",
+              "paragraph": null,
+              "segment_index": 3,
+              "chunk_id": "0459b414eb756428173e37063fb26b31",
+              "text": "毕业学分由专业培养计划学分、重点提升计划学分、创新实践计划学分、拓展培养计划学分四部分构成。其中，专业培养计划学分159学分，重点提升计划学分8学分，创新实践计划学分4学分，拓展培养计划学分8学分。总学分中必须修读至少2学分的“国际学分”，方可获得毕业资格！",
+              "text_hash": "9069b93e466871df9a039a5f1a1c7d5e4feae07dcb3ccfdfaefdb75dd93898e2",
+              "start": 0,
+              "end": 129
+            },
+            "score": 6.892189069121986,
+            "rank": 1,
+            "trace": {
+              "bm25_score": 6.892189069121986,
+              "bm25_rank": 1,
+              "selected": 1,
+              "evidence_coverage": 1.0
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "c09d5c6dc5850a5a9936d96a",
+              "file_name": "physics-curriculum-2023.md",
+              "source": "campus/physics-curriculum-2023.md",
+              "page": null,
+              "section": "物理学专业2023级培养方案 / 原文第 32 段",
+              "paragraph": null,
+              "segment_index": 2,
+              "chunk_id": "bfa8a4766003f1cff671730d7f3c76a1",
+              "text": "六、毕业学分 179学分",
+              "text_hash": "ab9ab2a9527548f1aec9c09397751f1d57ae0a57e2e9ef445f847a779a19441a",
+              "start": 0,
+              "end": 12
+            },
+            "score": 4.065893358224077,
+            "rank": 2,
+            "trace": {
+              "bm25_score": 4.065893358224077,
+              "bm25_rank": 2,
+              "selected": 1,
+              "evidence_coverage": 0.42857142857142855
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "c09d5c6dc5850a5a9936d96a",
+              "file_name": "physics-curriculum-2023.md",
+              "source": "campus/physics-curriculum-2023.md",
+              "page": null,
+              "section": "物理学专业2023级培养方案 / 原文第 36 段",
+              "paragraph": null,
+              "segment_index": 5,
+              "chunk_id": "1cd8bd0076f18f5ce0382d9c782831c3",
+              "text": "八、授予学位 理学学士",
+              "text_hash": "0d3d96c9f48346e751bbd537d67b72ddbdd6a34a3a532a1de612ea5980918b28",
+              "start": 0,
+              "end": 11
+            },
+            "score": 0.15080648515676226,
+            "rank": 3,
+            "trace": {
+              "bm25_score": 0.15080648515676226,
+              "bm25_rank": 3,
+              "selected": 1,
+              "evidence_coverage": 0.14285714285714285
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "c09d5c6dc5850a5a9936d96a",
+              "file_name": "physics-curriculum-2023.md",
+              "source": "campus/physics-curriculum-2023.md",
+              "page": null,
+              "section": "物理学专业2023级培养方案 / 原文第 34 段",
+              "paragraph": null,
+              "segment_index": 4,
+              "chunk_id": "a40caf2dda7845e9052a29c1691f4fd2",
+              "text": "七、标准学制 4年",
+              "text_hash": "133df91a44c6bedd4477803ead147627034b1afad6da055ae813e565cbe00293",
+              "start": 0,
+              "end": 9
+            },
+            "score": 0.11710712032047173,
+            "rank": 4,
+            "trace": {
+              "bm25_score": 0.11710712032047173,
+              "bm25_rank": 4,
+              "selected": 0,
+              "evidence_coverage": 0.14285714285714285
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "c09d5c6dc5850a5a9936d96a",
+              "file_name": "physics-curriculum-2023.md",
+              "source": "campus/physics-curriculum-2023.md",
+              "page": null,
+              "section": "物理学专业2023级培养方案 / 原文第 1 段",
+              "paragraph": null,
+              "segment_index": 1,
+              "chunk_id": "abc805c179d8b685abbe8b60e9bd1d9b",
+              "text": "物理学专业培养方案（2023）（中文版）",
+              "text_hash": "7d0989658f4c5bfabdf7b9e6b39f0198f096bea493aa5e294909942ebccdccfb",
+              "start": 0,
+              "end": 20
+            },
+            "score": 0.1000795315746202,
+            "rank": 5,
+            "trace": {
+              "bm25_score": 0.1000795315746202,
+              "bm25_rank": 5,
+              "selected": 0,
+              "evidence_coverage": 0.14285714285714285
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "c09d5c6dc5850a5a9936d96a",
+              "file_name": "physics-curriculum-2023.md",
+              "source": "campus/physics-curriculum-2023.md",
+              "page": null,
+              "section": "物理学专业2023级培养方案",
+              "paragraph": null,
+              "segment_index": 0,
+              "chunk_id": "8b530681f39d7c15def77d49f32c580e",
+              "text": "> 山东大学（威海） · 2023 年历史资料摘录。仅用于工程演示，不作为当前办事或招生依据。",
+              "text_hash": "148c573224a61084e79a404ab6103802186faac622fd04826f4ca2bc5c2214b1",
+              "start": 0,
+              "end": 47
+            },
+            "score": 0.07078581576945009,
+            "rank": 6,
+            "trace": {
+              "bm25_score": 0.07078581576945009,
+              "bm25_rank": 6,
+              "selected": 0,
+              "evidence_coverage": 0.14285714285714285
+            }
+          }
+        ],
+        "refused": false,
+        "evidence_score": 1.0,
+        "threshold": 0.25,
+        "confidence_note": "Lexical token coverage is an evidence gate, not a probability or entailment proof.",
+        "original_query": "国际学分",
+        "retrieval_query": "国际学分",
+        "embedding_kind": "MOCK",
+        "source_scope": [
+          "campus/physics-curriculum-2023.md"
+        ]
+      }
+    },
+    {
+      "case_id": "navigation-quota",
+      "passed": true,
+      "response": {
+        "mode": "extractive",
+        "answer": "面向空间科学与物理学院2024级学生，择优录取30名，若选拔考试中最后一名出现同分情况，可同时录取同分学生。按照有关规定不允许转专业的不得报名。 [C1]\n\n1、选拔考试采用笔试与面试相结合的形式，总成绩中笔试与面试成绩各占50%，按总成绩排名确定录取名单。 [C2]",
+        "statements": [
+          {
+            "text": "面向空间科学与物理学院2024级学生，择优录取30名，若选拔考试中最后一名出现同分情况，可同时录取同分学生。按照有关规定不允许转专业的不得报名。",
+            "citation_ids": [
+              "C1"
+            ]
+          },
+          {
+            "text": "1、选拔考试采用笔试与面试相结合的形式，总成绩中笔试与面试成绩各占50%，按总成绩排名确定录取名单。",
+            "citation_ids": [
+              "C2"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "C1",
+            "chunk_id": "e58a646ddf065c94143a37cace052e8b",
+            "document_id": "27828fb682a2943d65565099",
+            "file_name": "navigation-admission-2024.md",
+            "source": "campus/navigation-admission-2024.md",
+            "page": null,
+            "section": "2024级“智能导航特色班”招生简章 / 原文第 14 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 72,
+            "snippet": "面向空间科学与物理学院2024级学生，择优录取30名，若选拔考试中最后一名出现同分情况，可同时录取同分学生。按照有关规定不允许转专业的不得报名。"
+          },
+          {
+            "citation_id": "C2",
+            "chunk_id": "374cebe99cc9ef9d49b945e9db136574",
+            "document_id": "27828fb682a2943d65565099",
+            "file_name": "navigation-admission-2024.md",
+            "source": "campus/navigation-admission-2024.md",
+            "page": null,
+            "section": "2024级“智能导航特色班”招生简章 / 原文第 16 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 50,
+            "snippet": "1、选拔考试采用笔试与面试相结合的形式，总成绩中笔试与面试成绩各占50%，按总成绩排名确定录取名单。"
+          }
+        ],
+        "candidates": [
+          {
+            "chunk": {
+              "document_id": "27828fb682a2943d65565099",
+              "file_name": "navigation-admission-2024.md",
+              "source": "campus/navigation-admission-2024.md",
+              "page": null,
+              "section": "2024级“智能导航特色班”招生简章 / 原文第 14 段",
+              "paragraph": null,
+              "segment_index": 2,
+              "chunk_id": "e58a646ddf065c94143a37cace052e8b",
+              "text": "面向空间科学与物理学院2024级学生，择优录取30名，若选拔考试中最后一名出现同分情况，可同时录取同分学生。按照有关规定不允许转专业的不得报名。",
+              "text_hash": "b8859d8265ea06dc822eedab5e986b50a84b38c707bf58bbafdafab714fc6b69",
+              "start": 0,
+              "end": 72
+            },
+            "score": 9.235187662876776,
+            "rank": 1,
+            "trace": {
+              "bm25_score": 9.235187662876776,
+              "bm25_rank": 1,
+              "selected": 1,
+              "evidence_coverage": 1.0
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "27828fb682a2943d65565099",
+              "file_name": "navigation-admission-2024.md",
+              "source": "campus/navigation-admission-2024.md",
+              "page": null,
+              "section": "2024级“智能导航特色班”招生简章 / 原文第 16 段",
+              "paragraph": null,
+              "segment_index": 3,
+              "chunk_id": "374cebe99cc9ef9d49b945e9db136574",
+              "text": "1、选拔考试采用笔试与面试相结合的形式，总成绩中笔试与面试成绩各占50%，按总成绩排名确定录取名单。",
+              "text_hash": "bec44c2d43f21e14524f755b328b62e632e6b22f17709124a4623b3bfbec1266",
+              "start": 0,
+              "end": 50
+            },
+            "score": 3.1116645147820106,
+            "rank": 2,
+            "trace": {
+              "bm25_score": 3.1116645147820106,
+              "bm25_rank": 2,
+              "selected": 1,
+              "evidence_coverage": 0.42857142857142855
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "27828fb682a2943d65565099",
+              "file_name": "navigation-admission-2024.md",
+              "source": "campus/navigation-admission-2024.md",
+              "page": null,
+              "section": "2024级“智能导航特色班”招生简章",
+              "paragraph": null,
+              "segment_index": 0,
+              "chunk_id": "524f9312d2343f346b1f6c3691ad2548",
+              "text": "> 山东大学（威海） · 2024 年历史资料摘录。仅用于工程演示，不作为当前办事或招生依据。",
+              "text_hash": "55db37b288b872daf3dcbafd631775ee14e7c907fd6cbfe07afd32b8a10711b3",
+              "start": 0,
+              "end": 47
+            },
+            "score": 0.9767041592724315,
+            "rank": 3,
+            "trace": {
+              "bm25_score": 0.9767041592724315,
+              "bm25_rank": 3,
+              "selected": 1,
+              "evidence_coverage": 0.14285714285714285
+            }
+          }
+        ],
+        "refused": false,
+        "evidence_score": 1.0,
+        "threshold": 0.25,
+        "confidence_note": "Lexical token coverage is an evidence gate, not a probability or entailment proof.",
+        "original_query": "择优录取",
+        "retrieval_query": "择优录取",
+        "embedding_kind": "MOCK",
+        "source_scope": [
+          "campus/navigation-admission-2024.md"
+        ]
+      }
+    },
+    {
+      "case_id": "navigation-weight",
+      "passed": true,
+      "response": {
+        "mode": "extractive",
+        "answer": "1、选拔考试采用笔试与面试相结合的形式，总成绩中笔试与面试成绩各占50%，按总成绩排名确定录取名单。 [C1]\n\n3、面试名单：根据笔试成绩由高到低排序前45名进入面试。 [C2]\n\n4、笔试时间：2024年9月11日19:00-21:00，面试时间：9月13日19:00-21:30，笔试地点、面试地点及分组请关注QQ群通知。 [C3]",
+        "statements": [
+          {
+            "text": "1、选拔考试采用笔试与面试相结合的形式，总成绩中笔试与面试成绩各占50%，按总成绩排名确定录取名单。",
+            "citation_ids": [
+              "C1"
+            ]
+          },
+          {
+            "text": "3、面试名单：根据笔试成绩由高到低排序前45名进入面试。",
+            "citation_ids": [
+              "C2"
+            ]
+          },
+          {
+            "text": "4、笔试时间：2024年9月11日19:00-21:00，面试时间：9月13日19:00-21:30，笔试地点、面试地点及分组请关注QQ群通知。",
+            "citation_ids": [
+              "C3"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "C1",
+            "chunk_id": "374cebe99cc9ef9d49b945e9db136574",
+            "document_id": "27828fb682a2943d65565099",
+            "file_name": "navigation-admission-2024.md",
+            "source": "campus/navigation-admission-2024.md",
+            "page": null,
+            "section": "2024级“智能导航特色班”招生简章 / 原文第 16 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 50,
+            "snippet": "1、选拔考试采用笔试与面试相结合的形式，总成绩中笔试与面试成绩各占50%，按总成绩排名确定录取名单。"
+          },
+          {
+            "citation_id": "C2",
+            "chunk_id": "b58041274ed6c53bd249cf09bbeb3e96",
+            "document_id": "27828fb682a2943d65565099",
+            "file_name": "navigation-admission-2024.md",
+            "source": "campus/navigation-admission-2024.md",
+            "page": null,
+            "section": "2024级“智能导航特色班”招生简章 / 原文第 18 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 28,
+            "snippet": "3、面试名单：根据笔试成绩由高到低排序前45名进入面试。"
+          },
+          {
+            "citation_id": "C3",
+            "chunk_id": "ddc2cf2414198ec92aab53a30241443b",
+            "document_id": "27828fb682a2943d65565099",
+            "file_name": "navigation-admission-2024.md",
+            "source": "campus/navigation-admission-2024.md",
+            "page": null,
+            "section": "2024级“智能导航特色班”招生简章 / 原文第 19 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 72,
+            "snippet": "4、笔试时间：2024年9月11日19:00-21:00，面试时间：9月13日19:00-21:30，笔试地点、面试地点及分组请关注QQ群通知。"
+          }
+        ],
+        "candidates": [
+          {
+            "chunk": {
+              "document_id": "27828fb682a2943d65565099",
+              "file_name": "navigation-admission-2024.md",
+              "source": "campus/navigation-admission-2024.md",
+              "page": null,
+              "section": "2024级“智能导航特色班”招生简章 / 原文第 16 段",
+              "paragraph": null,
+              "segment_index": 3,
+              "chunk_id": "374cebe99cc9ef9d49b945e9db136574",
+              "text": "1、选拔考试采用笔试与面试相结合的形式，总成绩中笔试与面试成绩各占50%，按总成绩排名确定录取名单。",
+              "text_hash": "bec44c2d43f21e14524f755b328b62e632e6b22f17709124a4623b3bfbec1266",
+              "start": 0,
+              "end": 50
+            },
+            "score": 17.91506830996004,
+            "rank": 1,
+            "trace": {
+              "bm25_score": 17.91506830996004,
+              "bm25_rank": 1,
+              "selected": 1,
+              "evidence_coverage": 1.0
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "27828fb682a2943d65565099",
+              "file_name": "navigation-admission-2024.md",
+              "source": "campus/navigation-admission-2024.md",
+              "page": null,
+              "section": "2024级“智能导航特色班”招生简章 / 原文第 18 段",
+              "paragraph": null,
+              "segment_index": 5,
+              "chunk_id": "b58041274ed6c53bd249cf09bbeb3e96",
+              "text": "3、面试名单：根据笔试成绩由高到低排序前45名进入面试。",
+              "text_hash": "2081c98e907eeb9d2146663e3b9713ac1ba09bfc0b73dc3eeac01c0b6b157375",
+              "start": 0,
+              "end": 28
+            },
+            "score": 11.187954632683867,
+            "rank": 2,
+            "trace": {
+              "bm25_score": 11.187954632683867,
+              "bm25_rank": 2,
+              "selected": 1,
+              "evidence_coverage": 0.75
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "27828fb682a2943d65565099",
+              "file_name": "navigation-admission-2024.md",
+              "source": "campus/navigation-admission-2024.md",
+              "page": null,
+              "section": "2024级“智能导航特色班”招生简章 / 原文第 19 段",
+              "paragraph": null,
+              "segment_index": 6,
+              "chunk_id": "ddc2cf2414198ec92aab53a30241443b",
+              "text": "4、笔试时间：2024年9月11日19:00-21:00，面试时间：9月13日19:00-21:30，笔试地点、面试地点及分组请关注QQ群通知。",
+              "text_hash": "88f6289d3d2e846cc0528197577308d316d346394613c827e97859555e627ab6",
+              "start": 0,
+              "end": 72
+            },
+            "score": 5.209212377696684,
+            "rank": 3,
+            "trace": {
+              "bm25_score": 5.209212377696684,
+              "bm25_rank": 3,
+              "selected": 1,
+              "evidence_coverage": 0.4166666666666667
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "27828fb682a2943d65565099",
+              "file_name": "navigation-admission-2024.md",
+              "source": "campus/navigation-admission-2024.md",
+              "page": null,
+              "section": "2024级“智能导航特色班”招生简章 / 原文第 17 段",
+              "paragraph": null,
+              "segment_index": 4,
+              "chunk_id": "c815d0e2093eb3ea5038f358ca1bfbfc",
+              "text": "2、笔试科目为高中物理，考试内容为物理学基础知识及其灵活应用（所涉及知识点与高考要求基本相同，但更强调灵活应用）。",
+              "text_hash": "867ed82ee1d7afb4478526f2caa3c9f1b18740eb132a090752c8a432190818d1",
+              "start": 0,
+              "end": 57
+            },
+            "score": 2.510457301431969,
+            "rank": 4,
+            "trace": {
+              "bm25_score": 2.510457301431969,
+              "bm25_rank": 4,
+              "selected": 0,
+              "evidence_coverage": 0.3333333333333333
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "27828fb682a2943d65565099",
+              "file_name": "navigation-admission-2024.md",
+              "source": "campus/navigation-admission-2024.md",
+              "page": null,
+              "section": "2024级“智能导航特色班”招生简章 / 原文第 14 段",
+              "paragraph": null,
+              "segment_index": 2,
+              "chunk_id": "e58a646ddf065c94143a37cace052e8b",
+              "text": "面向空间科学与物理学院2024级学生，择优录取30名，若选拔考试中最后一名出现同分情况，可同时录取同分学生。按照有关规定不允许转专业的不得报名。",
+              "text_hash": "b8859d8265ea06dc822eedab5e986b50a84b38c707bf58bbafdafab714fc6b69",
+              "start": 0,
+              "end": 72
+            },
+            "score": 1.5626457614930889,
+            "rank": 5,
+            "trace": {
+              "bm25_score": 1.5626457614930889,
+              "bm25_rank": 5,
+              "selected": 0,
+              "evidence_coverage": 0.25
+            }
+          }
+        ],
+        "refused": false,
+        "evidence_score": 1.0,
+        "threshold": 0.25,
+        "confidence_note": "Lexical token coverage is an evidence gate, not a probability or entailment proof.",
+        "original_query": "笔试与面试成绩",
+        "retrieval_query": "笔试与面试成绩",
+        "embedding_kind": "MOCK",
+        "source_scope": [
+          "campus/navigation-admission-2024.md"
+        ]
+      }
+    },
+    {
+      "case_id": "navigation-interview",
+      "passed": true,
+      "response": {
+        "mode": "extractive",
+        "answer": "3、面试名单：根据笔试成绩由高到低排序前45名进入面试。 [C1]\n\n4、笔试时间：2024年9月11日19:00-21:00，面试时间：9月13日19:00-21:30，笔试地点、面试地点及分组请关注QQ群通知。 [C2]\n\n1、选拔考试采用笔试与面试相结合的形式，总成绩中笔试与面试成绩各占50%，按总成绩排名确定录取名单。 [C3]",
+        "statements": [
+          {
+            "text": "3、面试名单：根据笔试成绩由高到低排序前45名进入面试。",
+            "citation_ids": [
+              "C1"
+            ]
+          },
+          {
+            "text": "4、笔试时间：2024年9月11日19:00-21:00，面试时间：9月13日19:00-21:30，笔试地点、面试地点及分组请关注QQ群通知。",
+            "citation_ids": [
+              "C2"
+            ]
+          },
+          {
+            "text": "1、选拔考试采用笔试与面试相结合的形式，总成绩中笔试与面试成绩各占50%，按总成绩排名确定录取名单。",
+            "citation_ids": [
+              "C3"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "C1",
+            "chunk_id": "b58041274ed6c53bd249cf09bbeb3e96",
+            "document_id": "27828fb682a2943d65565099",
+            "file_name": "navigation-admission-2024.md",
+            "source": "campus/navigation-admission-2024.md",
+            "page": null,
+            "section": "2024级“智能导航特色班”招生简章 / 原文第 18 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 28,
+            "snippet": "3、面试名单：根据笔试成绩由高到低排序前45名进入面试。"
+          },
+          {
+            "citation_id": "C2",
+            "chunk_id": "ddc2cf2414198ec92aab53a30241443b",
+            "document_id": "27828fb682a2943d65565099",
+            "file_name": "navigation-admission-2024.md",
+            "source": "campus/navigation-admission-2024.md",
+            "page": null,
+            "section": "2024级“智能导航特色班”招生简章 / 原文第 19 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 72,
+            "snippet": "4、笔试时间：2024年9月11日19:00-21:00，面试时间：9月13日19:00-21:30，笔试地点、面试地点及分组请关注QQ群通知。"
+          },
+          {
+            "citation_id": "C3",
+            "chunk_id": "374cebe99cc9ef9d49b945e9db136574",
+            "document_id": "27828fb682a2943d65565099",
+            "file_name": "navigation-admission-2024.md",
+            "source": "campus/navigation-admission-2024.md",
+            "page": null,
+            "section": "2024级“智能导航特色班”招生简章 / 原文第 16 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 50,
+            "snippet": "1、选拔考试采用笔试与面试相结合的形式，总成绩中笔试与面试成绩各占50%，按总成绩排名确定录取名单。"
+          }
+        ],
+        "candidates": [
+          {
+            "chunk": {
+              "document_id": "27828fb682a2943d65565099",
+              "file_name": "navigation-admission-2024.md",
+              "source": "campus/navigation-admission-2024.md",
+              "page": null,
+              "section": "2024级“智能导航特色班”招生简章 / 原文第 18 段",
+              "paragraph": null,
+              "segment_index": 5,
+              "chunk_id": "b58041274ed6c53bd249cf09bbeb3e96",
+              "text": "3、面试名单：根据笔试成绩由高到低排序前45名进入面试。",
+              "text_hash": "2081c98e907eeb9d2146663e3b9713ac1ba09bfc0b73dc3eeac01c0b6b157375",
+              "start": 0,
+              "end": 28
+            },
+            "score": 11.961960121387595,
+            "rank": 1,
+            "trace": {
+              "bm25_score": 11.961960121387595,
+              "bm25_rank": 1,
+              "selected": 1,
+              "evidence_coverage": 1.0
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "27828fb682a2943d65565099",
+              "file_name": "navigation-admission-2024.md",
+              "source": "campus/navigation-admission-2024.md",
+              "page": null,
+              "section": "2024级“智能导航特色班”招生简章 / 原文第 19 段",
+              "paragraph": null,
+              "segment_index": 6,
+              "chunk_id": "ddc2cf2414198ec92aab53a30241443b",
+              "text": "4、笔试时间：2024年9月11日19:00-21:00，面试时间：9月13日19:00-21:30，笔试地点、面试地点及分组请关注QQ群通知。",
+              "text_hash": "88f6289d3d2e846cc0528197577308d316d346394613c827e97859555e627ab6",
+              "start": 0,
+              "end": 72
+            },
+            "score": 3.231246590449463,
+            "rank": 2,
+            "trace": {
+              "bm25_score": 3.231246590449463,
+              "bm25_rank": 2,
+              "selected": 1,
+              "evidence_coverage": 0.42857142857142855
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "27828fb682a2943d65565099",
+              "file_name": "navigation-admission-2024.md",
+              "source": "campus/navigation-admission-2024.md",
+              "page": null,
+              "section": "2024级“智能导航特色班”招生简章 / 原文第 16 段",
+              "paragraph": null,
+              "segment_index": 3,
+              "chunk_id": "374cebe99cc9ef9d49b945e9db136574",
+              "text": "1、选拔考试采用笔试与面试相结合的形式，总成绩中笔试与面试成绩各占50%，按总成绩排名确定录取名单。",
+              "text_hash": "bec44c2d43f21e14524f755b328b62e632e6b22f17709124a4623b3bfbec1266",
+              "start": 0,
+              "end": 50
+            },
+            "score": 3.048122768898893,
+            "rank": 3,
+            "trace": {
+              "bm25_score": 3.048122768898893,
+              "bm25_rank": 3,
+              "selected": 1,
+              "evidence_coverage": 0.42857142857142855
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "27828fb682a2943d65565099",
+              "file_name": "navigation-admission-2024.md",
+              "source": "campus/navigation-admission-2024.md",
+              "page": null,
+              "section": "2024级“智能导航特色班”招生简章 / 原文第 14 段",
+              "paragraph": null,
+              "segment_index": 2,
+              "chunk_id": "e58a646ddf065c94143a37cace052e8b",
+              "text": "面向空间科学与物理学院2024级学生，择优录取30名，若选拔考试中最后一名出现同分情况，可同时录取同分学生。按照有关规定不允许转专业的不得报名。",
+              "text_hash": "b8859d8265ea06dc822eedab5e986b50a84b38c707bf58bbafdafab714fc6b69",
+              "start": 0,
+              "end": 72
+            },
+            "score": 0.8697819838701445,
+            "rank": 4,
+            "trace": {
+              "bm25_score": 0.8697819838701445,
+              "bm25_rank": 4,
+              "selected": 0,
+              "evidence_coverage": 0.2857142857142857
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "27828fb682a2943d65565099",
+              "file_name": "navigation-admission-2024.md",
+              "source": "campus/navigation-admission-2024.md",
+              "page": null,
+              "section": "2024级“智能导航特色班”招生简章 / 原文第 17 段",
+              "paragraph": null,
+              "segment_index": 4,
+              "chunk_id": "c815d0e2093eb3ea5038f358ca1bfbfc",
+              "text": "2、笔试科目为高中物理，考试内容为物理学基础知识及其灵活应用（所涉及知识点与高考要求基本相同，但更强调灵活应用）。",
+              "text_hash": "867ed82ee1d7afb4478526f2caa3c9f1b18740eb132a090752c8a432190818d1",
+              "start": 0,
+              "end": 57
+            },
+            "score": 0.6064491127556337,
+            "rank": 5,
+            "trace": {
+              "bm25_score": 0.6064491127556337,
+              "bm25_rank": 5,
+              "selected": 0,
+              "evidence_coverage": 0.14285714285714285
+            }
+          }
+        ],
+        "refused": false,
+        "evidence_score": 1.0,
+        "threshold": 0.25,
+        "confidence_note": "Lexical token coverage is an evidence gate, not a probability or entailment proof.",
+        "original_query": "进入面试",
+        "retrieval_query": "进入面试",
+        "embedding_kind": "MOCK",
+        "source_scope": [
+          "campus/navigation-admission-2024.md"
+        ]
+      }
+    },
+    {
+      "case_id": "data-science-quota",
+      "passed": true,
+      "response": {
+        "mode": "extractive",
+        "answer": "4、选拔结果。选拔根据笔试、面试成绩之和计算最终成绩，成绩由高到低排序，排名前25的同学可进入实验班。名单公布后如有学生放弃，将根据成绩排名依次顺延录取。 [C1]\n\n2、选拔笔试。笔试时间为2024年9月6日晚19:00-20:00，主要考核学生高中数学水平。笔试时长为60分钟，共50道客观题，总分为100分。笔试成绩前40名同学进入面试。报名笔试的同学可以向辅导员或军训教官请假。 [C2]",
+        "statements": [
+          {
+            "text": "4、选拔结果。选拔根据笔试、面试成绩之和计算最终成绩，成绩由高到低排序，排名前25的同学可进入实验班。名单公布后如有学生放弃，将根据成绩排名依次顺延录取。",
+            "citation_ids": [
+              "C1"
+            ]
+          },
+          {
+            "text": "2、选拔笔试。笔试时间为2024年9月6日晚19:00-20:00，主要考核学生高中数学水平。笔试时长为60分钟，共50道客观题，总分为100分。笔试成绩前40名同学进入面试。报名笔试的同学可以向辅导员或军训教官请假。",
+            "citation_ids": [
+              "C2"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "C1",
+            "chunk_id": "f478e5ac8f92b09b720f14a7eaf58be7",
+            "document_id": "64d603cc9da9dbdecdeb15ef",
+            "file_name": "data-science-admission-2024.md",
+            "source": "campus/data-science-admission-2024.md",
+            "page": null,
+            "section": "2024级数据科学实验班招生 / 原文第 115 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 77,
+            "snippet": "4、选拔结果。选拔根据笔试、面试成绩之和计算最终成绩，成绩由高到低排序，排名前25的同学可进入实验班。名单公布后如有学生放弃，将根据成绩排名依次顺延录取。"
+          },
+          {
+            "citation_id": "C2",
+            "chunk_id": "8ae275b88187a3dd150b88119f915c50",
+            "document_id": "64d603cc9da9dbdecdeb15ef",
+            "file_name": "data-science-admission-2024.md",
+            "source": "campus/data-science-admission-2024.md",
+            "page": null,
+            "section": "2024级数据科学实验班招生 / 原文第 113 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 109,
+            "snippet": "2、选拔笔试。笔试时间为2024年9月6日晚19:00-20:00，主要考核学生高中数学水平。笔试时长为60分钟，共50道客观题，总分为100分。笔试成绩前40名同学进入面试。报名笔试的同学可以向辅导员或军训教官请假。"
+          }
+        ],
+        "candidates": [
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 115 段",
+              "paragraph": null,
+              "segment_index": 7,
+              "chunk_id": "f478e5ac8f92b09b720f14a7eaf58be7",
+              "text": "4、选拔结果。选拔根据笔试、面试成绩之和计算最终成绩，成绩由高到低排序，排名前25的同学可进入实验班。名单公布后如有学生放弃，将根据成绩排名依次顺延录取。",
+              "text_hash": "659bd72ef7d1823edb7f4c31d977367101741a8fd3b7ae1cce8ca66ac70b5967",
+              "start": 0,
+              "end": 77
+            },
+            "score": 28.458066098015273,
+            "rank": 1,
+            "trace": {
+              "bm25_score": 28.458066098015273,
+              "bm25_rank": 1,
+              "selected": 1,
+              "evidence_coverage": 1.0
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 113 段",
+              "paragraph": null,
+              "segment_index": 5,
+              "chunk_id": "8ae275b88187a3dd150b88119f915c50",
+              "text": "2、选拔笔试。笔试时间为2024年9月6日晚19:00-20:00，主要考核学生高中数学水平。笔试时长为60分钟，共50道客观题，总分为100分。笔试成绩前40名同学进入面试。报名笔试的同学可以向辅导员或军训教官请假。",
+              "text_hash": "19e0b15a0b4b0ecf7d82f1ce140995d43d89d6193bc78b8acb7661b8be3f01e2",
+              "start": 0,
+              "end": 109
+            },
+            "score": 6.141084263693841,
+            "rank": 2,
+            "trace": {
+              "bm25_score": 6.141084263693841,
+              "bm25_rank": 2,
+              "selected": 1,
+              "evidence_coverage": 0.36363636363636365
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 124 段",
+              "paragraph": null,
+              "segment_index": 11,
+              "chunk_id": "8447fb99dabdf6363cf8c74a84b3f113",
+              "text": "的确不是每个人都适合实验班。请报名的同学先仔细阅读本页面的信息，看往届同学的作业视频，评估自己是否真的认同实验班“动手实践“、“自主学习终身学习”、“难走的路永不拥挤”的理念，再决定是否报名。退出实验班需写申请，经学院和学校教务处研究同意后，可以退出实验班。原则上，非大一学生退至统计学专业。",
+              "text_hash": "7043949a5dd27492a7e2d71f74a94489f9dc3df263789709ceb46b220874fb55",
+              "start": 0,
+              "end": 146
+            },
+            "score": 2.4207349968987977,
+            "rank": 3,
+            "trace": {
+              "bm25_score": 2.4207349968987977,
+              "bm25_rank": 3,
+              "selected": 1,
+              "evidence_coverage": 0.18181818181818182
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 118 段",
+              "paragraph": null,
+              "segment_index": 8,
+              "chunk_id": "efa63d49a2a82474b9c116dc26df69e9",
+              "text": "进入实验班意味着转出原来的专业，学籍进入统计学（数据科学与人工智能）实验班。宿舍也会根据学校的安排统一调整。具体调整时间以学院辅导员的通知为准。",
+              "text_hash": "98341eb7d08570a65a72bd834c255d1d1c1fd40a65260333d56b18193fa65b0d",
+              "start": 0,
+              "end": 72
+            },
+            "score": 1.942652150322525,
+            "rank": 4,
+            "trace": {
+              "bm25_score": 1.942652150322525,
+              "bm25_rank": 4,
+              "selected": 0,
+              "evidence_coverage": 0.09090909090909091
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 128 段",
+              "paragraph": null,
+              "segment_index": 13,
+              "chunk_id": "5820408eb1d3554f617369a7f5e748aa",
+              "text": "实验班毕业所需学分基本上与其他普通班一致，具体请查看教务处最新的毕业要求。每一个学分的收费均按学校规定的标准，没有特殊收费或额外收费的地方。",
+              "text_hash": "d0bd8af429665f3c61dc428a079757b1857e13e39a4513d11adbd442e2d5d269",
+              "start": 0,
+              "end": 70
+            },
+            "score": 1.930283571699956,
+            "rank": 5,
+            "trace": {
+              "bm25_score": 1.930283571699956,
+              "bm25_rank": 5,
+              "selected": 0,
+              "evidence_coverage": 0.09090909090909091
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 48 段",
+              "paragraph": null,
+              "segment_index": 1,
+              "chunk_id": "ddb789c8b1ddd3baca6e0a49ddf11571",
+              "text": "实验班采用“项目导向制”教学法，以实践为主，将实际应用中需要掌握的电子设计、计算机视觉、数学建模、控制自动化等知识融入综合科研项目供学生学习，由学员亲手实践做成开源项目。",
+              "text_hash": "1a80ed686371330f8acd269aa0d89ce66e3e642faaf43a1526c31ac90359a2b7",
+              "start": 0,
+              "end": 85
+            },
+            "score": 1.2379406890874827,
+            "rank": 6,
+            "trace": {
+              "bm25_score": 1.2379406890874827,
+              "bm25_rank": 6,
+              "selected": 0,
+              "evidence_coverage": 0.09090909090909091
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 106 段",
+              "paragraph": null,
+              "segment_index": 3,
+              "chunk_id": "9acab7dce57e813a851cae116411adeb",
+              "text": "本实验班采用领先的“项目导向”教学模式，采用综合实训项目的考核模式，旨在本科期间打下宽口径的交叉学科基础，培养使用多学科知识、系统性地解决实际问题的能力。每个学期学生需要综合运用多门课程知识完成一个高水平科研项目，并把项目代码及文档在Github开源，在B站上制作一个讲解视频（本科期间需完成至少6个大项目）。学生知识面广，动手能力和表达能力都得到很好的锻炼，符合社会对人工智能人才能力的需求（见下图），因此在升学和就业竞争中极具优势。",
+              "text_hash": "2e19029200b2a85b1e3f51750831e2baa2a8b7bf7ad991bcf11268cc8e6b5076",
+              "start": 0,
+              "end": 218
+            },
+            "score": 1.18185460602371,
+            "rank": 7,
+            "trace": {
+              "bm25_score": 1.18185460602371,
+              "bm25_rank": 7,
+              "selected": 0,
+              "evidence_coverage": 0.09090909090909091
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 126 段",
+              "paragraph": null,
+              "segment_index": 12,
+              "chunk_id": "103657f412142ebc2b94bb2f083c8f79",
+              "text": "实验班毕业生颁发统计学学历证书和理学学位证书。我们把实验班设在统计学是因为，一方面人工智能的根基是数据，与数学和统计学密不可分，另一方面数学与数据科学是山东大学久负盛名的优势学科，名列全国第一梯队。学生未来升学和就业会更具优势。",
+              "text_hash": "aa94a818939a7004838d870cb977bd4d2538e3433989d46051988ea61b6bae8a",
+              "start": 0,
+              "end": 114
+            },
+            "score": 1.0709600766455736,
+            "rank": 8,
+            "trace": {
+              "bm25_score": 1.0709600766455736,
+              "bm25_rank": 8,
+              "selected": 0,
+              "evidence_coverage": 0.09090909090909091
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 101 段",
+              "paragraph": null,
+              "segment_index": 2,
+              "chunk_id": "1f0170979b6b14cfcdaa815f197a4755",
+              "text": "本实验班为校级精英班，推免比例高于普通班。另外实验班学生获得国家级竞赛奖项的比例也非常高，在推免竞争中更具优势。具体名额信息以推免当年的学校政策为准。",
+              "text_hash": "71b7025f7e47c6921e77bf4d2b3a2c6c2d14503f2fe78c7e2cf6329cdf6a43df",
+              "start": 0,
+              "end": 75
+            },
+            "score": 0.8812618197794072,
+            "rank": 9,
+            "trace": {
+              "bm25_score": 0.8812618197794072,
+              "bm25_rank": 9,
+              "selected": 0,
+              "evidence_coverage": 0.09090909090909091
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 114 段",
+              "paragraph": null,
+              "segment_index": 6,
+              "chunk_id": "eb901d9524b117c5f4d50779e92f2e67",
+              "text": "3、选拔面试。面试时间为2024年9月8日，主要考核学生创新能力、系统分析能力、报名动机以及学习目标等信息。每人面试时间不超过15分钟，面试总分为100分，由专家小组集体打分评定。进入面试的同学可以向辅导员或军训教官请假。",
+              "text_hash": "45a75a21f30f1422bae03d1b85bc2468e86ff5da64c35a2db06fde98a6da62e6",
+              "start": 0,
+              "end": 111
+            },
+            "score": 0.7946518040629875,
+            "rank": 10,
+            "trace": {
+              "bm25_score": 0.7946518040629875,
+              "bm25_rank": 10,
+              "selected": 0,
+              "evidence_coverage": 0.09090909090909091
+            }
+          }
+        ],
+        "refused": false,
+        "evidence_score": 1.0,
+        "threshold": 0.25,
+        "confidence_note": "Lexical token coverage is an evidence gate, not a probability or entailment proof.",
+        "original_query": "最终成绩排名",
+        "retrieval_query": "最终成绩排名",
+        "embedding_kind": "MOCK",
+        "source_scope": [
+          "campus/data-science-admission-2024.md"
+        ]
+      }
+    },
+    {
+      "case_id": "data-science-subjects",
+      "passed": true,
+      "response": {
+        "mode": "extractive",
+        "answer": "实验班选拔面向全校2024级本科学生，要求高考选科中选择物理和化学组合方向。其中，根据国家有关规定、学校招生章程及相关协议规定，艺术类、中外合作办学等不能转专业的学生不列入选拔范围；校内留降级学生不列入选拔范围。 [C1]\n\n2、选拔笔试。笔试时间为2024年9月6日晚19:00-20:00，主要考核学生高中数学水平。笔试时长为60分钟，共50道客观题，总分为100分。笔试成绩前40名同学进入面试。报名笔试的同学可以向辅导员或军训教官请假。 [C2]\n\n4、选拔结果。选拔根据笔试、面试成绩之和计算最终成绩，成绩由高到低排序，排名前25的同学可进入实验班。名单公布后如有学生放弃，将根据成绩排名依次顺延录取。 [C3]",
+        "statements": [
+          {
+            "text": "实验班选拔面向全校2024级本科学生，要求高考选科中选择物理和化学组合方向。其中，根据国家有关规定、学校招生章程及相关协议规定，艺术类、中外合作办学等不能转专业的学生不列入选拔范围；校内留降级学生不列入选拔范围。",
+            "citation_ids": [
+              "C1"
+            ]
+          },
+          {
+            "text": "2、选拔笔试。笔试时间为2024年9月6日晚19:00-20:00，主要考核学生高中数学水平。笔试时长为60分钟，共50道客观题，总分为100分。笔试成绩前40名同学进入面试。报名笔试的同学可以向辅导员或军训教官请假。",
+            "citation_ids": [
+              "C2"
+            ]
+          },
+          {
+            "text": "4、选拔结果。选拔根据笔试、面试成绩之和计算最终成绩，成绩由高到低排序，排名前25的同学可进入实验班。名单公布后如有学生放弃，将根据成绩排名依次顺延录取。",
+            "citation_ids": [
+              "C3"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "C1",
+            "chunk_id": "86f6de27eaab1ed6e39829d3f7949b0c",
+            "document_id": "64d603cc9da9dbdecdeb15ef",
+            "file_name": "data-science-admission-2024.md",
+            "source": "campus/data-science-admission-2024.md",
+            "page": null,
+            "section": "2024级数据科学实验班招生 / 原文第 110 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 106,
+            "snippet": "实验班选拔面向全校2024级本科学生，要求高考选科中选择物理和化学组合方向。其中，根据国家有关规定、学校招生章程及相关协议规定，艺术类、中外合作办学等不能转专业的学生不列入选拔范围；校内留降级学生不列入选拔范围。"
+          },
+          {
+            "citation_id": "C2",
+            "chunk_id": "8ae275b88187a3dd150b88119f915c50",
+            "document_id": "64d603cc9da9dbdecdeb15ef",
+            "file_name": "data-science-admission-2024.md",
+            "source": "campus/data-science-admission-2024.md",
+            "page": null,
+            "section": "2024级数据科学实验班招生 / 原文第 113 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 109,
+            "snippet": "2、选拔笔试。笔试时间为2024年9月6日晚19:00-20:00，主要考核学生高中数学水平。笔试时长为60分钟，共50道客观题，总分为100分。笔试成绩前40名同学进入面试。报名笔试的同学可以向辅导员或军训教官请假。"
+          },
+          {
+            "citation_id": "C3",
+            "chunk_id": "f478e5ac8f92b09b720f14a7eaf58be7",
+            "document_id": "64d603cc9da9dbdecdeb15ef",
+            "file_name": "data-science-admission-2024.md",
+            "source": "campus/data-science-admission-2024.md",
+            "page": null,
+            "section": "2024级数据科学实验班招生 / 原文第 115 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 77,
+            "snippet": "4、选拔结果。选拔根据笔试、面试成绩之和计算最终成绩，成绩由高到低排序，排名前25的同学可进入实验班。名单公布后如有学生放弃，将根据成绩排名依次顺延录取。"
+          }
+        ],
+        "candidates": [
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 110 段",
+              "paragraph": null,
+              "segment_index": 4,
+              "chunk_id": "86f6de27eaab1ed6e39829d3f7949b0c",
+              "text": "实验班选拔面向全校2024级本科学生，要求高考选科中选择物理和化学组合方向。其中，根据国家有关规定、学校招生章程及相关协议规定，艺术类、中外合作办学等不能转专业的学生不列入选拔范围；校内留降级学生不列入选拔范围。",
+              "text_hash": "89eb586d34a7de03516863944253d72afa403bfb641513d417cc2484d5d6cbc3",
+              "start": 0,
+              "end": 106
+            },
+            "score": 11.838290429335832,
+            "rank": 1,
+            "trace": {
+              "bm25_score": 11.838290429335832,
+              "bm25_rank": 1,
+              "selected": 1,
+              "evidence_coverage": 1.0
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 113 段",
+              "paragraph": null,
+              "segment_index": 5,
+              "chunk_id": "8ae275b88187a3dd150b88119f915c50",
+              "text": "2、选拔笔试。笔试时间为2024年9月6日晚19:00-20:00，主要考核学生高中数学水平。笔试时长为60分钟，共50道客观题，总分为100分。笔试成绩前40名同学进入面试。报名笔试的同学可以向辅导员或军训教官请假。",
+              "text_hash": "19e0b15a0b4b0ecf7d82f1ce140995d43d89d6193bc78b8acb7661b8be3f01e2",
+              "start": 0,
+              "end": 109
+            },
+            "score": 3.3011575649954543,
+            "rank": 2,
+            "trace": {
+              "bm25_score": 3.3011575649954543,
+              "bm25_rank": 2,
+              "selected": 1,
+              "evidence_coverage": 0.42857142857142855
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 115 段",
+              "paragraph": null,
+              "segment_index": 7,
+              "chunk_id": "f478e5ac8f92b09b720f14a7eaf58be7",
+              "text": "4、选拔结果。选拔根据笔试、面试成绩之和计算最终成绩，成绩由高到低排序，排名前25的同学可进入实验班。名单公布后如有学生放弃，将根据成绩排名依次顺延录取。",
+              "text_hash": "659bd72ef7d1823edb7f4c31d977367101741a8fd3b7ae1cce8ca66ac70b5967",
+              "start": 0,
+              "end": 77
+            },
+            "score": 2.908786788186433,
+            "rank": 3,
+            "trace": {
+              "bm25_score": 2.908786788186433,
+              "bm25_rank": 3,
+              "selected": 1,
+              "evidence_coverage": 0.2857142857142857
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 106 段",
+              "paragraph": null,
+              "segment_index": 3,
+              "chunk_id": "9acab7dce57e813a851cae116411adeb",
+              "text": "本实验班采用领先的“项目导向”教学模式，采用综合实训项目的考核模式，旨在本科期间打下宽口径的交叉学科基础，培养使用多学科知识、系统性地解决实际问题的能力。每个学期学生需要综合运用多门课程知识完成一个高水平科研项目，并把项目代码及文档在Github开源，在B站上制作一个讲解视频（本科期间需完成至少6个大项目）。学生知识面广，动手能力和表达能力都得到很好的锻炼，符合社会对人工智能人才能力的需求（见下图），因此在升学和就业竞争中极具优势。",
+              "text_hash": "2e19029200b2a85b1e3f51750831e2baa2a8b7bf7ad991bcf11268cc8e6b5076",
+              "start": 0,
+              "end": 218
+            },
+            "score": 2.774994809212065,
+            "rank": 4,
+            "trace": {
+              "bm25_score": 2.774994809212065,
+              "bm25_rank": 4,
+              "selected": 0,
+              "evidence_coverage": 0.42857142857142855
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 114 段",
+              "paragraph": null,
+              "segment_index": 6,
+              "chunk_id": "eb901d9524b117c5f4d50779e92f2e67",
+              "text": "3、选拔面试。面试时间为2024年9月8日，主要考核学生创新能力、系统分析能力、报名动机以及学习目标等信息。每人面试时间不超过15分钟，面试总分为100分，由专家小组集体打分评定。进入面试的同学可以向辅导员或军训教官请假。",
+              "text_hash": "45a75a21f30f1422bae03d1b85bc2468e86ff5da64c35a2db06fde98a6da62e6",
+              "start": 0,
+              "end": 111
+            },
+            "score": 2.097481777019293,
+            "rank": 5,
+            "trace": {
+              "bm25_score": 2.097481777019293,
+              "bm25_rank": 5,
+              "selected": 0,
+              "evidence_coverage": 0.2857142857142857
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 101 段",
+              "paragraph": null,
+              "segment_index": 2,
+              "chunk_id": "1f0170979b6b14cfcdaa815f197a4755",
+              "text": "本实验班为校级精英班，推免比例高于普通班。另外实验班学生获得国家级竞赛奖项的比例也非常高，在推免竞争中更具优势。具体名额信息以推免当年的学校政策为准。",
+              "text_hash": "71b7025f7e47c6921e77bf4d2b3a2c6c2d14503f2fe78c7e2cf6329cdf6a43df",
+              "start": 0,
+              "end": 75
+            },
+            "score": 1.487562221285573,
+            "rank": 6,
+            "trace": {
+              "bm25_score": 1.487562221285573,
+              "bm25_rank": 6,
+              "selected": 0,
+              "evidence_coverage": 0.14285714285714285
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 122 段",
+              "paragraph": null,
+              "segment_index": 10,
+              "chunk_id": "604423430035ff6982649a531c6f166e",
+              "text": "根据学校的规定，实验班只面向刚刚入学的新生招生。降级或其他年级的学生不能报考。",
+              "text_hash": "9a6bd90355379c47a32e9a86e3ebc4b5984af7bdb581e97de6291fbccb6a884f",
+              "start": 0,
+              "end": 39
+            },
+            "score": 1.330828156596522,
+            "rank": 7,
+            "trace": {
+              "bm25_score": 1.330828156596522,
+              "bm25_rank": 7,
+              "selected": 0,
+              "evidence_coverage": 0.14285714285714285
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 126 段",
+              "paragraph": null,
+              "segment_index": 12,
+              "chunk_id": "103657f412142ebc2b94bb2f083c8f79",
+              "text": "实验班毕业生颁发统计学学历证书和理学学位证书。我们把实验班设在统计学是因为，一方面人工智能的根基是数据，与数学和统计学密不可分，另一方面数学与数据科学是山东大学久负盛名的优势学科，名列全国第一梯队。学生未来升学和就业会更具优势。",
+              "text_hash": "aa94a818939a7004838d870cb977bd4d2538e3433989d46051988ea61b6bae8a",
+              "start": 0,
+              "end": 114
+            },
+            "score": 1.2849016946073522,
+            "rank": 8,
+            "trace": {
+              "bm25_score": 1.2849016946073522,
+              "bm25_rank": 8,
+              "selected": 0,
+              "evidence_coverage": 0.14285714285714285
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 118 段",
+              "paragraph": null,
+              "segment_index": 8,
+              "chunk_id": "efa63d49a2a82474b9c116dc26df69e9",
+              "text": "进入实验班意味着转出原来的专业，学籍进入统计学（数据科学与人工智能）实验班。宿舍也会根据学校的安排统一调整。具体调整时间以学院辅导员的通知为准。",
+              "text_hash": "98341eb7d08570a65a72bd834c255d1d1c1fd40a65260333d56b18193fa65b0d",
+              "start": 0,
+              "end": 72
+            },
+            "score": 1.087795004117977,
+            "rank": 9,
+            "trace": {
+              "bm25_score": 1.087795004117977,
+              "bm25_rank": 9,
+              "selected": 0,
+              "evidence_coverage": 0.14285714285714285
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 48 段",
+              "paragraph": null,
+              "segment_index": 1,
+              "chunk_id": "ddb789c8b1ddd3baca6e0a49ddf11571",
+              "text": "实验班采用“项目导向制”教学法，以实践为主，将实际应用中需要掌握的电子设计、计算机视觉、数学建模、控制自动化等知识融入综合科研项目供学生学习，由学员亲手实践做成开源项目。",
+              "text_hash": "1a80ed686371330f8acd269aa0d89ce66e3e642faaf43a1526c31ac90359a2b7",
+              "start": 0,
+              "end": 85
+            },
+            "score": 1.0316084379539858,
+            "rank": 10,
+            "trace": {
+              "bm25_score": 1.0316084379539858,
+              "bm25_rank": 10,
+              "selected": 0,
+              "evidence_coverage": 0.14285714285714285
+            }
+          }
+        ],
+        "refused": false,
+        "evidence_score": 1.0,
+        "threshold": 0.25,
+        "confidence_note": "Lexical token coverage is an evidence gate, not a probability or entailment proof.",
+        "original_query": "高考选科",
+        "retrieval_query": "高考选科",
+        "embedding_kind": "MOCK",
+        "source_scope": [
+          "campus/data-science-admission-2024.md"
+        ]
+      }
+    },
+    {
+      "case_id": "data-science-degree",
+      "passed": true,
+      "response": {
+        "mode": "extractive",
+        "answer": "实验班毕业生颁发统计学学历证书和理学学位证书。我们把实验班设在统计学是因为，一方面人工智能的根基是数据，与数学和统计学密不可分，另一方面数学与数据科学是山东大学久负盛名的优势学科，名列全国第一梯队。学生未来升学和就业会更具优势。 [C1]",
+        "statements": [
+          {
+            "text": "实验班毕业生颁发统计学学历证书和理学学位证书。我们把实验班设在统计学是因为，一方面人工智能的根基是数据，与数学和统计学密不可分，另一方面数学与数据科学是山东大学久负盛名的优势学科，名列全国第一梯队。学生未来升学和就业会更具优势。",
+            "citation_ids": [
+              "C1"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "C1",
+            "chunk_id": "103657f412142ebc2b94bb2f083c8f79",
+            "document_id": "64d603cc9da9dbdecdeb15ef",
+            "file_name": "data-science-admission-2024.md",
+            "source": "campus/data-science-admission-2024.md",
+            "page": null,
+            "section": "2024级数据科学实验班招生 / 原文第 126 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 114,
+            "snippet": "实验班毕业生颁发统计学学历证书和理学学位证书。我们把实验班设在统计学是因为，一方面人工智能的根基是数据，与数学和统计学密不可分，另一方面数学与数据科学是山东大学久负盛名的优势学科，名列全国第一梯队。学生未来升学和就业会更具优势。"
+          }
+        ],
+        "candidates": [
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 126 段",
+              "paragraph": null,
+              "segment_index": 12,
+              "chunk_id": "103657f412142ebc2b94bb2f083c8f79",
+              "text": "实验班毕业生颁发统计学学历证书和理学学位证书。我们把实验班设在统计学是因为，一方面人工智能的根基是数据，与数学和统计学密不可分，另一方面数学与数据科学是山东大学久负盛名的优势学科，名列全国第一梯队。学生未来升学和就业会更具优势。",
+              "text_hash": "aa94a818939a7004838d870cb977bd4d2538e3433989d46051988ea61b6bae8a",
+              "start": 0,
+              "end": 114
+            },
+            "score": 23.889946567643577,
+            "rank": 1,
+            "trace": {
+              "bm25_score": 23.889946567643577,
+              "bm25_rank": 1,
+              "selected": 1,
+              "evidence_coverage": 0.9230769230769231
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 124 段",
+              "paragraph": null,
+              "segment_index": 11,
+              "chunk_id": "8447fb99dabdf6363cf8c74a84b3f113",
+              "text": "的确不是每个人都适合实验班。请报名的同学先仔细阅读本页面的信息，看往届同学的作业视频，评估自己是否真的认同实验班“动手实践“、“自主学习终身学习”、“难走的路永不拥挤”的理念，再决定是否报名。退出实验班需写申请，经学院和学校教务处研究同意后，可以退出实验班。原则上，非大一学生退至统计学专业。",
+              "text_hash": "7043949a5dd27492a7e2d71f74a94489f9dc3df263789709ceb46b220874fb55",
+              "start": 0,
+              "end": 146
+            },
+            "score": 2.679853633315081,
+            "rank": 2,
+            "trace": {
+              "bm25_score": 2.679853633315081,
+              "bm25_rank": 2,
+              "selected": 1,
+              "evidence_coverage": 0.23076923076923078
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生",
+              "paragraph": null,
+              "segment_index": 0,
+              "chunk_id": "334fe58326023cde3b59e13d35043544",
+              "text": "> 山东大学（威海） · 2024 年历史资料摘录。仅用于工程演示，不作为当前办事或招生依据。",
+              "text_hash": "55db37b288b872daf3dcbafd631775ee14e7c907fd6cbfe07afd32b8a10711b3",
+              "start": 0,
+              "end": 47
+            },
+            "score": 2.5101955994884344,
+            "rank": 3,
+            "trace": {
+              "bm25_score": 2.5101955994884344,
+              "bm25_rank": 3,
+              "selected": 1,
+              "evidence_coverage": 0.15384615384615385
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 115 段",
+              "paragraph": null,
+              "segment_index": 7,
+              "chunk_id": "f478e5ac8f92b09b720f14a7eaf58be7",
+              "text": "4、选拔结果。选拔根据笔试、面试成绩之和计算最终成绩，成绩由高到低排序，排名前25的同学可进入实验班。名单公布后如有学生放弃，将根据成绩排名依次顺延录取。",
+              "text_hash": "659bd72ef7d1823edb7f4c31d977367101741a8fd3b7ae1cce8ca66ac70b5967",
+              "start": 0,
+              "end": 77
+            },
+            "score": 1.139070620017915,
+            "rank": 4,
+            "trace": {
+              "bm25_score": 1.139070620017915,
+              "bm25_rank": 4,
+              "selected": 0,
+              "evidence_coverage": 0.15384615384615385
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 106 段",
+              "paragraph": null,
+              "segment_index": 3,
+              "chunk_id": "9acab7dce57e813a851cae116411adeb",
+              "text": "本实验班采用领先的“项目导向”教学模式，采用综合实训项目的考核模式，旨在本科期间打下宽口径的交叉学科基础，培养使用多学科知识、系统性地解决实际问题的能力。每个学期学生需要综合运用多门课程知识完成一个高水平科研项目，并把项目代码及文档在Github开源，在B站上制作一个讲解视频（本科期间需完成至少6个大项目）。学生知识面广，动手能力和表达能力都得到很好的锻炼，符合社会对人工智能人才能力的需求（见下图），因此在升学和就业竞争中极具优势。",
+              "text_hash": "2e19029200b2a85b1e3f51750831e2baa2a8b7bf7ad991bcf11268cc8e6b5076",
+              "start": 0,
+              "end": 218
+            },
+            "score": 1.043648142492497,
+            "rank": 5,
+            "trace": {
+              "bm25_score": 1.043648142492497,
+              "bm25_rank": 5,
+              "selected": 0,
+              "evidence_coverage": 0.15384615384615385
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 110 段",
+              "paragraph": null,
+              "segment_index": 4,
+              "chunk_id": "86f6de27eaab1ed6e39829d3f7949b0c",
+              "text": "实验班选拔面向全校2024级本科学生，要求高考选科中选择物理和化学组合方向。其中，根据国家有关规定、学校招生章程及相关协议规定，艺术类、中外合作办学等不能转专业的学生不列入选拔范围；校内留降级学生不列入选拔范围。",
+              "text_hash": "89eb586d34a7de03516863944253d72afa403bfb641513d417cc2484d5d6cbc3",
+              "start": 0,
+              "end": 106
+            },
+            "score": 0.9933577008362368,
+            "rank": 6,
+            "trace": {
+              "bm25_score": 0.9933577008362368,
+              "bm25_rank": 6,
+              "selected": 0,
+              "evidence_coverage": 0.15384615384615385
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 118 段",
+              "paragraph": null,
+              "segment_index": 8,
+              "chunk_id": "efa63d49a2a82474b9c116dc26df69e9",
+              "text": "进入实验班意味着转出原来的专业，学籍进入统计学（数据科学与人工智能）实验班。宿舍也会根据学校的安排统一调整。具体调整时间以学院辅导员的通知为准。",
+              "text_hash": "98341eb7d08570a65a72bd834c255d1d1c1fd40a65260333d56b18193fa65b0d",
+              "start": 0,
+              "end": 72
+            },
+            "score": 0.06720294199322448,
+            "rank": 7,
+            "trace": {
+              "bm25_score": 0.06720294199322448,
+              "bm25_rank": 7,
+              "selected": 0,
+              "evidence_coverage": 0.07692307692307693
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 48 段",
+              "paragraph": null,
+              "segment_index": 1,
+              "chunk_id": "ddb789c8b1ddd3baca6e0a49ddf11571",
+              "text": "实验班采用“项目导向制”教学法，以实践为主，将实际应用中需要掌握的电子设计、计算机视觉、数学建模、控制自动化等知识融入综合科研项目供学生学习，由学员亲手实践做成开源项目。",
+              "text_hash": "1a80ed686371330f8acd269aa0d89ce66e3e642faaf43a1526c31ac90359a2b7",
+              "start": 0,
+              "end": 85
+            },
+            "score": 0.06589066692121062,
+            "rank": 8,
+            "trace": {
+              "bm25_score": 0.06589066692121062,
+              "bm25_rank": 8,
+              "selected": 0,
+              "evidence_coverage": 0.07692307692307693
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 122 段",
+              "paragraph": null,
+              "segment_index": 10,
+              "chunk_id": "604423430035ff6982649a531c6f166e",
+              "text": "根据学校的规定，实验班只面向刚刚入学的新生招生。降级或其他年级的学生不能报考。",
+              "text_hash": "9a6bd90355379c47a32e9a86e3ebc4b5984af7bdb581e97de6291fbccb6a884f",
+              "start": 0,
+              "end": 39
+            },
+            "score": 0.06545151514312486,
+            "rank": 9,
+            "trace": {
+              "bm25_score": 0.06545151514312486,
+              "bm25_rank": 9,
+              "selected": 0,
+              "evidence_coverage": 0.07692307692307693
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 113 段",
+              "paragraph": null,
+              "segment_index": 5,
+              "chunk_id": "8ae275b88187a3dd150b88119f915c50",
+              "text": "2、选拔笔试。笔试时间为2024年9月6日晚19:00-20:00，主要考核学生高中数学水平。笔试时长为60分钟，共50道客观题，总分为100分。笔试成绩前40名同学进入面试。报名笔试的同学可以向辅导员或军训教官请假。",
+              "text_hash": "19e0b15a0b4b0ecf7d82f1ce140995d43d89d6193bc78b8acb7661b8be3f01e2",
+              "start": 0,
+              "end": 109
+            },
+            "score": 0.06241767583285717,
+            "rank": 10,
+            "trace": {
+              "bm25_score": 0.06241767583285717,
+              "bm25_rank": 10,
+              "selected": 0,
+              "evidence_coverage": 0.07692307692307693
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 128 段",
+              "paragraph": null,
+              "segment_index": 13,
+              "chunk_id": "5820408eb1d3554f617369a7f5e748aa",
+              "text": "实验班毕业所需学分基本上与其他普通班一致，具体请查看教务处最新的毕业要求。每一个学分的收费均按学校规定的标准，没有特殊收费或额外收费的地方。",
+              "text_hash": "d0bd8af429665f3c61dc428a079757b1857e13e39a4513d11adbd442e2d5d269",
+              "start": 0,
+              "end": 70
+            },
+            "score": 0.058848809780616164,
+            "rank": 11,
+            "trace": {
+              "bm25_score": 0.058848809780616164,
+              "bm25_rank": 11,
+              "selected": 0,
+              "evidence_coverage": 0.07692307692307693
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 114 段",
+              "paragraph": null,
+              "segment_index": 6,
+              "chunk_id": "eb901d9524b117c5f4d50779e92f2e67",
+              "text": "3、选拔面试。面试时间为2024年9月8日，主要考核学生创新能力、系统分析能力、报名动机以及学习目标等信息。每人面试时间不超过15分钟，面试总分为100分，由专家小组集体打分评定。进入面试的同学可以向辅导员或军训教官请假。",
+              "text_hash": "45a75a21f30f1422bae03d1b85bc2468e86ff5da64c35a2db06fde98a6da62e6",
+              "start": 0,
+              "end": 111
+            },
+            "score": 0.05490588588009175,
+            "rank": 12,
+            "trace": {
+              "bm25_score": 0.05490588588009175,
+              "bm25_rank": 12,
+              "selected": 0,
+              "evidence_coverage": 0.07692307692307693
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 120 段",
+              "paragraph": null,
+              "segment_index": 9,
+              "chunk_id": "6ad5b6ead8ae02b34f4da9e33b90eac0",
+              "text": "是的。这是山东大学威海校区的规定，不能扩招。",
+              "text_hash": "1bd085cf3e7ba72aad187389e91b25ae757fb3bfe56822c18a0ef55fdefb757c",
+              "start": 0,
+              "end": 22
+            },
+            "score": 0.05188292884398305,
+            "rank": 13,
+            "trace": {
+              "bm25_score": 0.05188292884398305,
+              "bm25_rank": 13,
+              "selected": 0,
+              "evidence_coverage": 0.07692307692307693
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "64d603cc9da9dbdecdeb15ef",
+              "file_name": "data-science-admission-2024.md",
+              "source": "campus/data-science-admission-2024.md",
+              "page": null,
+              "section": "2024级数据科学实验班招生 / 原文第 101 段",
+              "paragraph": null,
+              "segment_index": 2,
+              "chunk_id": "1f0170979b6b14cfcdaa815f197a4755",
+              "text": "本实验班为校级精英班，推免比例高于普通班。另外实验班学生获得国家级竞赛奖项的比例也非常高，在推免竞争中更具优势。具体名额信息以推免当年的学校政策为准。",
+              "text_hash": "71b7025f7e47c6921e77bf4d2b3a2c6c2d14503f2fe78c7e2cf6329cdf6a43df",
+              "start": 0,
+              "end": 75
+            },
+            "score": 0.05026468804377954,
+            "rank": 14,
+            "trace": {
+              "bm25_score": 0.05026468804377954,
+              "bm25_rank": 14,
+              "selected": 0,
+              "evidence_coverage": 0.07692307692307693
+            }
+          }
+        ],
+        "refused": false,
+        "evidence_score": 0.9230769230769231,
+        "threshold": 0.25,
+        "confidence_note": "Lexical token coverage is an evidence gate, not a probability or entailment proof.",
+        "original_query": "学历证书和学位证书",
+        "retrieval_query": "学历证书和学位证书",
+        "embedding_kind": "MOCK",
+        "source_scope": [
+          "campus/data-science-admission-2024.md"
+        ]
+      }
+    },
+    {
+      "case_id": "law-weight",
+      "passed": true,
+      "response": {
+        "mode": "extractive",
+        "answer": "按笔试成绩占60%，面试成绩占40%的比例计算考试综合成绩，按综合成绩排名确定录取名单。若综合成绩相同，按笔试成绩由高分到低分确定最终录取名单。 [C1]\n\n按招生计划数1∶1.2的比例确定参加面试考生名单。放弃参加面试考生造成的空缺，依次等额递补。 [C2]\n\n3.考试方式：笔试与面试相结合。考试侧重能力考试，考生无需特别准备。笔试主要考察数学、英语、思维、论述等内容，面试主要考察逻辑思维能力、语言表达能力等。 [C3]",
+        "statements": [
+          {
+            "text": "按笔试成绩占60%，面试成绩占40%的比例计算考试综合成绩，按综合成绩排名确定录取名单。若综合成绩相同，按笔试成绩由高分到低分确定最终录取名单。",
+            "citation_ids": [
+              "C1"
+            ]
+          },
+          {
+            "text": "按招生计划数1∶1.2的比例确定参加面试考生名单。放弃参加面试考生造成的空缺，依次等额递补。",
+            "citation_ids": [
+              "C2"
+            ]
+          },
+          {
+            "text": "3.考试方式：笔试与面试相结合。考试侧重能力考试，考生无需特别准备。笔试主要考察数学、英语、思维、论述等内容，面试主要考察逻辑思维能力、语言表达能力等。",
+            "citation_ids": [
+              "C3"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "C1",
+            "chunk_id": "cd42441e733c01905505e52a72e364d3",
+            "document_id": "f457cd063da14f3de2a1f1ae",
+            "file_name": "computational-law-admission-2024.md",
+            "source": "campus/computational-law-admission-2024.md",
+            "page": null,
+            "section": "2024级计算法学实验班招生简章 / 原文第 27 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 72,
+            "snippet": "按笔试成绩占60%，面试成绩占40%的比例计算考试综合成绩，按综合成绩排名确定录取名单。若综合成绩相同，按笔试成绩由高分到低分确定最终录取名单。"
+          },
+          {
+            "citation_id": "C2",
+            "chunk_id": "6665f095999b233ff5858938335cca66",
+            "document_id": "f457cd063da14f3de2a1f1ae",
+            "file_name": "computational-law-admission-2024.md",
+            "source": "campus/computational-law-admission-2024.md",
+            "page": null,
+            "section": "2024级计算法学实验班招生简章 / 原文第 16 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 46,
+            "snippet": "按招生计划数1∶1.2的比例确定参加面试考生名单。放弃参加面试考生造成的空缺，依次等额递补。"
+          },
+          {
+            "citation_id": "C3",
+            "chunk_id": "059c96b62d3137bb6d3c09a129878c86",
+            "document_id": "f457cd063da14f3de2a1f1ae",
+            "file_name": "computational-law-admission-2024.md",
+            "source": "campus/computational-law-admission-2024.md",
+            "page": null,
+            "section": "2024级计算法学实验班招生简章 / 原文第 15 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 76,
+            "snippet": "3.考试方式：笔试与面试相结合。考试侧重能力考试，考生无需特别准备。笔试主要考察数学、英语、思维、论述等内容，面试主要考察逻辑思维能力、语言表达能力等。"
+          }
+        ],
+        "candidates": [
+          {
+            "chunk": {
+              "document_id": "f457cd063da14f3de2a1f1ae",
+              "file_name": "computational-law-admission-2024.md",
+              "source": "campus/computational-law-admission-2024.md",
+              "page": null,
+              "section": "2024级计算法学实验班招生简章 / 原文第 27 段",
+              "paragraph": null,
+              "segment_index": 12,
+              "chunk_id": "cd42441e733c01905505e52a72e364d3",
+              "text": "按笔试成绩占60%，面试成绩占40%的比例计算考试综合成绩，按综合成绩排名确定录取名单。若综合成绩相同，按笔试成绩由高分到低分确定最终录取名单。",
+              "text_hash": "d45bcfa6c7c91399032a9e2732f5998a19c20cb640363b80bd20af069ca49b56",
+              "start": 0,
+              "end": 72
+            },
+            "score": 33.35998968245676,
+            "rank": 1,
+            "trace": {
+              "bm25_score": 33.35998968245676,
+              "bm25_rank": 1,
+              "selected": 1,
+              "evidence_coverage": 0.8333333333333334
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "f457cd063da14f3de2a1f1ae",
+              "file_name": "computational-law-admission-2024.md",
+              "source": "campus/computational-law-admission-2024.md",
+              "page": null,
+              "section": "2024级计算法学实验班招生简章 / 原文第 16 段",
+              "paragraph": null,
+              "segment_index": 8,
+              "chunk_id": "6665f095999b233ff5858938335cca66",
+              "text": "按招生计划数1∶1.2的比例确定参加面试考生名单。放弃参加面试考生造成的空缺，依次等额递补。",
+              "text_hash": "b893dc38ac8de53b254ac5745473edee730c7eb133e0255941eab316223dd263",
+              "start": 0,
+              "end": 46
+            },
+            "score": 11.323226034245234,
+            "rank": 2,
+            "trace": {
+              "bm25_score": 11.323226034245234,
+              "bm25_rank": 2,
+              "selected": 1,
+              "evidence_coverage": 0.3888888888888889
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "f457cd063da14f3de2a1f1ae",
+              "file_name": "computational-law-admission-2024.md",
+              "source": "campus/computational-law-admission-2024.md",
+              "page": null,
+              "section": "2024级计算法学实验班招生简章 / 原文第 15 段",
+              "paragraph": null,
+              "segment_index": 7,
+              "chunk_id": "059c96b62d3137bb6d3c09a129878c86",
+              "text": "3.考试方式：笔试与面试相结合。考试侧重能力考试，考生无需特别准备。笔试主要考察数学、英语、思维、论述等内容，面试主要考察逻辑思维能力、语言表达能力等。",
+              "text_hash": "39c2936d6692e18a9f4e5e2a4a5b0ca846d79c4bada9b9d35d1e3e183bfba604",
+              "start": 0,
+              "end": 76
+            },
+            "score": 10.211275563253519,
+            "rank": 3,
+            "trace": {
+              "bm25_score": 10.211275563253519,
+              "bm25_rank": 3,
+              "selected": 1,
+              "evidence_coverage": 0.3333333333333333
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "f457cd063da14f3de2a1f1ae",
+              "file_name": "computational-law-admission-2024.md",
+              "source": "campus/computational-law-admission-2024.md",
+              "page": null,
+              "section": "2024级计算法学实验班招生简章 / 原文第 24 段",
+              "paragraph": null,
+              "segment_index": 10,
+              "chunk_id": "694ad6df8853a20f4f778a146a4b8873",
+              "text": "5.考试时间：9月7日晚7：00-10：00进行笔试。",
+              "text_hash": "7d3f4fbf1bb2ea0325855c5a3daf01808560f61a7325eb72a7c3bbf9723ee115",
+              "start": 0,
+              "end": 27
+            },
+            "score": 6.046601155101689,
+            "rank": 4,
+            "trace": {
+              "bm25_score": 6.046601155101689,
+              "bm25_rank": 4,
+              "selected": 0,
+              "evidence_coverage": 0.16666666666666666
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "f457cd063da14f3de2a1f1ae",
+              "file_name": "computational-law-admission-2024.md",
+              "source": "campus/computational-law-admission-2024.md",
+              "page": null,
+              "section": "2024级计算法学实验班招生简章 / 原文第 9 段",
+              "paragraph": null,
+              "segment_index": 3,
+              "chunk_id": "8564acdcaf8a1eb580d661b0f5348977",
+              "text": "实验班学生推荐免试研究生资格比例按照学校推荐优秀应届本科毕业生免试攻读研究生工作办法中的相关规定执行，按照班级人数的30%计算推荐免试研究生计划。实验班学生可享受学校优惠的奖学金政策，学生评定校优秀学生学业奖学金的比例可达到50%。",
+              "text_hash": "7fb66a1a1bcaae6d3afa1f637973846df9f27d88efb1c2256bd68365ff79480e",
+              "start": 0,
+              "end": 116
+            },
+            "score": 5.959251831602573,
+            "rank": 5,
+            "trace": {
+              "bm25_score": 5.959251831602573,
+              "bm25_rank": 5,
+              "selected": 0,
+              "evidence_coverage": 0.2222222222222222
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "f457cd063da14f3de2a1f1ae",
+              "file_name": "computational-law-admission-2024.md",
+              "source": "campus/computational-law-admission-2024.md",
+              "page": null,
+              "section": "2024级计算法学实验班招生简章 / 原文第 25 段",
+              "paragraph": null,
+              "segment_index": 11,
+              "chunk_id": "19843fff0a8a9bd61a398c8e77cf11d3",
+              "text": "9月9日上午8：30进行面试。",
+              "text_hash": "adbb39f5db8cf35796692c623d531a96bb2910d0c9929386d3ad8f5e82c3cde7",
+              "start": 0,
+              "end": 15
+            },
+            "score": 4.909269996464848,
+            "rank": 6,
+            "trace": {
+              "bm25_score": 4.909269996464848,
+              "bm25_rank": 6,
+              "selected": 0,
+              "evidence_coverage": 0.16666666666666666
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "f457cd063da14f3de2a1f1ae",
+              "file_name": "computational-law-admission-2024.md",
+              "source": "campus/computational-law-admission-2024.md",
+              "page": null,
+              "section": "2024级计算法学实验班招生简章 / 原文第 8 段",
+              "paragraph": null,
+              "segment_index": 2,
+              "chunk_id": "1586b93f602cabe0c8b24a6c57126c0d",
+              "text": "实验班学生需要综合运用法学专业知识以及数据科学、计算科学、复杂性科学的交叉知识（包括但不限于Python、NLP自然语言处理、计量建模、机器学习与深度学习等）去完成高水平的法律大数据检索与研究、法律科技应用与研发等项目，并积极转化申请相关大学生科研创新项目、参与学术竞赛等。实验班学生通过法学专业与其他学科专业的知识交叉融合、问题与项目为导向的创新教学与学习方式，能提高学生的专业能力、团队合作能力等，在科研竞赛、研究生升学、就业等方面极具竞争力。",
+              "text_hash": "047f04479c30122746e084dd846d4804e53623befaac128221b903d601a771fe",
+              "start": 0,
+              "end": 224
+            },
+            "score": 4.2530213907279,
+            "rank": 7,
+            "trace": {
+              "bm25_score": 4.2530213907279,
+              "bm25_rank": 7,
+              "selected": 0,
+              "evidence_coverage": 0.2777777777777778
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "f457cd063da14f3de2a1f1ae",
+              "file_name": "computational-law-admission-2024.md",
+              "source": "campus/computational-law-admission-2024.md",
+              "page": null,
+              "section": "2024级计算法学实验班招生简章 / 原文第 10 段",
+              "paragraph": null,
+              "segment_index": 4,
+              "chunk_id": "412792ae802864d40f0a04e40bf2ad75",
+              "text": "实验班隶属于法学院（威海）法学专业，授予法学学士学位。学生日常管理由法学院按照学校相关管理规定进行。实验班学生实行转出机制。大一学年结束时，专业学习成绩排名在后20%且学分绩点低于75分者，实行转出该班。转出学生可根据自身意愿，申请转入原专业或法学专业普通班学习，转出后不再享有实验班的各项优惠政策。",
+              "text_hash": "69a85fc5f9726795f77d52a7e98578390f483973b77bbf76354c3bdc269f925e",
+              "start": 0,
+              "end": 150
+            },
+            "score": 3.674038236314936,
+            "rank": 8,
+            "trace": {
+              "bm25_score": 3.674038236314936,
+              "bm25_rank": 8,
+              "selected": 0,
+              "evidence_coverage": 0.16666666666666666
+            }
+          }
+        ],
+        "refused": false,
+        "evidence_score": 0.8333333333333334,
+        "threshold": 0.25,
+        "confidence_note": "Lexical token coverage is an evidence gate, not a probability or entailment proof.",
+        "original_query": "综合成绩笔试面试比例",
+        "retrieval_query": "综合成绩笔试面试比例",
+        "embedding_kind": "MOCK",
+        "source_scope": [
+          "campus/computational-law-admission-2024.md"
+        ]
+      }
+    },
+    {
+      "case_id": "law-quota",
+      "passed": true,
+      "response": {
+        "mode": "extractive",
+        "answer": "1、实验班招生计划人数为30人。 [C1]\n\n按招生计划数1∶1.2的比例确定参加面试考生名单。放弃参加面试考生造成的空缺，依次等额递补。 [C2]\n\n实验班学生推荐免试研究生资格比例按照学校推荐优秀应届本科毕业生免试攻读研究生工作办法中的相关规定执行，按照班级人数的30%计算推荐免试研究生计划。实验班学生可享受学校优惠的奖学金政策，学生评定校优秀学生学业奖学金的比例可达到50%。 [C3]",
+        "statements": [
+          {
+            "text": "1、实验班招生计划人数为30人。",
+            "citation_ids": [
+              "C1"
+            ]
+          },
+          {
+            "text": "按招生计划数1∶1.2的比例确定参加面试考生名单。放弃参加面试考生造成的空缺，依次等额递补。",
+            "citation_ids": [
+              "C2"
+            ]
+          },
+          {
+            "text": "实验班学生推荐免试研究生资格比例按照学校推荐优秀应届本科毕业生免试攻读研究生工作办法中的相关规定执行，按照班级人数的30%计算推荐免试研究生计划。实验班学生可享受学校优惠的奖学金政策，学生评定校优秀学生学业奖学金的比例可达到50%。",
+            "citation_ids": [
+              "C3"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "C1",
+            "chunk_id": "d7d26ec9655329f9ae652e62befc6793",
+            "document_id": "f457cd063da14f3de2a1f1ae",
+            "file_name": "computational-law-admission-2024.md",
+            "source": "campus/computational-law-admission-2024.md",
+            "page": null,
+            "section": "2024级计算法学实验班招生简章 / 原文第 12 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 16,
+            "snippet": "1、实验班招生计划人数为30人。"
+          },
+          {
+            "citation_id": "C2",
+            "chunk_id": "6665f095999b233ff5858938335cca66",
+            "document_id": "f457cd063da14f3de2a1f1ae",
+            "file_name": "computational-law-admission-2024.md",
+            "source": "campus/computational-law-admission-2024.md",
+            "page": null,
+            "section": "2024级计算法学实验班招生简章 / 原文第 16 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 46,
+            "snippet": "按招生计划数1∶1.2的比例确定参加面试考生名单。放弃参加面试考生造成的空缺，依次等额递补。"
+          },
+          {
+            "citation_id": "C3",
+            "chunk_id": "8564acdcaf8a1eb580d661b0f5348977",
+            "document_id": "f457cd063da14f3de2a1f1ae",
+            "file_name": "computational-law-admission-2024.md",
+            "source": "campus/computational-law-admission-2024.md",
+            "page": null,
+            "section": "2024级计算法学实验班招生简章 / 原文第 9 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 116,
+            "snippet": "实验班学生推荐免试研究生资格比例按照学校推荐优秀应届本科毕业生免试攻读研究生工作办法中的相关规定执行，按照班级人数的30%计算推荐免试研究生计划。实验班学生可享受学校优惠的奖学金政策，学生评定校优秀学生学业奖学金的比例可达到50%。"
+          }
+        ],
+        "candidates": [
+          {
+            "chunk": {
+              "document_id": "f457cd063da14f3de2a1f1ae",
+              "file_name": "computational-law-admission-2024.md",
+              "source": "campus/computational-law-admission-2024.md",
+              "page": null,
+              "section": "2024级计算法学实验班招生简章 / 原文第 12 段",
+              "paragraph": null,
+              "segment_index": 5,
+              "chunk_id": "d7d26ec9655329f9ae652e62befc6793",
+              "text": "1、实验班招生计划人数为30人。",
+              "text_hash": "3e827fae62bd34206118d36f8d0cbaf74ba71275b9ac1b16e75ee99c5d463063",
+              "start": 0,
+              "end": 16
+            },
+            "score": 23.36984069707852,
+            "rank": 1,
+            "trace": {
+              "bm25_score": 23.36984069707852,
+              "bm25_rank": 1,
+              "selected": 1,
+              "evidence_coverage": 1.0
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "f457cd063da14f3de2a1f1ae",
+              "file_name": "computational-law-admission-2024.md",
+              "source": "campus/computational-law-admission-2024.md",
+              "page": null,
+              "section": "2024级计算法学实验班招生简章 / 原文第 16 段",
+              "paragraph": null,
+              "segment_index": 8,
+              "chunk_id": "6665f095999b233ff5858938335cca66",
+              "text": "按招生计划数1∶1.2的比例确定参加面试考生名单。放弃参加面试考生造成的空缺，依次等额递补。",
+              "text_hash": "b893dc38ac8de53b254ac5745473edee730c7eb133e0255941eab316223dd263",
+              "start": 0,
+              "end": 46
+            },
+            "score": 10.390335744339408,
+            "rank": 2,
+            "trace": {
+              "bm25_score": 10.390335744339408,
+              "bm25_rank": 2,
+              "selected": 1,
+              "evidence_coverage": 0.7272727272727273
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "f457cd063da14f3de2a1f1ae",
+              "file_name": "computational-law-admission-2024.md",
+              "source": "campus/computational-law-admission-2024.md",
+              "page": null,
+              "section": "2024级计算法学实验班招生简章 / 原文第 9 段",
+              "paragraph": null,
+              "segment_index": 3,
+              "chunk_id": "8564acdcaf8a1eb580d661b0f5348977",
+              "text": "实验班学生推荐免试研究生资格比例按照学校推荐优秀应届本科毕业生免试攻读研究生工作办法中的相关规定执行，按照班级人数的30%计算推荐免试研究生计划。实验班学生可享受学校优惠的奖学金政策，学生评定校优秀学生学业奖学金的比例可达到50%。",
+              "text_hash": "7fb66a1a1bcaae6d3afa1f637973846df9f27d88efb1c2256bd68365ff79480e",
+              "start": 0,
+              "end": 116
+            },
+            "score": 8.141264436854108,
+            "rank": 3,
+            "trace": {
+              "bm25_score": 8.141264436854108,
+              "bm25_rank": 3,
+              "selected": 1,
+              "evidence_coverage": 0.7272727272727273
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "f457cd063da14f3de2a1f1ae",
+              "file_name": "computational-law-admission-2024.md",
+              "source": "campus/computational-law-admission-2024.md",
+              "page": null,
+              "section": "2024级计算法学实验班招生简章 / 原文第 1 段",
+              "paragraph": null,
+              "segment_index": 1,
+              "chunk_id": "c32dc4f9a298b08128b50571268c7ad0",
+              "text": "山东大学（威海）2024级计算法学实验班招生简章",
+              "text_hash": "883ebecc964aa2d576822e5f4889e708895deedbc0b2d34cf73327638a0d58fa",
+              "start": 0,
+              "end": 24
+            },
+            "score": 4.782678245314079,
+            "rank": 4,
+            "trace": {
+              "bm25_score": 4.782678245314079,
+              "bm25_rank": 4,
+              "selected": 0,
+              "evidence_coverage": 0.36363636363636365
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "f457cd063da14f3de2a1f1ae",
+              "file_name": "computational-law-admission-2024.md",
+              "source": "campus/computational-law-admission-2024.md",
+              "page": null,
+              "section": "2024级计算法学实验班招生简章",
+              "paragraph": null,
+              "segment_index": 0,
+              "chunk_id": "7463470ebd4a2c28580e86d0a81a5d9a",
+              "text": "> 山东大学（威海） · 2024 年历史资料摘录。仅用于工程演示，不作为当前办事或招生依据。",
+              "text_hash": "55db37b288b872daf3dcbafd631775ee14e7c907fd6cbfe07afd32b8a10711b3",
+              "start": 0,
+              "end": 47
+            },
+            "score": 3.0911914852357274,
+            "rank": 5,
+            "trace": {
+              "bm25_score": 3.0911914852357274,
+              "bm25_rank": 5,
+              "selected": 0,
+              "evidence_coverage": 0.2727272727272727
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "f457cd063da14f3de2a1f1ae",
+              "file_name": "computational-law-admission-2024.md",
+              "source": "campus/computational-law-admission-2024.md",
+              "page": null,
+              "section": "2024级计算法学实验班招生简章 / 原文第 14 段",
+              "paragraph": null,
+              "segment_index": 6,
+              "chunk_id": "4444d9516b33f5ec4bc8dc30eebc4311",
+              "text": "山东大学（威海）2024级新入校的本科学生可申请本实验班选拔。（按照国家有关规定、学校招生章程及相关协议规定不能转入其他专业学习的学生，或已被其他校级特色班、五年制双学位班录取的除外）。",
+              "text_hash": "dfebbf10b2b22be958466fc38afbf026e3ef48ea04da221c0c0ff285ccfafca8",
+              "start": 0,
+              "end": 93
+            },
+            "score": 2.38595779651772,
+            "rank": 6,
+            "trace": {
+              "bm25_score": 2.38595779651772,
+              "bm25_rank": 6,
+              "selected": 0,
+              "evidence_coverage": 0.2727272727272727
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "f457cd063da14f3de2a1f1ae",
+              "file_name": "computational-law-admission-2024.md",
+              "source": "campus/computational-law-admission-2024.md",
+              "page": null,
+              "section": "2024级计算法学实验班招生简章 / 原文第 8 段",
+              "paragraph": null,
+              "segment_index": 2,
+              "chunk_id": "1586b93f602cabe0c8b24a6c57126c0d",
+              "text": "实验班学生需要综合运用法学专业知识以及数据科学、计算科学、复杂性科学的交叉知识（包括但不限于Python、NLP自然语言处理、计量建模、机器学习与深度学习等）去完成高水平的法律大数据检索与研究、法律科技应用与研发等项目，并积极转化申请相关大学生科研创新项目、参与学术竞赛等。实验班学生通过法学专业与其他学科专业的知识交叉融合、问题与项目为导向的创新教学与学习方式，能提高学生的专业能力、团队合作能力等，在科研竞赛、研究生升学、就业等方面极具竞争力。",
+              "text_hash": "047f04479c30122746e084dd846d4804e53623befaac128221b903d601a771fe",
+              "start": 0,
+              "end": 224
+            },
+            "score": 2.084769178528942,
+            "rank": 7,
+            "trace": {
+              "bm25_score": 2.084769178528942,
+              "bm25_rank": 7,
+              "selected": 0,
+              "evidence_coverage": 0.2727272727272727
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "f457cd063da14f3de2a1f1ae",
+              "file_name": "computational-law-admission-2024.md",
+              "source": "campus/computational-law-admission-2024.md",
+              "page": null,
+              "section": "2024级计算法学实验班招生简章 / 原文第 15 段",
+              "paragraph": null,
+              "segment_index": 7,
+              "chunk_id": "059c96b62d3137bb6d3c09a129878c86",
+              "text": "3.考试方式：笔试与面试相结合。考试侧重能力考试，考生无需特别准备。笔试主要考察数学、英语、思维、论述等内容，面试主要考察逻辑思维能力、语言表达能力等。",
+              "text_hash": "39c2936d6692e18a9f4e5e2a4a5b0ca846d79c4bada9b9d35d1e3e183bfba604",
+              "start": 0,
+              "end": 76
+            },
+            "score": 1.4043365119468474,
+            "rank": 8,
+            "trace": {
+              "bm25_score": 1.4043365119468474,
+              "bm25_rank": 8,
+              "selected": 0,
+              "evidence_coverage": 0.18181818181818182
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "f457cd063da14f3de2a1f1ae",
+              "file_name": "computational-law-admission-2024.md",
+              "source": "campus/computational-law-admission-2024.md",
+              "page": null,
+              "section": "2024级计算法学实验班招生简章 / 原文第 27 段",
+              "paragraph": null,
+              "segment_index": 12,
+              "chunk_id": "cd42441e733c01905505e52a72e364d3",
+              "text": "按笔试成绩占60%，面试成绩占40%的比例计算考试综合成绩，按综合成绩排名确定录取名单。若综合成绩相同，按笔试成绩由高分到低分确定最终录取名单。",
+              "text_hash": "d45bcfa6c7c91399032a9e2732f5998a19c20cb640363b80bd20af069ca49b56",
+              "start": 0,
+              "end": 72
+            },
+            "score": 0.8075282885307938,
+            "rank": 9,
+            "trace": {
+              "bm25_score": 0.8075282885307938,
+              "bm25_rank": 9,
+              "selected": 0,
+              "evidence_coverage": 0.09090909090909091
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "f457cd063da14f3de2a1f1ae",
+              "file_name": "computational-law-admission-2024.md",
+              "source": "campus/computational-law-admission-2024.md",
+              "page": null,
+              "section": "2024级计算法学实验班招生简章 / 原文第 10 段",
+              "paragraph": null,
+              "segment_index": 4,
+              "chunk_id": "412792ae802864d40f0a04e40bf2ad75",
+              "text": "实验班隶属于法学院（威海）法学专业，授予法学学士学位。学生日常管理由法学院按照学校相关管理规定进行。实验班学生实行转出机制。大一学年结束时，专业学习成绩排名在后20%且学分绩点低于75分者，实行转出该班。转出学生可根据自身意愿，申请转入原专业或法学专业普通班学习，转出后不再享有实验班的各项优惠政策。",
+              "text_hash": "69a85fc5f9726795f77d52a7e98578390f483973b77bbf76354c3bdc269f925e",
+              "start": 0,
+              "end": 150
+            },
+            "score": 0.5720923747052314,
+            "rank": 10,
+            "trace": {
+              "bm25_score": 0.5720923747052314,
+              "bm25_rank": 10,
+              "selected": 0,
+              "evidence_coverage": 0.09090909090909091
+            }
+          }
+        ],
+        "refused": false,
+        "evidence_score": 1.0,
+        "threshold": 0.25,
+        "confidence_note": "Lexical token coverage is an evidence gate, not a probability or entailment proof.",
+        "original_query": "招生计划人数",
+        "retrieval_query": "招生计划人数",
+        "embedding_kind": "MOCK",
+        "source_scope": [
+          "campus/computational-law-admission-2024.md"
+        ]
+      }
+    },
+    {
+      "case_id": "english-exception",
+      "passed": true,
+      "response": {
+        "mode": "extractive",
+        "answer": "三、参加对象：2024级新生（不含翻译学院）。翻译学院新生的分专业测试由学院自行组织。 [C1]\n\n5、学生须凭身份证和一卡通参加考试。 [C2]",
+        "statements": [
+          {
+            "text": "三、参加对象：2024级新生（不含翻译学院）。翻译学院新生的分专业测试由学院自行组织。",
+            "citation_ids": [
+              "C1"
+            ]
+          },
+          {
+            "text": "5、学生须凭身份证和一卡通参加考试。",
+            "citation_ids": [
+              "C2"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "C1",
+            "chunk_id": "534e686237d745d79faa488826cc3b5c",
+            "document_id": "93fe1c95088e45c8a7687609",
+            "file_name": "english-placement-2024.md",
+            "source": "campus/english-placement-2024.md",
+            "page": null,
+            "section": "开学英语分级 / 原文第 6 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 43,
+            "snippet": "三、参加对象：2024级新生（不含翻译学院）。翻译学院新生的分专业测试由学院自行组织。"
+          },
+          {
+            "citation_id": "C2",
+            "chunk_id": "b12aa30c502674580f7443125034ecad",
+            "document_id": "93fe1c95088e45c8a7687609",
+            "file_name": "english-placement-2024.md",
+            "source": "campus/english-placement-2024.md",
+            "page": null,
+            "section": "开学英语分级 / 原文第 12 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 18,
+            "snippet": "5、学生须凭身份证和一卡通参加考试。"
+          }
+        ],
+        "candidates": [
+          {
+            "chunk": {
+              "document_id": "93fe1c95088e45c8a7687609",
+              "file_name": "english-placement-2024.md",
+              "source": "campus/english-placement-2024.md",
+              "page": null,
+              "section": "开学英语分级 / 原文第 6 段",
+              "paragraph": null,
+              "segment_index": 4,
+              "chunk_id": "534e686237d745d79faa488826cc3b5c",
+              "text": "三、参加对象：2024级新生（不含翻译学院）。翻译学院新生的分专业测试由学院自行组织。",
+              "text_hash": "779067c28f517300d7b1f1c9ff44b103abd0b627b232acd3a6b2017e4939b8c8",
+              "start": 0,
+              "end": 43
+            },
+            "score": 11.271696218371476,
+            "rank": 1,
+            "trace": {
+              "bm25_score": 11.271696218371476,
+              "bm25_rank": 1,
+              "selected": 1,
+              "evidence_coverage": 1.0
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "93fe1c95088e45c8a7687609",
+              "file_name": "english-placement-2024.md",
+              "source": "campus/english-placement-2024.md",
+              "page": null,
+              "section": "开学英语分级 / 原文第 12 段",
+              "paragraph": null,
+              "segment_index": 6,
+              "chunk_id": "b12aa30c502674580f7443125034ecad",
+              "text": "5、学生须凭身份证和一卡通参加考试。",
+              "text_hash": "0beaeffef00ccbca4d62a4de668f70ffba868baf5b2e2afaea7049dbd73dd189",
+              "start": 0,
+              "end": 18
+            },
+            "score": 5.079704798508729,
+            "rank": 2,
+            "trace": {
+              "bm25_score": 5.079704798508729,
+              "bm25_rank": 2,
+              "selected": 1,
+              "evidence_coverage": 0.42857142857142855
+            }
+          }
+        ],
+        "refused": false,
+        "evidence_score": 1.0,
+        "threshold": 0.25,
+        "confidence_note": "Lexical token coverage is an evidence gate, not a probability or entailment proof.",
+        "original_query": "参加对象",
+        "retrieval_query": "参加对象",
+        "embedding_kind": "MOCK",
+        "source_scope": [
+          "campus/english-placement-2024.md"
+        ]
+      }
+    },
+    {
+      "case_id": "english-materials",
+      "passed": true,
+      "response": {
+        "mode": "extractive",
+        "answer": "5、学生须凭身份证和一卡通参加考试。 [C1]\n\n三、参加对象：2024级新生（不含翻译学院）。翻译学院新生的分专业测试由学院自行组织。 [C2]",
+        "statements": [
+          {
+            "text": "5、学生须凭身份证和一卡通参加考试。",
+            "citation_ids": [
+              "C1"
+            ]
+          },
+          {
+            "text": "三、参加对象：2024级新生（不含翻译学院）。翻译学院新生的分专业测试由学院自行组织。",
+            "citation_ids": [
+              "C2"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "C1",
+            "chunk_id": "b12aa30c502674580f7443125034ecad",
+            "document_id": "93fe1c95088e45c8a7687609",
+            "file_name": "english-placement-2024.md",
+            "source": "campus/english-placement-2024.md",
+            "page": null,
+            "section": "开学英语分级 / 原文第 12 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 18,
+            "snippet": "5、学生须凭身份证和一卡通参加考试。"
+          },
+          {
+            "citation_id": "C2",
+            "chunk_id": "534e686237d745d79faa488826cc3b5c",
+            "document_id": "93fe1c95088e45c8a7687609",
+            "file_name": "english-placement-2024.md",
+            "source": "campus/english-placement-2024.md",
+            "page": null,
+            "section": "开学英语分级 / 原文第 6 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 43,
+            "snippet": "三、参加对象：2024级新生（不含翻译学院）。翻译学院新生的分专业测试由学院自行组织。"
+          }
+        ],
+        "candidates": [
+          {
+            "chunk": {
+              "document_id": "93fe1c95088e45c8a7687609",
+              "file_name": "english-placement-2024.md",
+              "source": "campus/english-placement-2024.md",
+              "page": null,
+              "section": "开学英语分级 / 原文第 12 段",
+              "paragraph": null,
+              "segment_index": 6,
+              "chunk_id": "b12aa30c502674580f7443125034ecad",
+              "text": "5、学生须凭身份证和一卡通参加考试。",
+              "text_hash": "0beaeffef00ccbca4d62a4de668f70ffba868baf5b2e2afaea7049dbd73dd189",
+              "start": 0,
+              "end": 18
+            },
+            "score": 11.359661786826878,
+            "rank": 1,
+            "trace": {
+              "bm25_score": 11.359661786826878,
+              "bm25_rank": 1,
+              "selected": 1,
+              "evidence_coverage": 0.6153846153846154
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "93fe1c95088e45c8a7687609",
+              "file_name": "english-placement-2024.md",
+              "source": "campus/english-placement-2024.md",
+              "page": null,
+              "section": "开学英语分级 / 原文第 6 段",
+              "paragraph": null,
+              "segment_index": 4,
+              "chunk_id": "534e686237d745d79faa488826cc3b5c",
+              "text": "三、参加对象：2024级新生（不含翻译学院）。翻译学院新生的分专业测试由学院自行组织。",
+              "text_hash": "779067c28f517300d7b1f1c9ff44b103abd0b627b232acd3a6b2017e4939b8c8",
+              "start": 0,
+              "end": 43
+            },
+            "score": 4.1208561764377345,
+            "rank": 2,
+            "trace": {
+              "bm25_score": 4.1208561764377345,
+              "bm25_rank": 2,
+              "selected": 1,
+              "evidence_coverage": 0.3076923076923077
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "93fe1c95088e45c8a7687609",
+              "file_name": "english-placement-2024.md",
+              "source": "campus/english-placement-2024.md",
+              "page": null,
+              "section": "开学英语分级 / 原文第 13 段",
+              "paragraph": null,
+              "segment_index": 7,
+              "chunk_id": "a94956c3581a86cfb93263ba4b3ba2f0",
+              "text": "6、此次考试时间共60分钟，英语考试无听力。学生自带黑色中性笔（签字笔）和2B铅笔（涂答题卡用）、橡皮等考试工具。",
+              "text_hash": "f8b97667888ad7015ce6e414c0986e4e68afdec387122833764d708329ececbf",
+              "start": 0,
+              "end": 57
+            },
+            "score": 1.842416108693318,
+            "rank": 3,
+            "trace": {
+              "bm25_score": 1.842416108693318,
+              "bm25_rank": 3,
+              "selected": 1,
+              "evidence_coverage": 0.23076923076923078
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "93fe1c95088e45c8a7687609",
+              "file_name": "english-placement-2024.md",
+              "source": "campus/english-placement-2024.md",
+              "page": null,
+              "section": "开学英语分级 / 原文第 5 段",
+              "paragraph": null,
+              "segment_index": 3,
+              "chunk_id": "09e82c5b410aabb3c3a40a1a4dea544e",
+              "text": "二、考试时间：9月9日（星期一）晚上19：00—20：00",
+              "text_hash": "33ff292d20bf0c29f5d9021d90e6857356fe424cea402aaf95fe5d6bf850c4ae",
+              "start": 0,
+              "end": 29
+            },
+            "score": 1.6320935105347703,
+            "rank": 4,
+            "trace": {
+              "bm25_score": 1.6320935105347703,
+              "bm25_rank": 4,
+              "selected": 0,
+              "evidence_coverage": 0.23076923076923078
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "93fe1c95088e45c8a7687609",
+              "file_name": "english-placement-2024.md",
+              "source": "campus/english-placement-2024.md",
+              "page": null,
+              "section": "开学英语分级 / 原文第 4 段",
+              "paragraph": null,
+              "segment_index": 2,
+              "chunk_id": "c0b793526921a19db2bc927876d76ec9",
+              "text": "一、考试科目：英语（答题卡试卷类型涂A，科目代号涂“英语”；涂卡时请将考生学号的后9位涂在答题卡上。填涂错误或空缺者一律以零分记；小语种考生考试科目为语文）",
+              "text_hash": "1c3cebfc77617c781c0dc0a4d1d8fced7832a28a74806c5d428e3ad567272bbc",
+              "start": 0,
+              "end": 78
+            },
+            "score": 1.5509708218734077,
+            "rank": 5,
+            "trace": {
+              "bm25_score": 1.5509708218734077,
+              "bm25_rank": 5,
+              "selected": 0,
+              "evidence_coverage": 0.23076923076923078
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "93fe1c95088e45c8a7687609",
+              "file_name": "english-placement-2024.md",
+              "source": "campus/english-placement-2024.md",
+              "page": null,
+              "section": "开学英语分级 / 原文第 11 段",
+              "paragraph": null,
+              "segment_index": 5,
+              "chunk_id": "098f886a0a695a27d5ae044081a64799",
+              "text": "4、各学院做好新生英语水平分级测试的考前准备工作，告知学生各自的学号，及时通知学生考试时间，并于开考前15分钟集体带入考场，不能迟到。",
+              "text_hash": "f125b3e4f765d60a9f01b2104856e993d935af44c6bfd0bd2b94027aeb53f673",
+              "start": 0,
+              "end": 67
+            },
+            "score": 1.3661282045878134,
+            "rank": 6,
+            "trace": {
+              "bm25_score": 1.3661282045878134,
+              "bm25_rank": 6,
+              "selected": 0,
+              "evidence_coverage": 0.23076923076923078
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "93fe1c95088e45c8a7687609",
+              "file_name": "english-placement-2024.md",
+              "source": "campus/english-placement-2024.md",
+              "page": null,
+              "section": "开学英语分级 / 原文第 1 段",
+              "paragraph": null,
+              "segment_index": 1,
+              "chunk_id": "11ec045be1d0e836030ea2a9a646219a",
+              "text": "关于2024级新生英语水平分级测试的通知",
+              "text_hash": "7a929914adf0846021c8c9f9240bc374621010fb2bd1bbbe678c318bd1fbce53",
+              "start": 0,
+              "end": 20
+            },
+            "score": 0.23883324784781026,
+            "rank": 7,
+            "trace": {
+              "bm25_score": 0.23883324784781026,
+              "bm25_rank": 7,
+              "selected": 0,
+              "evidence_coverage": 0.07692307692307693
+            }
+          }
+        ],
+        "refused": false,
+        "evidence_score": 0.6153846153846154,
+        "threshold": 0.25,
+        "confidence_note": "Lexical token coverage is an evidence gate, not a probability or entailment proof.",
+        "original_query": "凭什么参加考试",
+        "retrieval_query": "凭什么参加考试",
+        "embedding_kind": "MOCK",
+        "source_scope": [
+          "campus/english-placement-2024.md"
+        ]
+      }
+    },
+    {
+      "case_id": "course-period",
+      "passed": true,
+      "response": {
+        "mode": "extractive",
+        "answer": "根据学校选课工作安排，新生选课时间为：2024年9月14日10：00—9月20日10：00，新生本学期的课程只有这一次选课阶段。请各学院务必提前做好新生分班工作，及时维护入库，并认真组织好2024级新生网上选课工作。 [C1]\n\n5.新生应严格按照班级课表（“培养管理”-“我的课表”-“班级课表查询”）选课，因新生开课时间较晚，本次选课无需选择全校通选课程和通识核心课程。 [C2]\n\n关于2024级本科新生选课工作的通知 [C3]",
+        "statements": [
+          {
+            "text": "根据学校选课工作安排，新生选课时间为：2024年9月14日10：00—9月20日10：00，新生本学期的课程只有这一次选课阶段。请各学院务必提前做好新生分班工作，及时维护入库，并认真组织好2024级新生网上选课工作。",
+            "citation_ids": [
+              "C1"
+            ]
+          },
+          {
+            "text": "5.新生应严格按照班级课表（“培养管理”-“我的课表”-“班级课表查询”）选课，因新生开课时间较晚，本次选课无需选择全校通选课程和通识核心课程。",
+            "citation_ids": [
+              "C2"
+            ]
+          },
+          {
+            "text": "关于2024级本科新生选课工作的通知",
+            "citation_ids": [
+              "C3"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "C1",
+            "chunk_id": "4c2b5320cb78a804ffa68fdbf39a2c4c",
+            "document_id": "2f587b26e58c056bb3954bda",
+            "file_name": "course-selection-2024.md",
+            "source": "campus/course-selection-2024.md",
+            "page": null,
+            "section": "选课 / 原文第 6 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 108,
+            "snippet": "根据学校选课工作安排，新生选课时间为：2024年9月14日10：00—9月20日10：00，新生本学期的课程只有这一次选课阶段。请各学院务必提前做好新生分班工作，及时维护入库，并认真组织好2024级新生网上选课工作。"
+          },
+          {
+            "citation_id": "C2",
+            "chunk_id": "6eb23b4b7d0ef66299072ee9097c82f7",
+            "document_id": "2f587b26e58c056bb3954bda",
+            "file_name": "course-selection-2024.md",
+            "source": "campus/course-selection-2024.md",
+            "page": null,
+            "section": "选课 / 原文第 20 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 72,
+            "snippet": "5.新生应严格按照班级课表（“培养管理”-“我的课表”-“班级课表查询”）选课，因新生开课时间较晚，本次选课无需选择全校通选课程和通识核心课程。"
+          },
+          {
+            "citation_id": "C3",
+            "chunk_id": "8c3dc0ef37dba93f03c0e86854cd74f7",
+            "document_id": "2f587b26e58c056bb3954bda",
+            "file_name": "course-selection-2024.md",
+            "source": "campus/course-selection-2024.md",
+            "page": null,
+            "section": "选课 / 原文第 1 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 18,
+            "snippet": "关于2024级本科新生选课工作的通知"
+          }
+        ],
+        "candidates": [
+          {
+            "chunk": {
+              "document_id": "2f587b26e58c056bb3954bda",
+              "file_name": "course-selection-2024.md",
+              "source": "campus/course-selection-2024.md",
+              "page": null,
+              "section": "选课 / 原文第 6 段",
+              "paragraph": null,
+              "segment_index": 2,
+              "chunk_id": "4c2b5320cb78a804ffa68fdbf39a2c4c",
+              "text": "根据学校选课工作安排，新生选课时间为：2024年9月14日10：00—9月20日10：00，新生本学期的课程只有这一次选课阶段。请各学院务必提前做好新生分班工作，及时维护入库，并认真组织好2024级新生网上选课工作。",
+              "text_hash": "58f2a7090fe69297d315bd8d6f9fc9c273ed3541a8f8d0338bcab0ddad3c5265",
+              "start": 0,
+              "end": 108
+            },
+            "score": 7.6607687567489196,
+            "rank": 1,
+            "trace": {
+              "bm25_score": 7.6607687567489196,
+              "bm25_rank": 1,
+              "selected": 1,
+              "evidence_coverage": 1.0
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "2f587b26e58c056bb3954bda",
+              "file_name": "course-selection-2024.md",
+              "source": "campus/course-selection-2024.md",
+              "page": null,
+              "section": "选课 / 原文第 20 段",
+              "paragraph": null,
+              "segment_index": 6,
+              "chunk_id": "6eb23b4b7d0ef66299072ee9097c82f7",
+              "text": "5.新生应严格按照班级课表（“培养管理”-“我的课表”-“班级课表查询”）选课，因新生开课时间较晚，本次选课无需选择全校通选课程和通识核心课程。",
+              "text_hash": "d6132f5c67a45b1860c4a88df0fadcca8902c9086003f9391ce954cb5a1f7821",
+              "start": 0,
+              "end": 72
+            },
+            "score": 7.023641110242013,
+            "rank": 2,
+            "trace": {
+              "bm25_score": 7.023641110242013,
+              "bm25_rank": 2,
+              "selected": 1,
+              "evidence_coverage": 0.9090909090909091
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "2f587b26e58c056bb3954bda",
+              "file_name": "course-selection-2024.md",
+              "source": "campus/course-selection-2024.md",
+              "page": null,
+              "section": "选课 / 原文第 1 段",
+              "paragraph": null,
+              "segment_index": 1,
+              "chunk_id": "8c3dc0ef37dba93f03c0e86854cd74f7",
+              "text": "关于2024级本科新生选课工作的通知",
+              "text_hash": "9fe5a6ee3e547a9f7c3b8d2cc68ad356fd120531665ae2239184a51d7e5dcf51",
+              "start": 0,
+              "end": 18
+            },
+            "score": 3.8915270884302675,
+            "rank": 3,
+            "trace": {
+              "bm25_score": 3.8915270884302675,
+              "bm25_rank": 3,
+              "selected": 1,
+              "evidence_coverage": 0.6363636363636364
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "2f587b26e58c056bb3954bda",
+              "file_name": "course-selection-2024.md",
+              "source": "campus/course-selection-2024.md",
+              "page": null,
+              "section": "选课 / 原文第 16 段",
+              "paragraph": null,
+              "segment_index": 4,
+              "chunk_id": "215a94a3eaf4c73b022a2654b8d6dbaa",
+              "text": "3.新生所有选课均由学生网上自行选定，具体操作方法详见附件1《2024级本科新生选课说明》。",
+              "text_hash": "502ce3f3d6a1358fb97805c6f45bcb9d0de23aed5c7ac1ec5071039eff05015a",
+              "start": 0,
+              "end": 46
+            },
+            "score": 3.8098388432492105,
+            "rank": 4,
+            "trace": {
+              "bm25_score": 3.8098388432492105,
+              "bm25_rank": 4,
+              "selected": 0,
+              "evidence_coverage": 0.6363636363636364
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "2f587b26e58c056bb3954bda",
+              "file_name": "course-selection-2024.md",
+              "source": "campus/course-selection-2024.md",
+              "page": null,
+              "section": "选课 / 原文第 8 段",
+              "paragraph": null,
+              "segment_index": 3,
+              "chunk_id": "8f21fe502131ecc119a5be22a5e094fc",
+              "text": "所有选课数据将作为学生期末考试、成绩录入的唯一依据，为了确保选课数据准确，严格选课管理，请各学院教务秘书悉心指导，辅导员认真组织，各位同学严格按要求进行操作。",
+              "text_hash": "4e88b8760ca6651317acf47147de4e9ac9566b30cc453bcdf0d7f1d9d5b71f33",
+              "start": 0,
+              "end": 79
+            },
+            "score": 0.9711007962000218,
+            "rank": 5,
+            "trace": {
+              "bm25_score": 0.9711007962000218,
+              "bm25_rank": 5,
+              "selected": 0,
+              "evidence_coverage": 0.36363636363636365
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "2f587b26e58c056bb3954bda",
+              "file_name": "course-selection-2024.md",
+              "source": "campus/course-selection-2024.md",
+              "page": null,
+              "section": "选课 / 原文第 18 段",
+              "paragraph": null,
+              "segment_index": 5,
+              "chunk_id": "96e5a6a399a0c330136ff519e264d24d",
+              "text": "4.学生所选课程的课程号必须与教学计划课程号一致，教学计划可在“培养管理”-“培养方案”-“执行计划”查询。",
+              "text_hash": "6cc8215e7dd2fd7c9e6d42c91f11bdadd45d39fd029132922094e492d6091ecf",
+              "start": 0,
+              "end": 54
+            },
+            "score": 0.8651809107482267,
+            "rank": 6,
+            "trace": {
+              "bm25_score": 0.8651809107482267,
+              "bm25_rank": 6,
+              "selected": 0,
+              "evidence_coverage": 0.36363636363636365
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "2f587b26e58c056bb3954bda",
+              "file_name": "course-selection-2024.md",
+              "source": "campus/course-selection-2024.md",
+              "page": null,
+              "section": "选课",
+              "paragraph": null,
+              "segment_index": 0,
+              "chunk_id": "dacb12fe3c234ff257f432a0078547be",
+              "text": "> 山东大学（威海） · 2024 年历史资料摘录。仅用于工程演示，不作为当前办事或招生依据。",
+              "text_hash": "55db37b288b872daf3dcbafd631775ee14e7c907fd6cbfe07afd32b8a10711b3",
+              "start": 0,
+              "end": 47
+            },
+            "score": 0.0759701647939696,
+            "rank": 7,
+            "trace": {
+              "bm25_score": 0.0759701647939696,
+              "bm25_rank": 7,
+              "selected": 0,
+              "evidence_coverage": 0.09090909090909091
+            }
+          }
+        ],
+        "refused": false,
+        "evidence_score": 1.0,
+        "threshold": 0.25,
+        "confidence_note": "Lexical token coverage is an evidence gate, not a probability or entailment proof.",
+        "original_query": "新生选课时间",
+        "retrieval_query": "新生选课时间",
+        "embedding_kind": "MOCK",
+        "source_scope": [
+          "campus/course-selection-2024.md"
+        ]
+      }
+    },
+    {
+      "case_id": "course-number",
+      "passed": true,
+      "response": {
+        "mode": "extractive",
+        "answer": "4.学生所选课程的课程号必须与教学计划课程号一致，教学计划可在“培养管理”-“培养方案”-“执行计划”查询。 [C1]\n\n根据学校选课工作安排，新生选课时间为：2024年9月14日10：00—9月20日10：00，新生本学期的课程只有这一次选课阶段。请各学院务必提前做好新生分班工作，及时维护入库，并认真组织好2024级新生网上选课工作。 [C2]",
+        "statements": [
+          {
+            "text": "4.学生所选课程的课程号必须与教学计划课程号一致，教学计划可在“培养管理”-“培养方案”-“执行计划”查询。",
+            "citation_ids": [
+              "C1"
+            ]
+          },
+          {
+            "text": "根据学校选课工作安排，新生选课时间为：2024年9月14日10：00—9月20日10：00，新生本学期的课程只有这一次选课阶段。请各学院务必提前做好新生分班工作，及时维护入库，并认真组织好2024级新生网上选课工作。",
+            "citation_ids": [
+              "C2"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "C1",
+            "chunk_id": "96e5a6a399a0c330136ff519e264d24d",
+            "document_id": "2f587b26e58c056bb3954bda",
+            "file_name": "course-selection-2024.md",
+            "source": "campus/course-selection-2024.md",
+            "page": null,
+            "section": "选课 / 原文第 18 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 54,
+            "snippet": "4.学生所选课程的课程号必须与教学计划课程号一致，教学计划可在“培养管理”-“培养方案”-“执行计划”查询。"
+          },
+          {
+            "citation_id": "C2",
+            "chunk_id": "4c2b5320cb78a804ffa68fdbf39a2c4c",
+            "document_id": "2f587b26e58c056bb3954bda",
+            "file_name": "course-selection-2024.md",
+            "source": "campus/course-selection-2024.md",
+            "page": null,
+            "section": "选课 / 原文第 6 段",
+            "paragraph": null,
+            "start": 0,
+            "end": 108,
+            "snippet": "根据学校选课工作安排，新生选课时间为：2024年9月14日10：00—9月20日10：00，新生本学期的课程只有这一次选课阶段。请各学院务必提前做好新生分班工作，及时维护入库，并认真组织好2024级新生网上选课工作。"
+          }
+        ],
+        "candidates": [
+          {
+            "chunk": {
+              "document_id": "2f587b26e58c056bb3954bda",
+              "file_name": "course-selection-2024.md",
+              "source": "campus/course-selection-2024.md",
+              "page": null,
+              "section": "选课 / 原文第 18 段",
+              "paragraph": null,
+              "segment_index": 5,
+              "chunk_id": "96e5a6a399a0c330136ff519e264d24d",
+              "text": "4.学生所选课程的课程号必须与教学计划课程号一致，教学计划可在“培养管理”-“培养方案”-“执行计划”查询。",
+              "text_hash": "6cc8215e7dd2fd7c9e6d42c91f11bdadd45d39fd029132922094e492d6091ecf",
+              "start": 0,
+              "end": 54
+            },
+            "score": 25.51389464201118,
+            "rank": 1,
+            "trace": {
+              "bm25_score": 25.51389464201118,
+              "bm25_rank": 1,
+              "selected": 1,
+              "evidence_coverage": 1.0
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "2f587b26e58c056bb3954bda",
+              "file_name": "course-selection-2024.md",
+              "source": "campus/course-selection-2024.md",
+              "page": null,
+              "section": "选课 / 原文第 20 段",
+              "paragraph": null,
+              "segment_index": 6,
+              "chunk_id": "6eb23b4b7d0ef66299072ee9097c82f7",
+              "text": "5.新生应严格按照班级课表（“培养管理”-“我的课表”-“班级课表查询”）选课，因新生开课时间较晚，本次选课无需选择全校通选课程和通识核心课程。",
+              "text_hash": "d6132f5c67a45b1860c4a88df0fadcca8902c9086003f9391ce954cb5a1f7821",
+              "start": 0,
+              "end": 72
+            },
+            "score": 2.3101338431628164,
+            "rank": 2,
+            "trace": {
+              "bm25_score": 2.3101338431628164,
+              "bm25_rank": 2,
+              "selected": 1,
+              "evidence_coverage": 0.23076923076923078
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "2f587b26e58c056bb3954bda",
+              "file_name": "course-selection-2024.md",
+              "source": "campus/course-selection-2024.md",
+              "page": null,
+              "section": "选课 / 原文第 6 段",
+              "paragraph": null,
+              "segment_index": 2,
+              "chunk_id": "4c2b5320cb78a804ffa68fdbf39a2c4c",
+              "text": "根据学校选课工作安排，新生选课时间为：2024年9月14日10：00—9月20日10：00，新生本学期的课程只有这一次选课阶段。请各学院务必提前做好新生分班工作，及时维护入库，并认真组织好2024级新生网上选课工作。",
+              "text_hash": "58f2a7090fe69297d315bd8d6f9fc9c273ed3541a8f8d0338bcab0ddad3c5265",
+              "start": 0,
+              "end": 108
+            },
+            "score": 1.973206553465319,
+            "rank": 3,
+            "trace": {
+              "bm25_score": 1.973206553465319,
+              "bm25_rank": 3,
+              "selected": 1,
+              "evidence_coverage": 0.3076923076923077
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "2f587b26e58c056bb3954bda",
+              "file_name": "course-selection-2024.md",
+              "source": "campus/course-selection-2024.md",
+              "page": null,
+              "section": "选课 / 原文第 8 段",
+              "paragraph": null,
+              "segment_index": 3,
+              "chunk_id": "8f21fe502131ecc119a5be22a5e094fc",
+              "text": "所有选课数据将作为学生期末考试、成绩录入的唯一依据，为了确保选课数据准确，严格选课管理，请各学院教务秘书悉心指导，辅导员认真组织，各位同学严格按要求进行操作。",
+              "text_hash": "4e88b8760ca6651317acf47147de4e9ac9566b30cc453bcdf0d7f1d9d5b71f33",
+              "start": 0,
+              "end": 79
+            },
+            "score": 1.8015852134984593,
+            "rank": 4,
+            "trace": {
+              "bm25_score": 1.8015852134984593,
+              "bm25_rank": 4,
+              "selected": 0,
+              "evidence_coverage": 0.23076923076923078
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "2f587b26e58c056bb3954bda",
+              "file_name": "course-selection-2024.md",
+              "source": "campus/course-selection-2024.md",
+              "page": null,
+              "section": "选课",
+              "paragraph": null,
+              "segment_index": 0,
+              "chunk_id": "dacb12fe3c234ff257f432a0078547be",
+              "text": "> 山东大学（威海） · 2024 年历史资料摘录。仅用于工程演示，不作为当前办事或招生依据。",
+              "text_hash": "55db37b288b872daf3dcbafd631775ee14e7c907fd6cbfe07afd32b8a10711b3",
+              "start": 0,
+              "end": 47
+            },
+            "score": 1.1183403451761544,
+            "rank": 5,
+            "trace": {
+              "bm25_score": 1.1183403451761544,
+              "bm25_rank": 5,
+              "selected": 0,
+              "evidence_coverage": 0.15384615384615385
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "2f587b26e58c056bb3954bda",
+              "file_name": "course-selection-2024.md",
+              "source": "campus/course-selection-2024.md",
+              "page": null,
+              "section": "选课 / 原文第 16 段",
+              "paragraph": null,
+              "segment_index": 4,
+              "chunk_id": "215a94a3eaf4c73b022a2654b8d6dbaa",
+              "text": "3.新生所有选课均由学生网上自行选定，具体操作方法详见附件1《2024级本科新生选课说明》。",
+              "text_hash": "502ce3f3d6a1358fb97805c6f45bcb9d0de23aed5c7ac1ec5071039eff05015a",
+              "start": 0,
+              "end": 46
+            },
+            "score": 0.7361643307295687,
+            "rank": 6,
+            "trace": {
+              "bm25_score": 0.7361643307295687,
+              "bm25_rank": 6,
+              "selected": 0,
+              "evidence_coverage": 0.15384615384615385
+            }
+          },
+          {
+            "chunk": {
+              "document_id": "2f587b26e58c056bb3954bda",
+              "file_name": "course-selection-2024.md",
+              "source": "campus/course-selection-2024.md",
+              "page": null,
+              "section": "选课 / 原文第 1 段",
+              "paragraph": null,
+              "segment_index": 1,
+              "chunk_id": "8c3dc0ef37dba93f03c0e86854cd74f7",
+              "text": "关于2024级本科新生选课工作的通知",
+              "text_hash": "9fe5a6ee3e547a9f7c3b8d2cc68ad356fd120531665ae2239184a51d7e5dcf51",
+              "start": 0,
+              "end": 18
+            },
+            "score": 0.303217864325555,
+            "rank": 7,
+            "trace": {
+              "bm25_score": 0.303217864325555,
+              "bm25_rank": 7,
+              "selected": 0,
+              "evidence_coverage": 0.07692307692307693
+            }
+          }
+        ],
+        "refused": false,
+        "evidence_score": 1.0,
+        "threshold": 0.25,
+        "confidence_note": "Lexical token coverage is an evidence gate, not a probability or entailment proof.",
+        "original_query": "教学计划课程号",
+        "retrieval_query": "教学计划课程号",
+        "embedding_kind": "MOCK",
+        "source_scope": [
+          "campus/course-selection-2024.md"
+        ]
+      }
+    },
+    {
+      "case_id": "unknown-term",
+      "passed": true,
+      "response": {
+        "mode": "extractive",
+        "answer": "根据当前知识库无法确认",
+        "statements": [],
+        "citations": [],
+        "candidates": [],
+        "refused": true,
+        "evidence_score": 0.0,
+        "threshold": 0.25,
+        "confidence_note": "Lexical token coverage is an evidence gate, not a probability or entailment proof.",
+        "original_query": "zxqvplm astronomyzebra",
+        "retrieval_query": "zxqvplm astronomyzebra",
+        "embedding_kind": "MOCK",
+        "source_scope": [
+          "campus/cs-curriculum-2024.md"
+        ]
+      }
+    },
+    {
+      "case_id": "unavailable-2026-source",
+      "passed": true,
+      "response": {
+        "mode": "extractive",
+        "answer": "根据当前知识库无法确认",
+        "statements": [],
+        "citations": [],
+        "candidates": [],
+        "refused": true,
+        "evidence_score": 0.0,
+        "threshold": 0.25,
+        "confidence_note": "Lexical token coverage is an evidence gate, not a probability or entailment proof.",
+        "original_query": "新生选课时间",
+        "retrieval_query": "新生选课时间",
+        "embedding_kind": "MOCK",
+        "source_scope": [
+          "campus/course-selection-2026.md"
+        ]
+      }
+    }
+  ]
+}

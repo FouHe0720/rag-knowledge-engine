@@ -26,6 +26,7 @@ class QueryRequest(BaseModel):
     top_k: int = Field(5, ge=1, le=100)
     rerank: RerankMode = "noop"
     rewrite: bool = False
+    sources: list[str] | None = Field(default=None, max_length=32)
 
     @field_validator("question")
     @classmethod
@@ -110,7 +111,7 @@ def create_app(engine: Engine | None = None) -> FastAPI:
     @app.post("/query")
     def query(body: QueryRequest, request: Request):
         return request.app.state.engine.query(
-            body.question, body.strategy, body.top_k, body.rerank, body.rewrite
+            body.question, body.strategy, body.top_k, body.rerank, body.rewrite, body.sources
         )
 
     @app.get("/", include_in_schema=False)

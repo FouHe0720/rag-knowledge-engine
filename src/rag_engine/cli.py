@@ -23,6 +23,7 @@ def main() -> None:
     query.add_argument("--top-k", type=int, default=5)
     query.add_argument("--rerank", choices=["noop", "lexical"], default="noop")
     query.add_argument("--rewrite", action="store_true")
+    query.add_argument("--source", action="append", help="Restrict retrieval to these source paths")
     sub.add_parser("documents")
     delete = sub.add_parser("delete")
     delete.add_argument("document_id")
@@ -49,7 +50,7 @@ def main() -> None:
             result = {"ingested": values}
         elif args.command == "query":
             result = engine.query(
-                args.question, args.strategy, args.top_k, args.rerank, args.rewrite
+                args.question, args.strategy, args.top_k, args.rerank, args.rewrite, args.source
             ).model_dump()
         elif args.command == "delete":
             if not engine.store.delete(args.document_id):

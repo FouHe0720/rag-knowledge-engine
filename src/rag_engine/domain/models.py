@@ -74,3 +74,4 @@ class Answer(Value):
     original_query: str
     retrieval_query: str
     embedding_kind: str
+    source_scope: list[str] | None = None

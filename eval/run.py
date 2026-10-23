@@ -129,7 +129,10 @@ def run(real: bool = False, validate_only: bool = False, output: Path | None = N
             )
         engine = build_engine(settings)
         sources = sorted(
-            p for p in corpus.rglob("*") if p.suffix.lower() in {".md", ".txt", ".pdf"}
+            p
+            for p in corpus.rglob("*")
+            if p.suffix.lower() in {".md", ".txt", ".pdf"}
+            and p.relative_to(corpus).parts[0] != "campus"
         )
         for path in sources:
             engine.ingestion.ingest_path(path.relative_to(corpus).as_posix(), corpus)
