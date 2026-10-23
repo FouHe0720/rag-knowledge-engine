@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/FouHe0720/rag-knowledge-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/FouHe0720/rag-knowledge-engine/actions/workflows/ci.yml)
 
+[完整使用与技术手册](docs/USER_GUIDE.md) · [快速运行](#本地运行)
+
 面向校园资料的检索与引用服务。导入培养方案、选课通知和实验班简章，按指定资料范围查找原文，保留出处、段落和检索过程。
 
 样例来自山东大学（威海）知识库中的 8 份历史文档，覆盖 2023—2024 年。材料保留原始版本，用于查询和回归验证，不作为当前招生或办事依据。
